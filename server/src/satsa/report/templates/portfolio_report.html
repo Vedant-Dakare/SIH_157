@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio Risk Report — {{ run_id }}</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:2em;color:#111}
+.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.8em;color:#fff}
+.HIGH{background:#b00020}.ELEVATED{background:#e65100}.MODERATE{background:#f9a825;color:#111}.LOW{background:#2e7d32}
+table{border-collapse:collapse;width:100%;margin:1em 0}
+th,td{border:1px solid #999;padding:6px;text-align:left}
+footer{margin-top:2em;font-size:.8em;color:#555;border-top:1px solid #ccc;padding-top:1em}
+.chart{max-width:100%}
+</style>
+</head>
+<body>
+<h1>Portfolio Supervisory Risk Report</h1>
+<p>Run <strong>{{ run_id }}</strong> — window {{ window }}</p>
+<h2>Risk by band</h2>
+<div class="chart">{{ band_chart }}</div>
+<table>
+<tr><th>Band</th><th>Entities</th></tr>
+{% for row in band_rows %}
+<tr><td><span class="badge {{ row.band }}">{{ row.band }}</span></td><td>{{ row.count }}</td></tr>
+{% endfor %}
+</table>
+<h2>Top 5 findings</h2>
+<table>
+<tr><th>Entity</th><th>Signal</th><th>Score</th><th>Confidence</th></tr>
+{% for f in top_findings %}
+<tr><td>{{ f.entity_id }}</td><td>{{ f.signal_id }}</td><td>{{ f.score }} <span class="badge {{ f.band }}">{{ f.confidence }}</span></td><td>{{ f.confidence }}</td></tr>
+{% endfor %}
+</table>
+<h2>Sector aggregates</h2>
+<table>
+<tr><th>Sector</th><th>Median score</th></tr>
+{% for s in sector_rows %}
+<tr><td>{{ s.sector }}</td><td>{{ s.median }}</td></tr>
+{% endfor %}
+</table>
+<p>Portfolio trend: <strong>{{ trend }}</strong></p>
+<h2>Methodology footnote</h2>
+<p>{{ methodology }}</p>
+<h2>Assumptions &amp; Limitations</h2>
+<p>{{ assumptions }}</p>
+<footer>generated_at {{ generated_at }} | run_id {{ run_id }} | pipeline_version {{ pipeline_version }} | Merkle root {{ merkle_root }}</footer>
+</body>
+</html>

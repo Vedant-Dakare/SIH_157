@@ -1,0 +1,35 @@
+# Python and local tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.env
+
+# Frontend dependencies and generated bundles
+client/node_modules/
+client/dist/
+/ui/
+
+# Generated local analytics data
+data/curated/
+data/processed/
+data/quarantine/
+data/scoring/
+data/warehouse/
+data/warehouse/*.malformed-backup
+data/warehouse/*.duplicate-backup
+data/synthetic/
+models/artifacts/
+models/embeddings/
+
+# Editor and OS files
+.vscode/
+.idea/
+*.log
+Thumbs.db
+data/quarantine/amazon.jsonldata/quarantine/amazon.jsonl
+data/quarantine/

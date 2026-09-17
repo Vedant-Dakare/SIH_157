@@ -1,0 +1,17 @@
+{
+  "run_id": "run-20260917142315",
+  "status": "aborted",
+  "stages": [
+    {
+      "stage": "ingest",
+      "status": "aborted",
+      "duration": 9.270836299998336,
+      "records_in": 0,
+      "records_out": 0,
+      "warnings": [
+        "no synthetic corpora found"
+      ]
+    }
+  ],
+  "completed_at": "2026-09-17T14:23:24.862843+00:00"
+}

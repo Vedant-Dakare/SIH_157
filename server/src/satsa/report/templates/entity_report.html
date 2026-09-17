@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Entity Report — {{ entity_id }}</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:2em;color:#111}
+.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.8em;color:#fff}
+.HIGH{background:#b00020}.ELEVATED{background:#e65100}.MODERATE{background:#f9a825;color:#111}.LOW{background:#2e7d32}
+table{border-collapse:collapse;width:100%;margin:1em 0}
+th,td{border:1px solid #999;padding:6px;text-align:left;vertical-align:top}
+footer{margin-top:2em;font-size:.8em;color:#555;border-top:1px solid #ccc;padding-top:1em}
+.chart{max-width:100%}
+</style>
+</head>
+<body>
+<h1>CSE Deep-Dive: {{ entity_id }}</h1>
+<p>Overall score <strong>{{ overall_score }}</strong> <span class="badge {{ band }}">{{ band }}</span>
+<span class="badge {{ band }}">{{ confidence }}</span></p>
+<p>{{ confidence_reason }}</p>
+<h2>Score decomposition</h2>
+<div class="chart">{{ trend_chart }}</div>
+<table>
+<tr><th>Domain</th><th>Score</th><th>Contribution</th><th>Flagged signals</th></tr>
+{% for d in domains %}
+<tr><td>{{ d.name }}</td><td>{{ d.score }}</td><td>{{ d.contribution }}</td><td>{{ d.signals }}</td></tr>
+{% endfor %}
+</table>
+<h2>Findings with reason codes</h2>
+{% for f in findings %}
+<h3>{{ f.signal_id }} — {{ f.label }}</h3>
+<p>{{ f.plain_language }}</p>
+<p>Observed {{ f.observed }} vs threshold {{ f.threshold }} ({{ f.comparator }}).
+Peer median {{ f.peer_median }} (n={{ f.peer_n }}).</p>
+<p><strong>Counterfactual:</strong> {{ f.counterfactual }}</p>
+<p><strong>Evidence:</strong> {{ f.evidence_summary }}</p>
+{% endfor %}
+<h2>Peer comparison</h2>
+<div class="chart">{{ peer_chart }}</div>
+<h2>Data quality scorecard</h2>
+<table>
+<tr><th>Metric</th><th>Value</th></tr>
+{% for q in quality_rows %}
+<tr><td>{{ q.metric }}</td><td>{{ q.value }}</td></tr>
+{% endfor %}
+</table>
+<h2>Assumptions &amp; Limitations</h2>
+<p>{{ assumptions }}</p>
+<footer>generated_at {{ generated_at }} | run_id {{ run_id }} | window {{ window }} | pipeline_version {{ pipeline_version }} | Merkle root {{ merkle_root }}</footer>
+</body>
+</html>

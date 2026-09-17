@@ -1,0 +1,64 @@
+# Field-mapping DSL for cse_alpha (reference example).
+cse_id: cse_alpha
+source_timezone: Asia/Kolkata
+tables:
+  alerts:
+    timestamp_fields:
+      detected_ts:
+        source: created_at
+        formats:
+          - "%Y-%m-%dT%H:%M:%S%z"
+          - "%Y-%m-%d %H:%M:%S"
+          - "%d/%m/%Y %H:%M"
+    fields:
+      alert_id:
+        source: id
+        required: true
+      asset_id:
+        source: host_id
+        required: true
+      title:
+        source: subject
+        required: true
+      severity_raw:
+        source: priority
+        required: true
+      severity_norm:
+        source: priority
+        severity_norm: true
+        required: true
+      status:
+        source: state
+        required: false
+      analyst_id:
+        source: analyst
+        hashed: true
+        salt_env: SATSA_ANALYST_SALT
+        required: false
+      detected_ts:
+        source: created_at
+        required: true
+      category:
+        source: category
+        required: false
+  cases:
+    timestamp_fields:
+      open_ts:
+        source: opened
+        formats:
+          - "%Y-%m-%dT%H:%M:%S%z"
+          - "%Y-%m-%d %H:%M:%S"
+          - "%d/%m/%Y %H:%M"
+    fields:
+      case_id:
+        source: case_id
+        required: true
+      severity_norm:
+        source: severity
+        severity_norm: true
+        required: true
+      analyst_id:
+        source: owner
+        hashed: true
+        salt_env: SATSA_ANALYST_SALT
+        required: false

@@ -1,0 +1,27 @@
+# ALL numeric cutoffs referenced by any signal. No magic numbers in src/.
+premature_close_minutes: 5
+bulk_close_min_count: 50
+bulk_close_window_seconds: 60
+bulk_close_same_analyst_required: true
+escalation_bypass_min_severity_critical_only: true
+coverage_gap_min_unmonitored_assets: 1
+template_tfidf_threshold: 0.85
+template_min_notes: 5
+sla_breach_hours: 72
+reopen_churn_min_reopens: 2
+severity_mismatch_enabled: true
+after_hours_start: 22
+after_hours_end: 6
+after_hours_min_fraction: 0.3
+data_quality_null_rate_warn: 0.1
+data_quality_null_rate_critical: 0.25
+quarantine_rate_warn: 0.05
+quarantine_rate_critical: 0.2
+analyst_id_hash_length: 64
+timestamp_future_tolerance_seconds: 60
+partial_feed_null_rate: 0.3
+partial_feed_monotonicity_violation_rate: 0.05
+partial_feed_unknown_severity_rate: 0.05
+ground_truth_default_confidence: 1.0
+ground_truth_partial_feed_confidence: 0.7
+synthetic_default_alert_volume: 200

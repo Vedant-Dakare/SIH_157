@@ -1,0 +1,99 @@
+%PDF-1.4
+1 0 obj<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>endobj
+2 0 obj<</Type/Pages/Kids[3 0 R 5 0 R]/Count 2>>endobj
+3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 1 0 R>>>>/Contents 4 0 R>>endobj
+4 0 obj<</Length 1413>>stream
+BT /F1 11 Tf
+50 792 Td (Portfolio Risk Report ? run-20260917164404) Tj
+50 778 Td (Portfolio Supervisory Risk Report) Tj
+50 764 Td (Run) Tj
+50 750 Td (run-20260917164404) Tj
+50 736 Td (? window 2024-05-03..2024-05-31) Tj
+50 722 Td (Risk by band) Tj
+50 708 Td (PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0) Tj
+50 694 Td (Band) Tj
+50 680 Td (Entities) Tj
+50 666 Td (LOW) Tj
+50 652 Td (14) Tj
+50 638 Td (MODERATE) Tj
+50 624 Td (1) Tj
+50 610 Td (ELEVATED) Tj
+50 596 Td (0) Tj
+50 582 Td (HIGH) Tj
+50 568 Td (0) Tj
+50 554 Td (Top 5 findings) Tj
+50 540 Td (Entity) Tj
+50 526 Td (Signal) Tj
+50 512 Td (Score) Tj
+50 498 Td (Confidence) Tj
+50 484 Td (CSE_BULKCLOSE) Tj
+50 470 Td (EG-006) Tj
+50 456 Td (1.0) Tj
+50 442 Td (MEDIUM) Tj
+50 428 Td (MEDIUM) Tj
+50 414 Td (CSE_BULKCLOSE) Tj
+50 400 Td (NS-011) Tj
+50 386 Td (1.0) Tj
+50 372 Td (LOW) Tj
+50 358 Td (LOW) Tj
+50 344 Td (CSE_BYPASS) Tj
+50 330 Td (EG-003) Tj
+50 316 Td (1.0) Tj
+50 302 Td (MEDIUM) Tj
+50 288 Td (MEDIUM) Tj
+50 274 Td (CSE_FASTCLOSE) Tj
+50 260 Td (EG-001) Tj
+50 246 Td (1.0) Tj
+50 232 Td (MEDIUM) Tj
+50 218 Td (MEDIUM) Tj
+50 204 Td (CSE_FASTCLOSE) Tj
+50 190 Td (EG-004) Tj
+50 176 Td (1.0) Tj
+50 162 Td (MEDIUM) Tj
+50 148 Td (MEDIUM) Tj
+50 134 Td (Sector aggregates) Tj
+50 120 Td (Sector) Tj
+50 106 Td (Median score) Tj
+50 92 Td (finance) Tj
+50 30 Td (Page 1 of 2 | run-20260917164404 | ) Tj
+ET
+endstream
+endobj
+5 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 1 0 R>>>>/Contents 6 0 R>>endobj
+6 0 obj<</Length 789>>stream
+BT /F1 11 Tf
+50 792 Td (7.02) Tj
+50 778 Td (healthcare) Tj
+50 764 Td (11.56) Tj
+50 750 Td (technology) Tj
+50 736 Td (8.33) Tj
+50 722 Td (unknown) Tj
+50 708 Td (8.95) Tj
+50 694 Td (Portfolio trend:) Tj
+50 680 Td (STABLE) Tj
+50 666 Td (Methodology footnote) Tj
+50 652 Td (Transparent weighted composite over seven domains \(ADR-004\); confidence gating with a separate insufficient-ev) Tj
+50 638 Td (Assumptions &amp; Limitations) Tj
+50 624 Td (Scores are supervisory triage aids, not verdicts. Synthetic-data thresholds approximate production; partial fe) Tj
+50 610 Td (generated_at 2026-09-17T16:45:01.482142+00:00 | run_id run-20260917164404 | pipeline_version phase6 | Merkle r) Tj
+50 596 Td () Tj
+50 582 Td (run-20260917164404 | ) Tj
+50 30 Td (Page 2 of 2 | run-20260917164404 | ) Tj
+ET
+endstream
+endobj
+7 0 obj<</Type/Catalog/Pages 2 0 R>>endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000070 00000 n 
+0000000125 00000 n 
+0000000235 00000 n 
+0000001696 00000 n 
+0000001806 00000 n 
+0000002642 00000 n 
+trailer<</Size 8/Root 7 0 R>>
+startxref
+2685
+%%EOF

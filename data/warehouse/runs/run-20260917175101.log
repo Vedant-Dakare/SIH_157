@@ -1,0 +1,104 @@
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\asset.py:69: UserWarning: 177 alert assets missing from inventory; shadow UNKNOWN created
+  resolved = resolve_shadow_assets(alerts, assets)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\entity_features.py:168: UserWarning: 5 out-of-order case durations; nulled
+  lat_cases = case_duration_features(cases)
+DuckDB ledger unavailable; JSONL is source of truth: IO Error: Cannot open file "D:\Coding stuff\Projects\SIH157\data\warehouse\audit.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Program Files\Python313\python.exe (PID 24344)
+DuckDB ledger unavailable; JSONL is source of truthD:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\pipeline\orchestrator.py:234: UserWarning: FULL embedding backend unavailable, using LITE: sentence-transformers not installed
+  vectors = encode(["triage note one", "triage note two", "triage note threeC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breakingC:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using vDuckDB ledger unavailable; JSONL is source of truth: IO Error: Cannot open file "D:\Coding stuff\Projects\SIH157\data\warehouse\audit.duckdb": The process cannot access the file because it is being used by another process.
+
+File is already open in 
+C:\Program Files\Python313\python.exe (PID 24344)
+C:\Program Files\Python313\python.exe (PID 29168)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\asset.py:69: UserWarning: 177 alert assets missing from inventory; shadow UNKNOWN created
+  resolved = resolve_shadow_assets(alerts, assets)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\entity_features.py:168: UserWarning: 5 out-of-order case durations; nulled
+  lat_cases = case_duration_features(cases)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+WeasyPrint unavailable, trying reportlab fallback
+reportlab unavailable, using minimal PDF writer
+openpyxl unavailable, using minimal XLSX writer
+                     Run run-20260917175101 summary                      
++-----------------------------------------------------------------------+
+| stage      | status  | duration | records_in | records_out | warnings |
+|------------+---------+----------+------------+-------------+----------|
+| ingest     | ok      | 4.5s     | 0          | 96          |          |
+| canonical  | skipped | 0.0s     | 0          | 0           |          |
+| features   | ok      | 58.8s    | 53459      | 16          |          |
+| signals    | ok      | 59.0s    | 16         | 464         |          |
+| ml         | skipped | 0.0s     | 0          | 0           |          |
+| score      | ok      | 6.3s     | 16         | 16          |          |
+| prioritise | ok      | 10.4s    | 14         | 14          |          |
+| explain    | ok      | 19.5s    | 14         | 10          |          |
+| narrate    | ok      | 67.3s    | 1          | 7           |          |
+| report     | ok      | 11.4s    | 16         | 6           |          |
+| audit_seal | skipped | 0.0s     | 0          | 0           |          |
++-----------------------------------------------------------------------+
+     | 464         |            |
+| ml         | ok          | 0.0s     | 3          | 3           |            |
+| score      | ok          | 6.2s     | 16         | 16          |            |
+| prioritise | ok          | 10.5s    | 14         | 14          |            |
+| explain    | failed-opt… | 8.5s     | 0          | 0           | IO Error:  |
+|            |             |          |            |             | Cannot     |
+|            |             |          |            |             | open file  |
+|            |             |          |            |             | "D:\Coding |
+|            |             |          |            |             | stuff\Pro… |
+|            |             |          |            |             | The        |
+|            |             |          |            |             | process    |
+|            |             |          |            |             | cannot     |
+|            |             |          |            |             | access the |
+|            |             |          |            |             | file       |
+|            |             |          |            |             | because it |
+|            |             |          |            |             | is being   |
+|            |             |          |            |             | used by    |
+|            |             |          |            |             | another    |
+|            |             |          |            |             | process.   |
+|            |             |          |            |             |            |
+|            |             |          |            |             | File is    |
+|            |             |          |            |             | already    |
+|            |             |          |            |             | open in    |
+|            |             |          |            |             | C:\Program |
+|            |             |          |            |             | Files\Pyt… |
+|            |             |          |            |             | (PID       |
+|            |             |          |            |             | 13096)     |
+| narrate    | ok          | 77.2s    | 1          | 7           |            |
+| report     | ok          | 11.6s    | 16         | 6           |            |
+| audit_seal | ok          | 0.1s     | 9          | 1           | ledger     |
+|            |             |          |            |             | verificat… |
+|            |             |          |            |             | failed     |
++-----------------------------------------------------------------------------+

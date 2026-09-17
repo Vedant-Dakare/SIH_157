@@ -1,0 +1,20 @@
+{
+  "entities": [
+    "CSE_BULKCLOSE",
+    "CSE_BYPASS",
+    "CSE_FASTCLOSE",
+    "CSE_HEALTHY",
+    "CSE_SILENT",
+    "amazon",
+    "cse_alpha",
+    "cse_bravo",
+    "cse_charlie",
+    "cse_delta",
+    "cse_echo",
+    "cse_foxtrot",
+    "cse_golf",
+    "cse_hotel",
+    "cse_india",
+    "cse_juliet"
+  ]
+}

@@ -1,0 +1,113 @@
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\asset.py:69: UserWarning: 177 alert assets missing from inventory; shadow UNKNOWN created
+  resolved = resolve_shadow_assets(alerts, assets)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\entity_features.py:168: UserWarning: 5 out-of-order case durations; nulled
+  lat_cases = case_duration_features(cases)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\pipeline\orchestrator.py:234: UserWarning: FULL embedding backend unavailable, using LITE: sentence-transformers not installed
+  vectors = encode(["triage note one", "triage note two", "triage note three"])
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator IsotonicRegression from version 1.9.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\asset.py:69: UserWarning: 177 alert assets missing from inventory; shadow UNKNOWN created
+  resolved = resolve_shadow_assets(alerts, assets)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\features\entity_features.py:168: UserWarning: 5 out-of-order case durations; nulled
+  lat_cases = case_duration_features(cases)
+D:\Coding stuff\Projects\SIH157\server\src\satsa\signals\negative_space.py:170: UserWarning: zero dispersion peer group; skipped
+  stats = modified_z(float(missing), peers)
+WeasyPrint unavailable, trying reportlab fallback
+reportlab unavailable, using minimal PDF writer
+openpyxl unavailable, using minimal XLSX writer
+C:\Users\VEDANT\AppData\Roaming\Python\Python313\site-packages\pydantic\main.py:253: UserWarning: default analyst_salt/manifest_key in use; rotate before production
+  validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                    Run upload-1789667249757 summary                    
++----------------------------------------------------------------------+
+| stage      | status | duration | records_in | records_out | warnings |
+|------------+--------+----------+------------+-------------+----------|
+| ingest     | ok     | 3.5s     | 0          | 96          |          |
+| canonical  | ok     | 1.0s     | 53459      | 53459       |          |
+| features   | ok     | 15.0s    | 53459      | 16          |          |
+| signals    | ok     | 18.0s    | 16         | 464         |          |
+| ml         | ok     | 0.0s     | 3          | 3           |          |
+| score      | ok     | 2.7s     | 16         | 16          |          |
+| prioritise | ok     | 5.6s     | 14         | 14          |          |
+| explain    | ok     | 3.6s     | 14         | 10          |          |
+| narrate    | ok     | 17.5s    | 1          | 7           |          |
+| report     | ok     | 23.8s    | 16         | 6           |          |
+| audit_seal | ok     | 0.3s     | 10         | 1           |          |
++----------------------------------------------------------------------+

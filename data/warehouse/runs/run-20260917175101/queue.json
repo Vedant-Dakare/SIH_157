@@ -1,0 +1,338 @@
+[
+  {
+    "band": "MODERATE",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_charlie",
+    "expected_review_minutes": 70,
+    "focus_area": "detection_coverage",
+    "novelty_weight": 1.0,
+    "priority": 33.492500107140685,
+    "rank": 1,
+    "risk_score": 26.794000085712547,
+    "sample_alert_ids": [
+      "cse_charlie-alert-00001",
+      "cse_charlie-alert-00003",
+      "cse_charlie-alert-00009",
+      "cse_charlie-alert-00010",
+      "cse_charlie-alert-00012"
+    ],
+    "sample_case_ids": [
+      "cse_charlie-case-00030",
+      "cse_charlie-case-00054"
+    ],
+    "signal_ids": [
+      "EG-004",
+      "EG-014",
+      "NS-001",
+      "NS-002",
+      "NS-005",
+      "NS-006",
+      "NS-009"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "CSE_SILENT",
+    "expected_review_minutes": 60,
+    "focus_area": "detection_coverage",
+    "novelty_weight": 1.0,
+    "priority": 30.708885088261813,
+    "rank": 2,
+    "risk_score": 24.56710807060945,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "CSE_SILENT-case-00012",
+      "CSE_SILENT-case-00036"
+    ],
+    "signal_ids": [
+      "EG-014",
+      "NS-001",
+      "NS-002",
+      "NS-005",
+      "NS-006",
+      "NS-009"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "CSE_FASTCLOSE",
+    "expected_review_minutes": 20,
+    "focus_area": "operational_discipline",
+    "novelty_weight": 1.0,
+    "priority": 14.971368788063039,
+    "rank": 3,
+    "risk_score": 11.977095030450432,
+    "sample_alert_ids": [
+      "CSE_FASTCLOSE-alert-00003",
+      "CSE_FASTCLOSE-alert-00016",
+      "CSE_FASTCLOSE-alert-00021",
+      "CSE_FASTCLOSE-alert-00028",
+      "CSE_FASTCLOSE-alert-00039"
+    ],
+    "sample_case_ids": [
+      "CSE_FASTCLOSE-case-00002",
+      "CSE_FASTCLOSE-case-00006",
+      "CSE_FASTCLOSE-case-00019",
+      "CSE_FASTCLOSE-case-00022",
+      "CSE_FASTCLOSE-case-00025"
+    ],
+    "signal_ids": [
+      "EG-001",
+      "EG-004"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_foxtrot",
+    "expected_review_minutes": 20,
+    "focus_area": "investigation_quality",
+    "novelty_weight": 1.0,
+    "priority": 14.455114691922933,
+    "rank": 4,
+    "risk_score": 11.564091753538346,
+    "sample_alert_ids": [
+      "cse_foxtrot-alert-00007",
+      "cse_foxtrot-alert-00012",
+      "cse_foxtrot-alert-00013",
+      "cse_foxtrot-alert-00016",
+      "cse_foxtrot-alert-00021"
+    ],
+    "sample_case_ids": [
+      "cse_foxtrot-case-00000",
+      "cse_foxtrot-case-00004",
+      "cse_foxtrot-case-00008",
+      "cse_foxtrot-case-00012",
+      "cse_foxtrot-case-00016"
+    ],
+    "signal_ids": [
+      "EG-002",
+      "EG-004"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "MEDIUM",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_golf",
+    "expected_review_minutes": 30,
+    "focus_area": "operational_discipline",
+    "novelty_weight": 1.0,
+    "priority": 12.777288879467594,
+    "rank": 5,
+    "risk_score": 13.629108138098767,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "cse_golf-case-00000",
+      "cse_golf-case-00003",
+      "cse_golf-case-00006",
+      "cse_golf-case-00007",
+      "cse_golf-case-00008",
+      "cse_golf-case-00001",
+      "cse_golf-case-00002",
+      "cse_golf-case-00004"
+    ],
+    "signal_ids": [
+      "EG-006",
+      "EG-007",
+      "NS-011"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_delta",
+    "expected_review_minutes": 10,
+    "focus_area": "investigation_quality",
+    "novelty_weight": 1.0,
+    "priority": 11.701759512509042,
+    "rank": 6,
+    "risk_score": 9.361407610007234,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "cse_delta-case-00000",
+      "cse_delta-case-00001",
+      "cse_delta-case-00002",
+      "cse_delta-case-00003",
+      "cse_delta-case-00004"
+    ],
+    "signal_ids": [
+      "EG-010"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "MEDIUM",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_hotel",
+    "expected_review_minutes": 20,
+    "focus_area": "escalation_integrity",
+    "novelty_weight": 1.0,
+    "priority": 10.970399542977226,
+    "rank": 7,
+    "risk_score": 11.701759512509042,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "cse_hotel-case-00000",
+      "cse_hotel-case-00001",
+      "cse_hotel-case-00002",
+      "cse_hotel-case-00003",
+      "cse_hotel-case-00004"
+    ],
+    "signal_ids": [
+      "EG-003",
+      "EG-007"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "CSE_BYPASS",
+    "expected_review_minutes": 10,
+    "focus_area": "escalation_integrity",
+    "novelty_weight": 1.0,
+    "priority": 8.776319634381782,
+    "rank": 8,
+    "risk_score": 7.021055707505425,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "CSE_BYPASS-case-00022",
+      "CSE_BYPASS-case-00026",
+      "CSE_BYPASS-case-00029",
+      "CSE_BYPASS-case-00033",
+      "CSE_BYPASS-case-00036"
+    ],
+    "signal_ids": [
+      "EG-003"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_bravo",
+    "expected_review_minutes": 10,
+    "focus_area": "operational_discipline",
+    "novelty_weight": 1.0,
+    "priority": 8.776319634381782,
+    "rank": 9,
+    "risk_score": 7.021055707505425,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "cse_bravo-case-00001",
+      "cse_bravo-case-00015",
+      "cse_bravo-case-00023",
+      "cse_bravo-case-00031",
+      "cse_bravo-case-00033"
+    ],
+    "signal_ids": [
+      "EG-001"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "MEDIUM",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "CSE_BULKCLOSE",
+    "expected_review_minutes": 20,
+    "focus_area": "operational_discipline",
+    "novelty_weight": 1.0,
+    "priority": 8.389129062276703,
+    "rank": 10,
+    "risk_score": 8.94840433309515,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "CSE_BULKCLOSE-case-00000",
+      "CSE_BULKCLOSE-case-00001",
+      "CSE_BULKCLOSE-case-00003",
+      "CSE_BULKCLOSE-case-00004",
+      "CSE_BULKCLOSE-case-00005",
+      "CSE_BULKCLOSE-case-00002"
+    ],
+    "signal_ids": [
+      "EG-006",
+      "NS-011"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_echo",
+    "expected_review_minutes": 10,
+    "focus_area": "detection_coverage",
+    "novelty_weight": 1.0,
+    "priority": 8.260065538241676,
+    "rank": 11,
+    "risk_score": 6.608052430593341,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "cse_echo-case-00000",
+      "cse_echo-case-00001",
+      "cse_echo-case-00002",
+      "cse_echo-case-00003",
+      "cse_echo-case-00004"
+    ],
+    "signal_ids": [
+      "EG-005"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_india",
+    "expected_review_minutes": 10,
+    "focus_area": "escalation_integrity",
+    "novelty_weight": 1.0,
+    "priority": 6.195049153681257,
+    "rank": 12,
+    "risk_score": 4.9560393229450055,
+    "sample_alert_ids": [],
+    "sample_case_ids": [
+      "cse_india-case-00048",
+      "cse_india-case-00054"
+    ],
+    "signal_ids": [
+      "EG-014"
+    ]
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "CSE_HEALTHY",
+    "expected_review_minutes": 1,
+    "focus_area": "detection_coverage",
+    "novelty_weight": 1.0,
+    "priority": 0.0,
+    "rank": 13,
+    "risk_score": 0.0,
+    "sample_alert_ids": [],
+    "sample_case_ids": [],
+    "signal_ids": []
+  },
+  {
+    "band": "LOW",
+    "confidence": "HIGH",
+    "coverage_gap_weight": 1.25,
+    "entity_id": "cse_alpha",
+    "expected_review_minutes": 1,
+    "focus_area": "detection_coverage",
+    "novelty_weight": 1.0,
+    "priority": 0.0,
+    "rank": 14,
+    "risk_score": 0.0,
+    "sample_alert_ids": [],
+    "sample_case_ids": [],
+    "signal_ids": []
+  }
+]

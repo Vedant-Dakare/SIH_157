@@ -1,0 +1,16 @@
+# SAT-SA air-gapped compose (TASK 8.3). network_mode: none enforces the
+# air-gap at container level; mounts are read-only inputs.
+services:
+  satsa-api:
+    build: .
+    image: satsa:latest
+    command: ["serve", "--host", "0.0.0.0", "--port", "8080"]
+    network_mode: none
+    read_only: true
+    user: "1000"
+    volumes:
+      - ./data:/data:ro
+      - ./models:/models:ro
+      - ./configs:/configs:ro
+    tmpfs:
+      - /tmp

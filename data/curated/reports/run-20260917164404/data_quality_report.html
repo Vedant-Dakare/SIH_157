@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Quality Report — run-20260917164404</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:2em;color:#111}
+.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.8em;color:#fff}
+.HEALTHY{background:#2e7d32}.DEGRADED{background:#f9a825;color:#111}.POOR{background:#b00020}
+table{border-collapse:collapse;width:100%;margin:1em 0}
+th,td{border:1px solid #999;padding:6px;text-align:left}
+footer{margin-top:2em;font-size:.8em;color:#555;border-top:1px solid #ccc;padding-top:1em}
+</style>
+</head>
+<body>
+<h1>Ingestion Scorecard by CSE</h1>
+<table>
+<tr><th>CSE</th><th>Total</th><th>Valid</th><th>Quarantined</th><th>Rate</th><th>Top reason</th><th>Health</th></tr>
+
+<tr><td>CSE_BULKCLOSE</td><td>500</td><td>500</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>CSE_BYPASS</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>CSE_FASTCLOSE</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>CSE_HEALTHY</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>CSE_SILENT</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_alpha</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_bravo</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_charlie</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_delta</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_echo</td><td>520</td><td>520</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_foxtrot</td><td>440</td><td>440</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_golf</td><td>520</td><td>520</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_hotel</td><td>400</td><td>400</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_india</td><td>420</td><td>420</td><td>0</td><td>0.0</td><td>—</td><td><span class="badge HEALTHY">HEALTHY</span></td></tr>
+
+<tr><td>cse_juliet</td><td>400</td><td>330</td><td>70</td><td>0.175</td><td>partial feed</td><td><span class="badge DEGRADED">DEGRADED</span></td></tr>
+
+</table>
+<h2>Feed health trend</h2>
+<p>Single-window run; trends appear after repeat runs.</p>
+<h2>Assumptions &amp; Limitations</h2>
+<p>Scores are supervisory triage aids, not verdicts. Synthetic-data thresholds approximate production; partial feeds are quarantined from ranking; absence of evidence is not evidence of absence. A human examiner makes all decisions.</p>
+<footer>generated_at 2026-09-17T16:45:01.482142+00:00 | run_id run-20260917164404 | pipeline_version phase6 | Merkle root </footer>
+</body>
+</html>

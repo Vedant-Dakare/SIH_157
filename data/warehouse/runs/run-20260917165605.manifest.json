@@ -1,0 +1,31 @@
+{
+  "run_id": "run-20260917165605",
+  "created_at": "2026-09-17T16:58:39.639603+00:00",
+  "window_start": "",
+  "window_end": "",
+  "entity_count": 1,
+  "finding_count": 0,
+  "first_seq": 189,
+  "last_seq": 240,
+  "entry_count": 11,
+  "merkle_root": "234c81d8357ddf9cb5edcf56ff141b810f71e60eab71b21265c40cb5f63ff306",
+  "ledger_hashes": [
+    "019de2bce5180c7cda2d9b00f1d2851d1878f37255629fedfd6ff5c3e2c5642f",
+    "8f2d58436b1b7acdc50eb99e96985a50ca510f6ea13ed61e2f01e8da069e2029",
+    "3cfd7634a2bce0e009214d81c8847fdef4ab69b53f8f4339d7eb3de610f988b0",
+    "76c5e5c6ecef13dc9778b4f10cd6a3a539edafa2a6d0dfe8c9bdc136ecdc5fdc",
+    "f3fc369852a1e355e358047a650adf48b0cb5ca22f7a2f5496b3892ee6a1104e",
+    "3b49ecae6a722b4d8f350380827c1339b4af4aa583ef507def2500ad3cf947e4",
+    "3b87602efe4fafb9fcb2e0e4f883176a998005787b31b3186abed99598f04829",
+    "97728e102c026f2ca3687faf778fdc14ec71611466ea7fed020648c8fe96489c",
+    "cf61a778aec4119bb828dc9a93e24c237c268f88e046fdc92bce9a6776efb855",
+    "b880d8300f319964980cf0b762d8b7c88d564ce8d1c7647b2c64df8e53052a41",
+    "314574c1471b01946bf9cc78db25c6abe744dedb8c5c1126ada7a3fdad2c3685"
+  ],
+  "thresholds_hash": "3d291fd919b8fb2fee4915a398b9bb2f830c9de9b76dcddfca5045e75c7db249",
+  "signals_version": "phase2-registry",
+  "settings_snapshot": {
+    "manifest_key_set": true
+  },
+  "signature": "6d61cd3f47121d14f8977bf4e54a5a1bef7c65830cb76b857be8caa118ff34fa"
+}

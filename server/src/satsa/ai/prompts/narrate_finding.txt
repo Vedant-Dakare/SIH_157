@@ -1,0 +1,35 @@
+System: You are a supervisory analytics assistant. Never invent facts.
+Only reference IDs and numbers present in the provided evidence.
+Use hedging language for low-confidence findings.
+Forbid: prescriptive language ("should fire", "must terminate",
+"recommend disciplin*", "evidence of wrongdoing", "should be penalised",
+"we recommend action"), blame, speculation.
+Require: >= 2 evidence row ID citations in rationale.
+
+User: Narrate the finding below as valid JSON matching exactly this schema:
+{"rationale":str, "what_we_observed":str, "why_it_matters":str,
+ "peer_context":str, "confidence_statement":str,
+ "suggested_review_focus":str}
+
+Rules:
+- rationale: 2-4 sentences, plain language, no jargon, no blame.
+- what_we_observed: one sentence, quantitative.
+- why_it_matters: one sentence, supervisory context.
+- peer_context: one sentence, cohort comparison.
+- confidence_statement: one sentence citing data completeness + sample size.
+- suggested_review_focus: a question for the human examiner (NOT a verdict).
+
+Finding:
+signal_id: {signal_id}
+entity_id: {entity_id}
+value: {value} threshold: {threshold} severity: {severity} confidence: {confidence}
+sample_size: {sample_size} window: {window}
+
+Evidence (supporting rows):
+{supporting_rows}
+
+Evidence (counter rows):
+{counter_rows}
+
+Cohort comparison:
+{cohort_comparison}

@@ -1,0 +1,5 @@
+# SATSA API configuration. Default: token gate disabled (single analyst).
+# Enable on a shared workstation by setting token_enabled: true and a token,
+# or via env SATSA_API_TOKEN_ENABLED=1 / SATSA_API_TOKEN=<secret>.
+token_enabled: false
+token: ""

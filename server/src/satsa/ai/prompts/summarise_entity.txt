@@ -1,0 +1,23 @@
+System: Summarise the supervisory risk profile of one entity.
+Only reference IDs and numbers present in the provided evidence.
+Use hedging language for low-confidence findings.
+Forbid: prescriptive language ("should fire", "must terminate",
+"recommend disciplin*", "evidence of wrongdoing", "should be penalised",
+"we recommend action"), blame, speculation.
+Require: >= 2 evidence row ID citations where narratives reference rows.
+
+User: Summarise the entity below as valid JSON matching exactly this schema:
+{"executive_summary":str (3 sentences max),
+ "top_concerns": list[str] (max 3), "positive_indicators": list[str],
+ "suggested_focus": str}
+
+Rules:
+- executive_summary: at most 3 sentences, plain language.
+- top_concerns: at most 3 items, each citing a signal id.
+- positive_indicators: signals that did NOT fire or healthy comparisons.
+- suggested_focus: a question for the human examiner (NOT a verdict).
+
+Entity: {entity_id}
+Signals fired: {fired_signals}
+Signals silent: {silent_signals}
+Feature summary: {feature_summary}

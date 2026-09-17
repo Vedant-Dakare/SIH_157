@@ -1,0 +1,4 @@
+entity_id,signal_id,expected_flag,confidence,reviewer_id,reviewed_at,rationale,adequate_evidence,escalation_warranted,root_cause_addressed,telemetry_adequate
+cse_bravo,SIG_PREMATURE_CLOSE,True,1.0,reviewer_hash_01,2024-06-02T00:00:00+00:00,S2 planted SIG_PREMATURE_CLOSE; critical cases closed in minutes,1,0,0,1
+cse_alpha,SIG_PREMATURE_CLOSE,False,1.0,reviewer_hash_01,2024-06-02T00:00:00+00:00,S1 baseline; SIG_PREMATURE_CLOSE not planted,1,1,1,1
+cse_charlie,SIG_COVERAGE_GAP,True,1.0,reviewer_hash_02,2024-06-02T00:00:00+00:00,S3 planted SIG_COVERAGE_GAP; critical assets dark,1,1,1,0

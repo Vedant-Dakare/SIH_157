@@ -1,0 +1,21 @@
+# SATSA default runtime configuration.
+paths:
+  data_root: data
+  synthetic_root: data/synthetic
+  quarantine_root: data/quarantine
+  raw_root: data/raw
+  processed_root: data/processed
+  models_root: models
+  embeddings_dir: models/embeddings
+seeds:
+  global_seed: 42
+  synthetic_base_seed: 1000
+chunk_sizes:
+  ingest_rows: 10000
+  parquet_row_group: 5000
+  embedding_batch: 32
+window_policy:
+  default_lookback_days: 30
+  min_window_days: 7
+  max_window_days: 90
+  sla_breach_hours: 72

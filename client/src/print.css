@@ -1,0 +1,43 @@
+/* Print stylesheet: clean worklists and reports, no app chrome. */
+
+@media print {
+  /* Hide navigation chrome everywhere. */
+  nav[aria-label='Primary navigation'],
+  header,
+  button,
+  [role='tablist'] {
+    display: none !important;
+  }
+
+  /* Expand the main column to the full page. */
+  main {
+    margin: 0 !important;
+  }
+
+  main > div {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Show force-mounted tab panels that are hidden on screen. */
+  [role='tabpanel'][hidden] {
+    display: block !important;
+  }
+
+  /* Keep tables and badges legible on paper. */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  table,
+  th,
+  td {
+    border-color: #999 !important;
+  }
+
+  /* Never strand a finding row across pages. */
+  tr {
+    break-inside: avoid;
+  }
+}

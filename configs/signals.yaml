@@ -1,0 +1,42 @@
+# Per-signal enable flags and parameters. Numeric cutoffs live in thresholds.yaml.
+signals:
+  SIG_PREMATURE_CLOSE:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_COVERAGE_GAP:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_TEMPLATE_NOTES:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_SLA_BREACH:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_REOPEN_CHURN:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_SEVERITY_MISMATCH:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_BULK_CLOSE:
+    enabled: true
+    params:
+      window_days: 7
+  SIG_ESCALATION_BYPASS:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_AFTER_HOURS:
+    enabled: true
+    params:
+      window_days: 30
+  SIG_DATA_QUALITY:
+    enabled: true
+    params:
+      window_days: 7

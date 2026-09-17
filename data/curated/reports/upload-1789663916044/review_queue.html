@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Manual Review Queue — upload-1789663916044</title>
+<style>
+@page{size:A4 landscape;margin:1cm}
+body{font-family:Arial,Helvetica,sans-serif;margin:1em;color:#111}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.9em}
+th,td{border:1px solid #999;padding:5px;text-align:left}
+footer{margin-top:2em;font-size:.8em;color:#555;border-top:1px solid #ccc;padding-top:1em}
+</style>
+</head>
+<body>
+<h1>Prioritised Manual-Review Worklist</h1>
+<table>
+<tr><th>Rank</th><th>Entity</th><th>Focus area</th><th>Signals</th><th>Minutes</th><th>Sample alerts</th><th>Sample cases</th></tr>
+
+<tr><td>1</td><td>cse_charlie</td><td>detection_coverage</td><td>EG-004, EG-014, NS-001, NS-002, NS-005, NS-006, NS-009</td><td>70</td><td>cse_charlie-alert-00001, cse_charlie-alert-00003, cse_charlie-alert-00009, cse_charlie-alert-00010, cse_charlie-alert-00012</td><td>cse_charlie-case-00030, cse_charlie-case-00054</td></tr>
+
+<tr><td>2</td><td>CSE_SILENT</td><td>detection_coverage</td><td>EG-014, NS-001, NS-002, NS-005, NS-006, NS-009</td><td>60</td><td></td><td>CSE_SILENT-case-00012, CSE_SILENT-case-00036</td></tr>
+
+<tr><td>3</td><td>CSE_FASTCLOSE</td><td>operational_discipline</td><td>EG-001, EG-004</td><td>20</td><td>CSE_FASTCLOSE-alert-00003, CSE_FASTCLOSE-alert-00016, CSE_FASTCLOSE-alert-00021, CSE_FASTCLOSE-alert-00028, CSE_FASTCLOSE-alert-00039</td><td>CSE_FASTCLOSE-case-00002, CSE_FASTCLOSE-case-00006, CSE_FASTCLOSE-case-00019, CSE_FASTCLOSE-case-00022, CSE_FASTCLOSE-case-00025</td></tr>
+
+<tr><td>4</td><td>cse_foxtrot</td><td>investigation_quality</td><td>EG-002, EG-004</td><td>20</td><td>cse_foxtrot-alert-00007, cse_foxtrot-alert-00012, cse_foxtrot-alert-00013, cse_foxtrot-alert-00016, cse_foxtrot-alert-00021</td><td>cse_foxtrot-case-00000, cse_foxtrot-case-00004, cse_foxtrot-case-00008, cse_foxtrot-case-00012, cse_foxtrot-case-00016</td></tr>
+
+<tr><td>5</td><td>cse_golf</td><td>operational_discipline</td><td>EG-006, EG-007, NS-011</td><td>30</td><td></td><td>cse_golf-case-00000, cse_golf-case-00003, cse_golf-case-00006, cse_golf-case-00007, cse_golf-case-00008</td></tr>
+
+<tr><td>6</td><td>cse_delta</td><td>investigation_quality</td><td>EG-010</td><td>10</td><td></td><td>cse_delta-case-00000, cse_delta-case-00001, cse_delta-case-00002, cse_delta-case-00003, cse_delta-case-00004</td></tr>
+
+<tr><td>7</td><td>cse_hotel</td><td>escalation_integrity</td><td>EG-003, EG-007</td><td>20</td><td></td><td>cse_hotel-case-00000, cse_hotel-case-00001, cse_hotel-case-00002, cse_hotel-case-00003, cse_hotel-case-00004</td></tr>
+
+<tr><td>8</td><td>CSE_BYPASS</td><td>escalation_integrity</td><td>EG-003</td><td>10</td><td></td><td>CSE_BYPASS-case-00022, CSE_BYPASS-case-00026, CSE_BYPASS-case-00029, CSE_BYPASS-case-00033, CSE_BYPASS-case-00036</td></tr>
+
+<tr><td>9</td><td>cse_bravo</td><td>operational_discipline</td><td>EG-001</td><td>10</td><td></td><td>cse_bravo-case-00001, cse_bravo-case-00015, cse_bravo-case-00023, cse_bravo-case-00031, cse_bravo-case-00033</td></tr>
+
+<tr><td>10</td><td>CSE_BULKCLOSE</td><td>operational_discipline</td><td>EG-006, NS-011</td><td>20</td><td></td><td>CSE_BULKCLOSE-case-00000, CSE_BULKCLOSE-case-00001, CSE_BULKCLOSE-case-00003, CSE_BULKCLOSE-case-00004, CSE_BULKCLOSE-case-00005</td></tr>
+
+<tr><td>11</td><td>cse_echo</td><td>detection_coverage</td><td>EG-005</td><td>10</td><td></td><td>cse_echo-case-00000, cse_echo-case-00001, cse_echo-case-00002, cse_echo-case-00003, cse_echo-case-00004</td></tr>
+
+<tr><td>12</td><td>cse_india</td><td>escalation_integrity</td><td>EG-014</td><td>10</td><td></td><td>cse_india-case-00048, cse_india-case-00054</td></tr>
+
+<tr><td>13</td><td>CSE_HEALTHY</td><td>detection_coverage</td><td></td><td>1</td><td></td><td></td></tr>
+
+<tr><td>14</td><td>cse_alpha</td><td>detection_coverage</td><td></td><td>1</td><td></td><td></td></tr>
+
+</table>
+<h2>Insufficient-evidence queue (verify feed, do not rank)</h2>
+<table>
+<tr><th>Entity</th><th>Completeness</th></tr>
+
+<tr><td>amazon</td><td>0.0</td></tr>
+
+<tr><td>cse_juliet</td><td>0.2</td></tr>
+
+</table>
+<h2>Assumptions &amp; Limitations</h2>
+<p>Scores are supervisory triage aids, not verdicts. Synthetic-data thresholds approximate production; partial feeds are quarantined from ranking; absence of evidence is not evidence of absence. A human examiner makes all decisions.</p>
+<footer>generated_at 2026-09-17T16:52:51.693503+00:00 | run_id upload-1789663916044 | pipeline_version phase6 | Merkle root </footer>
+</body>
+</html>

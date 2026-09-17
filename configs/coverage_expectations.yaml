@@ -1,0 +1,34 @@
+# Expected telemetry sources per (criticality, environment, os_family, internet_facing).
+# Key format: "<criticality>|<environment>|<os_family>|<internet_facing>"
+expectations:
+  "high|production|linux|true":
+    - edr
+    - firewall
+    - ids
+    - auth
+  "high|production|windows|true":
+    - edr
+    - firewall
+    - ids
+    - auth
+    - sysmon
+  "high|production|linux|false":
+    - edr
+    - auth
+  "medium|production|linux|true":
+    - edr
+    - firewall
+    - auth
+  "medium|production|windows|true":
+    - edr
+    - firewall
+    - auth
+  "medium|staging|linux|false":
+    - edr
+  "medium|production|linux|false":
+    - edr
+    - auth
+  "low|development|linux|false":
+    - edr
+defaults:
+  expected_sources: [edr]

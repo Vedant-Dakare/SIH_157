@@ -1,0 +1,31 @@
+# Peer cohort definitions for benchmarking (manually assigned membership).
+cohorts:
+  - cohort_id: FIN_LARGE_EXTERNAL
+    sector: finance
+    size: large
+    internet_exposure: high
+    members: [cse_alpha, cse_bravo]
+  - cohort_id: FIN_MID_MIXED
+    sector: finance
+    size: medium
+    internet_exposure: medium
+    members: [cse_charlie, cse_delta]
+  - cohort_id: HEALTH_LARGE_EXTERNAL
+    sector: healthcare
+    size: large
+    internet_exposure: high
+    members: [cse_echo, cse_foxtrot]
+  - cohort_id: TECH_SMALL_INTERNAL
+    sector: technology
+    size: small
+    internet_exposure: low
+    members: [cse_golf, cse_hotel]
+  - cohort_id: TECH_MID_MIXED
+    sector: technology
+    size: medium
+    internet_exposure: medium
+    members: [cse_india, cse_juliet]
+definitions:
+  sector_values: [finance, healthcare, technology]
+  size_values: [small, medium, large]
+  internet_exposure_values: [low, medium, high]

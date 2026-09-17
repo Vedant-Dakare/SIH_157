@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data Quality Report — {{ run_id }}</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:2em;color:#111}
+.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.8em;color:#fff}
+.HEALTHY{background:#2e7d32}.DEGRADED{background:#f9a825;color:#111}.POOR{background:#b00020}
+table{border-collapse:collapse;width:100%;margin:1em 0}
+th,td{border:1px solid #999;padding:6px;text-align:left}
+footer{margin-top:2em;font-size:.8em;color:#555;border-top:1px solid #ccc;padding-top:1em}
+</style>
+</head>
+<body>
+<h1>Ingestion Scorecard by CSE</h1>
+<table>
+<tr><th>CSE</th><th>Total</th><th>Valid</th><th>Quarantined</th><th>Rate</th><th>Top reason</th><th>Health</th></tr>
+{% for r in rows %}
+<tr><td>{{ r.entity_id }}</td><td>{{ r.total }}</td><td>{{ r.valid }}</td><td>{{ r.quarantined }}</td><td>{{ r.rate }}</td><td>{{ r.top_reason }}</td><td><span class="badge {{ r.health }}">{{ r.health }}</span></td></tr>
+{% endfor %}
+</table>
+<h2>Feed health trend</h2>
+<p>{{ trend_note }}</p>
+<h2>Assumptions &amp; Limitations</h2>
+<p>{{ assumptions }}</p>
+<footer>generated_at {{ generated_at }} | run_id {{ run_id }} | pipeline_version {{ pipeline_version }} | Merkle root {{ merkle_root }}</footer>
+</body>
+</html>

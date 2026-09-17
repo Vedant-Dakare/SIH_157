@@ -1,0 +1,2322 @@
+{
+  "002db210-c20b-5c15-b99f-90a159099c8a": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "006e339b-8a4b-5b1a-9c99-8b465d52ab15": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "008c4d0d-8bfc-5548-a38a-28341eaa1a34": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "0091c4e5-bb75-5f68-a415-81dcbcc305b9": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "00ad3dbc-4eaf-5ea7-b7e9-f3693eebdc82": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "012502ae-ebff-5585-984e-eab6f2d71ddd": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "025bc369-5eba-5a81-b646-e149a2fe9632": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "0267dff0-588d-5b62-8596-c61c8529f04a": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "026e89cf-bfbb-55de-bf03-87687ae762bd": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "029c6166-f2b0-557f-af9e-71513439884a": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "03a60ac0-7810-5f89-9908-e3c2071956f6": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "03d45edc-9bd0-5c1b-99f3-3786f0cc2f7e": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "0434447f-ae1a-5c8e-9f59-fb9cf9a1261c": {
+    "entity_id": "cse_charlie",
+    "is_flagged": true,
+    "signal_id": "EG-004"
+  },
+  "0514fa6d-4643-5d2d-b4ab-73d19871c48a": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "06eb73f3-8b1c-59da-a006-cf148af9b248": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "07a32645-eb84-5008-b872-dc76ffa5e19a": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "07f4cf01-6a5a-5fd5-a5b2-f8cf8b637c2f": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "0811e5cf-a6ad-5d5c-a6de-78e897c684ce": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "08d5f7a0-bf3d-5e38-bc2c-eeaba0e73087": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "09b43ca1-05fe-5512-80d3-84a2abbc1854": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "09cb1dd5-eb8b-54bd-b16d-f515a9df5018": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "0a0fa9f9-e0ae-5dcb-9657-375c37091a09": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "0a3c8211-2244-5430-af36-75be4212e59d": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "0a4c8aa9-b3c3-5d55-b7ea-0284656d3969": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "0a7491aa-5b0c-5c3d-af3b-e1780fc44b9d": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "0b0ded52-57d2-5271-a9d9-867e982ad1ef": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "0b263e58-8c5e-5071-8248-5c65c608d3a6": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "0c0c56a0-b94b-5301-b421-0661fd41e93d": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": true,
+    "signal_id": "EG-014"
+  },
+  "0ca02d87-cffa-524f-b13b-018a68a855ad": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "0cb0b96c-1fc5-559b-b826-ba71f31d1594": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "0ce7c87c-7e80-5d66-bc08-65d84e324eee": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "0edf1a19-7e2a-5111-9ee2-c4e41b967025": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "0f203048-f52e-59ff-9967-487021709195": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "0f8532c8-277c-50da-97d3-8c5d64494681": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "0fc0b177-4ede-5d86-91a4-4972d1c3f4af": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "0fe7ef20-994a-5939-8627-0698942d6fd1": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "0febc2a0-57c1-5a20-bb8d-984195c80d29": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "0ff56031-3348-5dc3-b86b-fd151f381d4b": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "10b7b92b-ffe7-533b-9088-5b592b7735ab": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "1173b556-4ef8-5502-bb79-e0401d874d78": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "11b7e594-76d3-5efb-989d-6c33775a44ea": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "1235ad0e-a8c8-5b60-960c-6b8900f0bc09": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "123cdc0d-0652-5251-a32d-af9c9d003743": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "128c2787-d8f8-5214-88c5-1800a285d790": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "13aa5f6c-7b26-5fda-be36-a509427b806b": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "14772b3d-d39d-5120-be7d-89f6dc6530d5": {
+    "entity_id": "cse_charlie",
+    "is_flagged": true,
+    "signal_id": "NS-005"
+  },
+  "14bf29e3-66ae-5798-b9c0-63e2af7ae874": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "151dcde5-27fd-5553-bbd8-0dccad72ad04": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "153ed77d-148f-50d4-b4f4-0f6b64bec66a": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "174a8dbb-20da-5e9d-aa56-db84eb319e28": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "1785b052-c6e9-5a18-8d97-89aebea3d612": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "17ab0753-05f6-578e-899b-be032008353e": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "17c724f7-a606-5a3f-9db7-84c8e4088355": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "187594ec-f75b-5631-b266-5c9817826d52": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "189c8db3-e56f-5a6c-b1cb-71127fd85deb": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "19356ad0-6954-5f70-a9cf-9c63cab2a433": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "1936dd42-20fe-5b83-bbeb-afa2103a4cb9": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "193f00e2-cfa1-5bee-8bf0-2a94cde8a5e2": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "193ff4b8-b737-5d24-9047-0f7405f134be": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "19644564-4beb-564f-9661-1f4f4292053f": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "19914edb-def3-5842-a2a1-2a2f5f871b80": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "1ad6cdc5-dc17-5bba-bb01-df2def00eeb9": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "1c1e03d3-8377-52c9-88bc-e57257cd0aa3": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "1c31bfc7-717c-59ff-911f-6cd687b3da55": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "1ca9c80d-db0d-5787-9b57-73e59b3edf74": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "1ceb46b2-02b8-527e-b2dc-2a97addb6946": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "1d52e058-f737-5cc1-9501-07c627f90476": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "1ec73b02-3130-55bc-8b7b-f9b055e412c5": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "1f332784-db0f-5306-8eb7-18a609aaa1bd": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "1ff86aa6-fd5a-5f6b-9c11-521b574dccf4": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "202d8b75-6fe5-5c59-982a-fa0280fdde9f": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "20b214ae-540f-5e0a-8440-17acab7518a8": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "2107619e-476e-5c19-a2e2-2f108d487025": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "2183f1db-b179-5c70-ac67-f36a7edf90e9": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "21ffff36-da2e-5d69-a08e-8fa2a7c09683": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "222f14e8-fe06-5d9d-ba65-8df12b7963ff": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "22c8d34d-ae91-5b45-ac79-230098e47c76": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "22ddece6-5c62-5ab8-a53f-92e925615512": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "23682674-51f7-5255-9a1c-c50ffb03fb89": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "23773c77-53b7-5411-af90-bb78bed405ea": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "2441f764-aec7-57ec-909c-ae8e629b98c0": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "246cce44-098c-5f02-ab04-c5eaae776585": {
+    "entity_id": "cse_charlie",
+    "is_flagged": true,
+    "signal_id": "NS-006"
+  },
+  "247aa5f2-4d68-54ce-a4a2-6efdee05fc66": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "24878137-3455-5e8b-bc66-a8b1e52bc0fa": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "24ebbad3-522a-5239-83ac-ebb5c2f05b55": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "253ae4f3-b088-52f5-9a6c-ae3852ee9008": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "2660aaa4-35af-5f51-aa8c-f328fb9adeae": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "26ab3c4f-a0a0-577f-94f6-51d5b7545feb": {
+    "entity_id": "cse_hotel",
+    "is_flagged": true,
+    "signal_id": "EG-007"
+  },
+  "26bd55b2-cde1-541d-93c7-513f4946d86e": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": true,
+    "signal_id": "EG-006"
+  },
+  "271798e6-e4c3-5a15-9c79-2bd174d3cb56": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "286ae693-5d1d-5eba-b145-b699345c8e7c": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "288abfa5-ce5e-54cf-9876-9794b9732e99": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "28a57943-10dd-5065-8a37-aadaa12880d8": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "2b349aea-9f81-599a-a695-bb9493837f93": {
+    "entity_id": "cse_echo",
+    "is_flagged": true,
+    "signal_id": "EG-005"
+  },
+  "2b363dd2-40e2-5ad2-bf32-5b905e713714": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "2b578fdf-d30b-5666-803e-db4011393fdc": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "2b72c8be-60f4-505b-9d40-4dc4cbee1eb0": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "2c695b6f-bfa7-5182-8aec-138c82c042a1": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "2d039bce-5a59-501b-bf7e-1e647b28d73c": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "2f6c7974-a2df-5408-944d-9c59c75e2bd1": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "2f7cb200-e79e-5dbe-b3e2-1b181a01cc39": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "30dd4e56-634c-5d67-a56f-278fbbcef48e": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": true,
+    "signal_id": "EG-001"
+  },
+  "30e12822-6ac1-5bdb-8d51-e1e59eb89e4a": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "3125e291-e621-5e44-a721-75e49f29033b": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "31bf9200-f579-559a-9594-79b0a545fdfc": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "31fadb84-360f-5531-9929-00087418e5f2": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "339b085a-13f7-5fc1-82f1-44a0e0f93cec": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "33e2d25a-11db-5bc3-94ba-328edaf14c53": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "34cb59eb-9e09-5d0b-9254-a0c9dd10dda7": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "35cc5646-c236-5302-b188-98b2ab0bd23c": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "36082233-d754-5082-8b02-3814c7daf59c": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "3640af91-b94c-50b5-ad2a-43c7c2a1954b": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "3844179a-a7f7-52d7-85fc-e9a9b58f90d9": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "38d80b6e-ee03-571e-a5a7-c9fb6f488ca7": {
+    "entity_id": "cse_charlie",
+    "is_flagged": true,
+    "signal_id": "NS-009"
+  },
+  "3925e66a-9107-505b-b0f1-39a06fcb63ef": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "39b86f98-ff26-5cf0-b547-e5341446eb1d": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "3a526f73-ad91-5997-883b-f5f851fcd483": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "3b905bf6-1629-5ab4-b7da-d68067f7a3ea": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "3d2f97d6-4985-5029-a484-fa1d86562350": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "3dc3a2ab-b28e-538e-9c2d-37e474c9ae1f": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "3dc9a1ce-3efa-58bf-bd45-0182e347574b": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "3dea3024-73d2-5c2b-9a93-ff0a4db87141": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "3e05b1fd-0c89-59a4-8b7f-2632af8a267c": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "3ec43983-4e4b-56c4-873a-b1e92776df87": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "3f8a5fe6-d8f9-5fff-b8c5-baca52326b06": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "41a90de8-28cc-5412-8401-153d00407b5b": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "42e692bc-d73f-5b30-8461-becbb0c611ad": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "431541e9-6779-51bf-9b14-6eda995557cd": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "43760ae5-349a-5231-981f-dec7fe351429": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "4421c3d3-efd2-567d-a128-98ee71d14e65": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "4443159e-9a35-576a-a715-5969fe01f859": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "445f2106-e8d1-5c60-9d98-f362e3554f35": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "45086585-7d4b-5680-a0e3-baf5f298c642": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "45cff0fe-20fa-5313-90fa-d4f2f2dad3c7": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "46079c40-0bde-58b4-ba0e-cbf8fc47e933": {
+    "entity_id": "cse_golf",
+    "is_flagged": true,
+    "signal_id": "EG-007"
+  },
+  "460f732f-9849-5ac6-a5fb-92c7125ef0a2": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "4657c54c-d623-5ba9-a71a-3caf09b12d0d": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "46918462-fef8-55bd-ae22-597feb28a7c7": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "46f7d662-b63c-5b81-8dc7-fc58bd3620cc": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "46feefbe-0fb5-5d1b-8755-497a55eb0e34": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "47f32d40-c7c2-581b-8e3e-c6d25762fed1": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "47fbef45-b36d-5765-891d-5a6486c98fca": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "49195328-b6c8-5a57-8599-656d68127189": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "49c92721-ccdb-5f17-9ea4-2868f24f66db": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "4a4f6d42-fb2d-59f6-96cb-1eaf7ef079d7": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "4a670429-fb36-5e58-9f29-ff6fddb778dc": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "4a7aaa33-ce3b-5fa3-86f7-cbe692c90e1f": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "4bdf6d6d-5c69-5c37-90cd-dfa521fac632": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "4d0aba37-dc91-5dd9-a1aa-a9123eede731": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "4d49ae09-d86e-56fe-afeb-ef4d606e7028": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "4daefdf5-4606-55df-a1cc-07dbcd254f20": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "4dd89417-dc9e-5128-9c5c-7670996ef8e5": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "4dff884f-cb22-516e-9d82-560c879c527e": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "4f64b7b0-fe05-5970-99fb-f6f12d19b106": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "4f8a6456-5b63-5edb-9b9e-3c74f7af406c": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "4fc57814-a733-51bb-90ea-f9ce757bc642": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "508e7ef7-3b9b-5829-99d6-2adce73db93a": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "50e3a66b-9180-551c-9f5b-25a362342955": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "5195ea76-b4f4-531b-b0c3-eade91faa81f": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "52ed2ce7-d9f0-5367-8510-49f3b0af321d": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "53747ad5-dd7c-5781-94a7-4898c544d150": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "5668d2eb-a115-5156-9155-1823738c003d": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "56991e30-c413-55e6-9d9d-182b032f250d": {
+    "entity_id": "cse_bravo",
+    "is_flagged": true,
+    "signal_id": "EG-001"
+  },
+  "569d2c7c-b76c-50d3-8d45-2f1226f5b699": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "5754fa25-e00e-548f-8934-c35dd8865399": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": true,
+    "signal_id": "NS-009"
+  },
+  "58547bd9-464f-5e61-b766-6672687bd8f2": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "587c482b-200a-5521-94d7-b3fb5df52277": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "5978eea9-aa42-5e8d-886f-b54769b3c2cf": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "59aefc29-2f39-59b1-8830-2ad05e75c2c8": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "59fa88ed-3392-5354-86a9-bb5ca2437a56": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "5a263764-af72-5009-be8b-7cff22efcec0": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "5a969bdb-f4e8-524c-b0a4-d035b8d74698": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "5ac92242-93b4-5828-96d3-e92978f3fb28": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "5b41e1fa-4d7b-58b0-8dc5-b22f9c0d55c2": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "5c080c6f-d8d9-5588-a4f4-c84de6595504": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "5c18a953-7432-5954-99ae-90a18e0be935": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "5c3c0cb0-1ace-5b70-a5bd-6ba7fd0c5cba": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "5d1f1594-390c-5e51-a618-d0e8652f6750": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "5d2982bd-8d43-528c-be16-56e7d7aea735": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "5dcccc33-edfb-51de-96cc-8d0e7e0dab4b": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "5dcfea4e-dc70-511c-9939-0bfad5613e47": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "5e379e63-6273-5f0b-bb8f-eedbae21a9c0": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "5e482587-da0d-556c-945c-050dcf03778b": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "5e79c80d-afa3-5685-acce-a735431481b2": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "5eec427b-4f26-5cce-b218-1fa2f5f03556": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "5f7285e2-702b-51bd-a8ce-72f7852776b8": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "5f7d3b5a-ea59-5a91-bb1a-5d86d75d8685": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "5fa7d585-f3f4-564f-921f-08bd9e7e2657": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "5fd7477d-68b3-5e11-9fcb-9c888ca8d32b": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "607e8270-1324-5afa-b746-98762709c5e3": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "617148cf-df69-51e9-a075-dce85087f97c": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "61729cab-9ab1-5577-ab77-f8e1931d5d11": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "63011627-b17c-50a1-857e-61af0ab55c3e": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "635f188e-7f62-59b5-9266-3f81713ad534": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "641b774f-2c5b-5a00-a7b0-1af0b16ee54c": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": true,
+    "signal_id": "EG-003"
+  },
+  "64ce0da2-9261-5a06-9670-f4305f522f80": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "64f8da56-b8be-50c2-8ed2-761887e7501f": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "650b54e4-b9cb-559b-864c-fd17fb6954a6": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "651d62e8-93e8-50a4-9f96-84439e1bbf1e": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "6549a0e9-de48-59c6-bdea-6babaa29fb1d": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "66b72c4e-879c-5f66-b21d-1eadbbb9f03a": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "66f1c443-e07b-5652-8efb-a2bd6e866aae": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "6758bec8-a970-5a63-bc81-d556dd2f4b97": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "6813b544-d876-5c25-a304-78c045c5a9c5": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "6818c07e-6c50-5a97-8ef7-cde61a65be51": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "6840a29e-f7a2-5e7e-823f-43287d8db7e4": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "686965aa-465e-52ca-b63f-5a14de7cc0e8": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "68933e9e-3f34-5261-9512-0f0b26a166a1": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "689989ab-5158-523f-b649-af703e559098": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "689c603d-503f-5b7f-bcef-a49f9b899def": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "6c4649cc-409b-5c2a-9956-d5281e5ea244": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "6c481bb6-b694-5dc0-8ca4-e5023fc2f8c2": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "6cb32e28-b453-59dd-9ee3-64318859a821": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "6e8f6a26-54eb-535f-b576-9adb2cd5317d": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "6fdf4c2e-71f1-52e4-b1d8-02b2157654e5": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "70e0143d-0e3b-52eb-8b98-849b9850f2ff": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "71c9c29e-b4af-5f2c-ab40-022e3b198bd5": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": true,
+    "signal_id": "EG-002"
+  },
+  "71f5d709-fe1f-53d0-b18c-aeaf039c4486": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "7212fe1f-0795-5598-b052-6dccce4f5936": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "7228deb1-534d-5ba6-ae35-c962c499d684": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "722d43c3-b285-5c33-b7ae-71c24e2a0942": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "733154df-f65c-54f7-b2ca-16977b41ac73": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "7393d556-07da-5f7f-a52c-a03afc50d1a9": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "74451a82-f283-5285-94ea-b7324b6e5b85": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "7563dd93-77e3-52a5-ab86-98de7544142f": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "757519d6-0363-59d8-848f-0297d310c1c9": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "75c3ece8-86ab-51b5-9319-fc04f6a25668": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "762b7afd-d213-59a1-8cc0-46a35bc414a5": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "76996d7f-c4bf-5591-9678-e5b1494ca111": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "76d981ee-4f2d-51a0-8cbf-678a11bfb82c": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "798290bd-0b52-5341-b199-92d76807f349": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "7a25fc7a-f067-5e13-bfbf-e6fc64d739e1": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "7b71642b-03f3-5d3c-a07b-dc3001b65e00": {
+    "entity_id": "cse_charlie",
+    "is_flagged": true,
+    "signal_id": "NS-001"
+  },
+  "7c635cfb-eea1-5efe-ab14-6d3bdf7071f6": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "7e2e57b5-4872-55da-9484-4388403e94f9": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "80c0452f-be52-5d15-9c07-cfe3b04e0c90": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "80c08405-4d2a-573e-baa6-2775b5fa0dd6": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "810b1d48-571a-5478-99ba-eb1c858d64dd": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "81937cc6-2e13-5901-a66d-74f4589397bc": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "81f0149c-2a77-5fb0-934d-6bddcd1b8c81": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "821acf02-c5d3-5f4b-9e39-96bc2afa72d3": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "825600d9-e717-56c7-a2ba-ea5fcf7fbe40": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "82f9a34b-ded7-5298-8373-9d91cf36a6c4": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "8315915f-b240-5597-841a-73b2aa24dd39": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "8402a573-bbf3-5064-b541-ce64c8b77bf3": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "84490de6-73d1-50b5-9a61-f40f05048115": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "8497826e-e7be-53ad-954e-5459bbadcfe6": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "84ab12c1-71f4-5534-80f7-e11bcf98e63a": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "854fe263-ab3f-5485-904d-c3e6b3efa48a": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "8667ed20-3553-5fe6-9257-09ced5a82036": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "868e644a-742a-570b-b83d-85d8b3057550": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": true,
+    "signal_id": "NS-005"
+  },
+  "86c04426-279f-527c-8234-7c7b46ed65cb": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "86d004ff-59f2-50a3-b566-f73b34974c68": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "87411bf0-4589-51dc-aad1-d36d773c8153": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "8873056c-1706-52e5-bcaf-6f974db39263": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "88de66aa-5ba7-559c-a51a-346596330279": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "8a62f767-ab67-587d-9e33-b42c3109a316": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "8b3eb209-45b2-5a69-86f0-7b4246957480": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "8b9d9d9e-3dbc-5a72-825d-fddc8bb8b3da": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "8c52f827-79a3-5024-b48a-748a89536be2": {
+    "entity_id": "cse_delta",
+    "is_flagged": true,
+    "signal_id": "EG-010"
+  },
+  "8c9210b6-28fe-51d9-8ecb-c9169f2c93af": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "8db6a6f4-f945-57bc-866e-c3dcf0a9fa34": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "8f16c94c-3091-5047-a7c2-e6d759496bc4": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "8f2c8eb2-162b-5f92-a3e2-1f87a8234a8d": {
+    "entity_id": "cse_golf",
+    "is_flagged": true,
+    "signal_id": "NS-011"
+  },
+  "9173adbf-ec49-5ba5-9abc-1b858b00dfbd": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "91797eef-1b1f-559d-86df-0506205cc4a3": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "91f39f3e-20ef-541c-be28-c40269776056": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "92b8e9b1-535a-5c5f-bbf3-bb089280e428": {
+    "entity_id": "cse_india",
+    "is_flagged": true,
+    "signal_id": "EG-014"
+  },
+  "933cb173-e240-5bc4-acc5-b348020027b9": {
+    "entity_id": "cse_charlie",
+    "is_flagged": true,
+    "signal_id": "NS-002"
+  },
+  "941ebbda-806e-5e4f-b757-32fbe76242dd": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "9469bf5c-3941-51a1-a691-047aa1c4f75e": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "950ceeab-2980-5457-ad9b-04bcd23c18e9": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "9633e6a2-d756-5acb-9b7e-2a72906cd3ce": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "9792b7ce-824d-5624-a2e7-219073f4cfc4": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "9816e487-0f90-551e-a67c-561e297bcaa0": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "98cf530f-4eee-5aac-95d7-bf5dcec64756": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "98e43af4-226c-5e35-b6f6-ab22a9451af9": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "99e15923-939b-5c24-a674-a1d1d7cbceb8": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "9a24ca9b-0fca-5899-a4e1-8d5cc1a760c3": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": true,
+    "signal_id": "NS-006"
+  },
+  "9a9849a9-f586-5b13-8381-1c4e5f54bd2e": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "9af9fcc1-32b2-5605-961f-0777a6ed53d5": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "9b832310-bc13-5e7f-a3c4-72cbc02cafe1": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "9bebdcdb-43b3-5717-ad66-631d0e38d8b0": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "9c391745-6426-5082-a97d-8fa7d628535b": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "9c4a2efe-d96a-5fd0-9bce-58bf48f67c77": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "9cacd70c-ba84-55dd-a310-9a23def57c10": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "9cbea1fa-84c7-5a5c-84b2-4544473fa7b6": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "9db70528-430d-5cfc-9cde-fa654d820878": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "9dbc1651-24e8-5243-834f-3465f2b30a88": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "9e9d8c6a-bc59-5a6b-bfca-a4fb7565477f": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "9f082340-3327-502a-a7bf-d2b11d7ef422": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "9f364a74-3c8a-5836-8fad-1fab8e1b08fb": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "9fe58991-a029-5385-8eba-e87340bc08b6": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "a0c834d0-4403-558d-8c3f-1eb164c0f4df": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "a124b72f-bc76-50d6-8bdd-6ae8fe2723be": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "a1952fff-5fcf-5643-8cf4-80736d9a9041": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "a20f2dfb-ac3d-52ae-8805-d0359c41d1ec": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "a2e11fe0-b22c-5e65-a7dd-b296e88e1bf2": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "a3276962-49d2-5876-9f56-78d2fd3e31e8": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "a3c59029-f8cf-5a87-b2fa-1a992bff9f6f": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "a3c8f8ca-7914-58ef-a3a0-94de7054906a": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "a3e650ff-5623-523b-b0b5-5fb0572325f8": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "a3fec8e9-ce42-576b-8359-b38d8f368784": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "a497a459-e002-5766-81cc-cf9d27028d4d": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "a4d6d39b-e246-5536-9828-b41a961fbba0": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "a6ae798b-16de-5092-bddb-8387199be97a": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "a79e7d6c-d7b7-5bf8-8d6d-204e3c2940ad": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "ab0e996f-59a4-5564-a471-1b1bd358a8b6": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "ab2634a7-a674-5849-81f1-b01746c43ad6": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "ac3385e7-533f-5fd0-965c-e4a050280107": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "ae3998e7-47eb-5c71-9325-4c1ce48da042": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "afd40e95-a381-5e57-8e8c-d57033b09e9a": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "b1406161-d4ec-5294-984a-14b7f64d1299": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "b1b01b71-e7f4-52c3-beb6-beb1bc3eae23": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "b1b2fdaf-ce3f-5b19-9ecb-7d3fcdc53ee5": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "b20ba700-30ed-59b1-833e-2dbd3cd9f49e": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "b264f8a3-179f-59c5-a90b-9a0fc5bc99fd": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "b28eb687-dee2-567d-aa3f-6aa1d4d76fbb": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "b5074375-91f0-54ca-92f3-65ebf6754891": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "b50aad33-f6d5-5e35-916f-df089b6bcb7e": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "b514e67b-668c-567c-927d-b0dda6ae38d4": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "b5a5211f-2d5b-5d96-a64f-f904968a62cf": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "b5cee749-5e89-55fc-9d9a-98ea419f7cb5": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "b68c47ab-a932-5eda-838d-aa6190bc2d71": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "b7e0a79f-277b-5ef5-afe8-f0f1b7e9ce88": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "b81c39af-bc94-5421-9d20-5b6df1f7f6b2": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "b8416dae-37e3-5a32-bf1e-3c2de0a2c2fb": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "b9a99435-878b-578d-b463-fa75e4c10366": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "ba1d8200-8d73-5e47-b55d-ea4d1ae9bf80": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "baba1a9b-0a27-5217-a1b4-63a023fa2f9b": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "bb2207f1-8661-5cbb-ac8b-da6c98fed205": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "bb50e06e-c72a-54b4-8557-13978789fd33": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "bb6fa879-2b70-594f-a876-a353bdafb4c6": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "bbf0cf7d-aaeb-5977-bb3d-d9ec28297a4e": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "bccb0c61-ec51-5a1b-8651-1f45546a4d3a": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": true,
+    "signal_id": "EG-004"
+  },
+  "bccec8ea-1cdd-5522-b4ba-a020e25179a8": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "bd966d96-32c2-54c8-aa95-a35dad71e3e2": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "bde79c7b-bb38-575a-bf12-40e1a183583a": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "be01b200-c777-50e5-bfbd-90ee24785eb5": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "be8c2ea8-c123-5d01-a7c0-2836f1ddc7bc": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "beeaa863-48b0-5b66-9c07-c5dbcfd965d7": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "bf251e3a-9074-5a24-ba5e-7285dd88ce6b": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "bf313928-4699-5692-bb8b-02ff2d644a34": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "c0123053-17ac-567f-be44-32cc27d24f6d": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "c06e3c1c-5732-5398-b432-1e022da87171": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "c1f24e12-a8b0-5246-8c91-db30b448ecc3": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "c1f8ab85-1971-5db5-a995-7d1f617dcf81": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "c20d2a0a-72cb-5a72-981d-c092a3cb65f8": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "c22d0fdd-de44-5d5d-afa4-9eb224969083": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "c39b8807-318d-5e0e-8032-247700bde2a6": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "c4073b01-2058-5cdd-b508-eb20ecf88701": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "c442a5d8-a63b-59d8-ba06-5837d5b5535c": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "c4d7eaf9-b15d-52ef-b8fc-8aa4f11ae796": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "c4ffd369-9836-5915-a62e-292cb2fd7135": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "c5e7940b-9353-5bbe-a959-9df967949310": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "c5fcea80-8997-5049-a81e-d72790347faa": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "c668d56e-5157-52dd-9e44-201980771c3d": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "c67b7165-1e8d-538b-a1fd-bb778ef7854a": {
+    "entity_id": "cse_golf",
+    "is_flagged": true,
+    "signal_id": "EG-006"
+  },
+  "c6c22401-395b-5939-8e77-0977e8112a6b": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "c7933bac-591e-53c3-847f-eafe6bee0b20": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "c82d0a3f-3980-54ab-8c9a-976adddaadd3": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "c881c2d6-445f-577e-9537-f7ab4a882b28": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "c9e6c0f8-2e48-50ae-b664-ccc59fe58d04": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "ca2c589c-19f1-5869-bf2b-cd0066407b62": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "ca4905b2-2abe-5aca-ba5c-9a5ddde0395f": {
+    "entity_id": "cse_hotel",
+    "is_flagged": true,
+    "signal_id": "EG-003"
+  },
+  "cb1e30be-f8ac-5774-a8c6-ebae7ef21294": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "cb2cb387-7d4a-5cfc-b653-5224adaa9443": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "cb85efe2-f903-5935-ad79-a66d07171afc": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-006"
+  },
+  "cbd420cb-4b40-5ba7-bf14-809658b61e23": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "cc4ca074-dd92-5c61-8e50-5366910cf1bb": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "cd0ae62b-1a47-5f3d-83d2-92822b84fca8": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "cd0edca1-36e4-56dc-ba0e-d2a03ce5bc8a": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "ce566853-cb53-50f2-b311-337e25cd57b7": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "ce6a63fd-099f-52b3-8471-904e49e74518": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "ce7dc51d-3c4d-5e2c-8542-041caa0883fb": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "cea7cc07-85d0-54b8-9243-479c7401e0a8": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "ced8433c-2b8e-52aa-8cee-f8d0317c72eb": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "cf5f2917-0961-5fe7-99a0-2ab0df6afec5": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "cf8fb9e2-bcb4-5505-98a7-918b4076e7a4": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "cf9ceb46-0749-543e-a119-0e8a144b082f": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "d0eaadd1-4135-58e7-9dfe-175681530719": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-002"
+  },
+  "d1352a87-e83b-5546-b552-c437949266a2": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "d2104fa5-24b4-53d7-a356-6a343699811f": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "d2a2c65b-18dd-523c-aff4-d753db5b27fa": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "d3068f37-cb9c-50a3-9415-2678948c861e": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "d3d02abc-b3e5-56e8-bf98-797bb758faf4": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "d3e3d36e-b0a3-5989-bd1c-fefc42fee571": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "d423fd27-49ce-5053-86cf-86b5e3028a10": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "d488ac84-d887-5619-baf7-f29576906056": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "d49ecbba-563a-5008-9a3a-137cde6c208a": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "d52e6cf4-ba8a-5ad8-ad12-979e42bd992c": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "d54283b7-3401-519c-9dc8-49d6ef872d84": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "d600f881-0b99-5462-87e7-a4a6d1230a9e": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": true,
+    "signal_id": "NS-001"
+  },
+  "d622231a-ed7b-5261-9180-2af03c26f08c": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "d6d15628-5401-51f2-815e-4ca9f87368f5": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "NS-003"
+  },
+  "d7761a45-81f7-55a5-a188-e4dc88aeb2d3": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "d79c81b2-ad06-5eb5-8a22-83f4232d51f5": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "d8578aae-36c8-54b6-8a29-c2f74cbf31c3": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "d896dd6f-1dbd-595d-b524-ce9e03be2c5d": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "d93d0bf8-02b0-526a-9211-dff38ab44444": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "d947ad4a-8457-519b-bd7d-563a8f31200b": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "d9c89e36-0e5f-5a42-a799-063889b0d297": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "db2ae743-2bd0-5aad-a543-b8805f3631f0": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "db3bd2e9-afba-5ec0-8299-066605994197": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "dbdea89a-7c3d-5154-afea-080777aa582f": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "dbec45c7-4868-55cd-b19c-8bc015a7edbf": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "dd0cbec3-f783-53fe-95a0-522cbd27cfde": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "dd44b79f-5dba-5cab-95b8-8d609ff649aa": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "ddc53405-5610-53b1-b701-657f21a987d6": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "de9aedbb-5612-5531-b07d-482d0fdcf8ff": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "def6255b-7026-5904-b2a5-2e27b10c3540": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-006"
+  },
+  "defe3399-ad4f-5a9a-a93f-bb6ae8090f95": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "df683d48-dfac-5fd2-a426-24f583dd5bae": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "dfb10328-8808-5666-8997-345a180ceddc": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "e07edd2e-19be-5743-82dc-4adcf1f8cc0b": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "EG-003"
+  },
+  "e0fa4e26-bed7-5c5b-a8b3-a055a329b388": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "e12508ca-5ae7-524f-a629-cbb282327ca6": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "e27e8d3e-864c-51f4-8953-1aca99e9ec41": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "e33e3550-58a7-50d3-85fa-266ffe15a1f7": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "e36927c8-45a7-57bc-a19b-cd556796f672": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-001"
+  },
+  "e49b765d-f655-557f-a93a-d65e938a5a80": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "e4aee376-8113-5bda-9ec0-dff74daf7dd1": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "e4fe45be-510b-575f-baeb-005779538d65": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "COMP-002"
+  },
+  "e53e23c8-193e-56a4-a286-0bf6a76b13cb": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "e5553a55-ee06-5bf6-bcfc-476d8f88a0f5": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "COMP-003"
+  },
+  "e56bc686-943d-58ea-ad56-741525862929": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "e5b895f5-5b32-5c97-ae4a-7fbb97044cf4": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "e5f303db-2337-5ec7-bb8a-8531c9f4ba66": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-004"
+  },
+  "e6b57b8f-0006-5a75-b737-c14fc210b43e": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "NS-007"
+  },
+  "e7567023-66c1-5f03-b52e-8d718307f94c": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "e77ff30f-751c-5eab-a65a-41a310be9792": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  },
+  "e8547810-197a-53e4-b3b0-c4a2a02ea627": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "e9664115-ffc7-5233-acc7-c0bcdf2568c9": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "e98627e9-7eb0-57f9-8975-04cc9b6be347": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "ea6208c7-3d61-57ca-a6a4-2fc5d2e0d50f": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-002"
+  },
+  "ea90d818-cf6f-5730-974f-0edc1d218d66": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-011"
+  },
+  "ed0d8704-1d9c-55ff-a217-183664cfc37b": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "ed18caf0-fb51-5767-98de-47c2a773743f": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-009"
+  },
+  "eee22cf3-d7e4-57c0-9938-531c9fede149": {
+    "entity_id": "cse_charlie",
+    "is_flagged": false,
+    "signal_id": "EG-008"
+  },
+  "efa7bc1f-eb24-5a17-bb44-86022f225638": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": true,
+    "signal_id": "NS-002"
+  },
+  "f05ec899-b844-53dc-9996-752a9e3199de": {
+    "entity_id": "amazon",
+    "is_flagged": true,
+    "signal_id": "NS-004"
+  },
+  "f286a66a-bd40-54b3-bd9f-d45fcc9f3936": {
+    "entity_id": "cse_charlie",
+    "is_flagged": true,
+    "signal_id": "EG-014"
+  },
+  "f37fa002-bb89-5158-9546-0d61c5e2e32c": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "f3a8da7b-bac2-5653-a73f-5463aae4cd5a": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "f52d8c51-61ec-53e1-ac46-1a0957da8510": {
+    "entity_id": "cse_india",
+    "is_flagged": false,
+    "signal_id": "NS-009"
+  },
+  "f566abf7-722b-5d18-825e-dab442fb9864": {
+    "entity_id": "CSE_HEALTHY",
+    "is_flagged": false,
+    "signal_id": "EG-010"
+  },
+  "f59bddf0-6b1b-5bd5-a380-86139beb75b1": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "EG-005"
+  },
+  "f5cbab81-45bf-5ea4-94fd-a72c751048ba": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "f617fe05-bf65-5b3d-a613-22929119d794": {
+    "entity_id": "cse_golf",
+    "is_flagged": false,
+    "signal_id": "COMP-001"
+  },
+  "f63c3444-5800-5ee2-b7fb-5f815506593e": {
+    "entity_id": "CSE_SILENT",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "f6553a04-8ace-5a36-a046-0f281f6a2d3e": {
+    "entity_id": "cse_juliet",
+    "is_flagged": false,
+    "signal_id": "EG-012"
+  },
+  "f7248d06-1164-5b12-b5e9-b06b5309c556": {
+    "entity_id": "CSE_BYPASS",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "f72ab767-eda1-52bf-b253-cc6deabb8fb0": {
+    "entity_id": "cse_hotel",
+    "is_flagged": false,
+    "signal_id": "NS-008"
+  },
+  "f7d6af5f-c40a-519c-8ddf-e26d3396b2c7": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": true,
+    "signal_id": "EG-004"
+  },
+  "f80d7f97-a2bf-5644-b7c2-9daaa1b6725e": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-010"
+  },
+  "fa13af0f-36f7-5284-b196-1822227b8480": {
+    "entity_id": "cse_bravo",
+    "is_flagged": false,
+    "signal_id": "EG-007"
+  },
+  "fa319856-99fc-5a1a-8381-776545ebd02a": {
+    "entity_id": "cse_echo",
+    "is_flagged": false,
+    "signal_id": "NS-004"
+  },
+  "fbc7ee91-f24e-53c5-91c3-9e83175877d2": {
+    "entity_id": "CSE_BULKCLOSE",
+    "is_flagged": true,
+    "signal_id": "NS-011"
+  },
+  "fc90583a-0081-5547-b177-f4147b512a18": {
+    "entity_id": "CSE_FASTCLOSE",
+    "is_flagged": false,
+    "signal_id": "EG-011"
+  },
+  "fc9aba53-73ae-5105-ba82-67e834eb1f76": {
+    "entity_id": "cse_delta",
+    "is_flagged": false,
+    "signal_id": "EG-013"
+  },
+  "fd3972fa-777b-5f55-a6af-200d96fa62cd": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-014"
+  },
+  "fd3a5ed8-892c-5a5a-ab1a-08b9667d31a2": {
+    "entity_id": "amazon",
+    "is_flagged": false,
+    "signal_id": "NS-012"
+  },
+  "fda65747-14fd-56a7-922a-2db5748cbae9": {
+    "entity_id": "cse_foxtrot",
+    "is_flagged": false,
+    "signal_id": "EG-001"
+  },
+  "fdb2c674-7a3d-5a55-bdc9-94e589c08398": {
+    "entity_id": "cse_alpha",
+    "is_flagged": false,
+    "signal_id": "NS-005"
+  }
+}

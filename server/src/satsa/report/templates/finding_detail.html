@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Finding Detail — {{ finding_id }}</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:2em;color:#111}
+.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.8em;color:#fff}
+.HIGH{background:#b00020}.ELEVATED{background:#e65100}.MODERATE{background:#f9a825;color:#111}.LOW{background:#2e7d32}
+table{border-collapse:collapse;width:100%;margin:1em 0}
+th,td{border:1px solid #999;padding:6px;text-align:left;vertical-align:top}
+footer{margin-top:2em;font-size:.8em;color:#555;border-top:1px solid #ccc;padding-top:1em}
+.chart{max-width:100%}
+</style>
+</head>
+<body>
+<h1>Finding {{ finding_id }}</h1>
+<p>Signal <strong>{{ signal_id }}</strong> for entity <strong>{{ entity_id }}</strong>
+<span class="badge {{ severity }}">{{ severity }}</span>
+<span class="badge {{ severity }}">{{ confidence }}</span></p>
+<h2>Reason code</h2>
+<p>{{ plain_language }}</p>
+<p>Observed {{ observed }} vs threshold {{ threshold }} ({{ comparator }}), window {{ window }}.</p>
+<h2>Evidence</h2>
+<h3>Supporting rows</h3>
+<table>
+<tr><th>#</th><th>Row</th></tr>
+{% for r in supporting_rows %}
+<tr><td>{{ r.n }}</td><td>{{ r.text }}</td></tr>
+{% endfor %}
+</table>
+<h3>Counter-evidence</h3>
+{% if has_counter %}
+<table>
+<tr><th>#</th><th>Row</th></tr>
+{% for r in counter_rows %}
+<tr><td>{{ r.n }}</td><td>{{ r.text }}</td></tr>
+{% endfor %}
+</table>
+{% endif %}
+<p>{{ counter_note }}</p>
+<h2>Peer baseline</h2>
+<table>
+<tr><th>Median</th><th>p95</th><th>n</th><th>Cohort</th></tr>
+<tr><td>{{ peer_median }}</td><td>{{ peer_p95 }}</td><td>{{ peer_n }}</td><td>{{ cohort_id }}</td></tr>
+</table>
+<h2>Counterfactual</h2>
+<div class="chart">{{ counterfactual_chart }}</div>
+<p>{{ counterfactual_text }}</p>
+<h2>Confidence</h2>
+<p><span class="badge {{ severity }}">{{ confidence }}</span> {{ confidence_reason }}</p>
+<h2>Audit entry</h2>
+<p>{{ audit_ref }}</p>
+<h2>Assumptions &amp; Limitations</h2>
+<p>{{ assumptions }}</p>
+<footer>generated_at {{ generated_at }} | run_id {{ run_id }} | pipeline_version {{ pipeline_version }} | Merkle root {{ merkle_root }}</footer>
+</body>
+</html>

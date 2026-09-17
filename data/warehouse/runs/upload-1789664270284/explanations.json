@@ -1,0 +1,292 @@
+{
+  "0434447f-ae1a-5c8e-9f59-fb9cf9a1261c": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "0434447f-ae1a-5c8e-9f59-fb9cf9a1261c",
+      "metric_name": "alert_share_HIGH",
+      "plain_language": "If alert_share_HIGH had fallen to <= 0.25 instead of the observed 0.375 (threshold 0.25), EG-004 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.249999,
+      "threshold_value": 0.25
+    },
+    "evidence_id": "d0258bc8dedb6210cfc3edc945fa20a7b235aa410490a602abd180448f68d982",
+    "reason": {
+      "code": "EG-004",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Severity downgrade bias",
+      "observed": 0.3750000000000002,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 100,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-004 (Severity downgrade bias) was observed at 0.3750000000000002 against an expected bound of 0.25 with MEDIUM severity; a supervisor should review the cited evidence rows.",
+      "severity": "MEDIUM",
+      "threshold": 0.25,
+      "window": "2024-05-02..2024-06-01"
+    }
+  },
+  "0c0c56a0-b94b-5301-b421-0661fd41e93d": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "0c0c56a0-b94b-5301-b421-0661fd41e93d",
+      "metric_name": "escalation_rate",
+      "plain_language": "If escalation_rate had fallen to <= 0.5 instead of the observed 0.5 (threshold 0.5), EG-014 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.499999,
+      "threshold_value": 0.5
+    },
+    "evidence_id": "6f3a0dfb345a948445c49c8e0b2d7ef52914b79af3e772385adf4b5a1dc3eeb5",
+    "reason": {
+      "code": "EG-014",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Escalation to nowhere",
+      "observed": 0.5,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 4,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-014 (Escalation to nowhere) was observed at 0.5 against an expected bound of 0.5 with MEDIUM severity; a supervisor should review the cited evidence rows.",
+      "severity": "MEDIUM",
+      "threshold": 0.5,
+      "window": "2024-05-03..2024-06-01"
+    }
+  },
+  "30dd4e56-634c-5d67-a56f-278fbbcef48e": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "30dd4e56-634c-5d67-a56f-278fbbcef48e",
+      "metric_name": "premature_rate",
+      "plain_language": "If premature_rate had fallen to <= 0.2 instead of the observed 1 (threshold 0.2), EG-001 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.199999,
+      "threshold_value": 0.2
+    },
+    "evidence_id": "52d6b0d33169ea3eba32104c7c4804e33202ecf6d8ba4aa0128765ee1ae36a58",
+    "reason": {
+      "code": "EG-001",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Premature closure",
+      "observed": 1.0,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 15,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-001 (Premature closure) was observed at 1.0 against an expected bound of 0.2 with HIGH severity; a supervisor should review the cited evidence rows.",
+      "severity": "HIGH",
+      "threshold": 0.2,
+      "window": "2024-05-03..2024-06-01"
+    }
+  },
+  "46079c40-0bde-58b4-ba0e-cbf8fc47e933": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "46079c40-0bde-58b4-ba0e-cbf8fc47e933",
+      "metric_name": "case_count",
+      "plain_language": "If case_count had fallen to <= 1 instead of the observed 1 (threshold 1), EG-007 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.999999,
+      "threshold_value": 1.0
+    },
+    "evidence_id": "56f2e9c87c0b7e4a311dd529435f0cf3996d9e6a02f70bbde4586e5547395dd3",
+    "reason": {
+      "code": "EG-007",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Metric gaming composite pattern",
+      "observed": 1.0,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 150,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-007 (Metric gaming composite pattern) was observed at 1.0 against an expected bound of 1.0 with HIGH severity; a supervisor should review the cited evidence rows.",
+      "severity": "HIGH",
+      "threshold": 1.0,
+      "window": "2024-05-03..2024-05-31"
+    }
+  },
+  "71c9c29e-b4af-5f2c-ab40-022e3b198bd5": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "71c9c29e-b4af-5f2c-ab40-022e3b198bd5",
+      "metric_name": "reopen_rate",
+      "plain_language": "If reopen_rate had fallen to <= 0.15 instead of the observed 0.2545 (threshold 0.15), EG-002 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.149999,
+      "threshold_value": 0.15
+    },
+    "evidence_id": "fd36fbe06f9050f6c0b3ec53a4b4533271fef4bf656a40bd2d21917ab1955355",
+    "reason": {
+      "code": "EG-002",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Reopen churn",
+      "observed": 0.2545454545454545,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 110,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-002 (Reopen churn) was observed at 0.2545454545454545 against an expected bound of 0.15 with MEDIUM severity; a supervisor should review the cited evidence rows.",
+      "severity": "MEDIUM",
+      "threshold": 0.15,
+      "window": "2024-05-03..2024-05-31"
+    }
+  },
+  "bccb0c61-ec51-5a1b-8651-1f45546a4d3a": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "bccb0c61-ec51-5a1b-8651-1f45546a4d3a",
+      "metric_name": "alert_share_HIGH",
+      "plain_language": "If alert_share_HIGH had fallen to <= 0.25 instead of the observed 0.255 (threshold 0.25), EG-004 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.249999,
+      "threshold_value": 0.25
+    },
+    "evidence_id": "b9c2d93c9af05e012d09716157f3dac314603224953037cf5f143c24f3f185f4",
+    "reason": {
+      "code": "EG-004",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Severity downgrade bias",
+      "observed": 0.2550000000000001,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 100,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-004 (Severity downgrade bias) was observed at 0.2550000000000001 against an expected bound of 0.25 with MEDIUM severity; a supervisor should review the cited evidence rows.",
+      "severity": "MEDIUM",
+      "threshold": 0.25,
+      "window": "2024-05-03..2024-06-01"
+    }
+  },
+  "c67b7165-1e8d-538b-a1fd-bb778ef7854a": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "c67b7165-1e8d-538b-a1fd-bb778ef7854a",
+      "metric_name": "case_count",
+      "plain_language": "If case_count had fallen to <= 50 instead of the observed 50 (threshold 50), EG-006 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 49.99995,
+      "threshold_value": 50.0
+    },
+    "evidence_id": "c63f4d07dab07e00afe70210181e3d6c3a0600c729f1475b9c3cf52ae60aaf13",
+    "reason": {
+      "code": "EG-006",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Bulk close burst",
+      "observed": 50.0,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 150,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-006 (Bulk close burst) was observed at 50.0 against an expected bound of 50.0 with HIGH severity; a supervisor should review the cited evidence rows.",
+      "severity": "HIGH",
+      "threshold": 50.0,
+      "window": "2024-05-03..2024-05-31"
+    }
+  },
+  "d600f881-0b99-5462-87e7-a4a6d1230a9e": {
+    "counterfactual": {
+      "computable": false,
+      "finding_id": "d600f881-0b99-5462-87e7-a4a6d1230a9e",
+      "metric_name": "",
+      "plain_language": "",
+      "reason_if_null": "absence findings describe missing evidence and have no threshold value",
+      "required_value": 0.0,
+      "threshold_value": 0.0
+    },
+    "evidence_id": "eed80c23480737808351b899fd365bcb86e332d9ae092f077dbe7886b3085200",
+    "reason": {
+      "code": "NS-001",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Critical coverage gap",
+      "observed": 1.0,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 20,
+        "p95": 0.0
+      },
+      "plain_language": "Signal NS-001 (Critical coverage gap) was observed at 1.0 against an expected bound of 0.1 with HIGH severity; a supervisor should review the cited evidence rows.",
+      "severity": "HIGH",
+      "threshold": 0.1,
+      "window": "2024-05-03..2024-06-01"
+    }
+  },
+  "f286a66a-bd40-54b3-bd9f-d45fcc9f3936": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "f286a66a-bd40-54b3-bd9f-d45fcc9f3936",
+      "metric_name": "escalation_rate",
+      "plain_language": "If escalation_rate had fallen to <= 0.5 instead of the observed 0.5 (threshold 0.5), EG-014 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.499999,
+      "threshold_value": 0.5
+    },
+    "evidence_id": "25dbde62aa0420f55588f87a0579ece777ba30e080041b98f1e5391634fb7297",
+    "reason": {
+      "code": "EG-014",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Escalation to nowhere",
+      "observed": 0.5,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 4,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-014 (Escalation to nowhere) was observed at 0.5 against an expected bound of 0.5 with MEDIUM severity; a supervisor should review the cited evidence rows.",
+      "severity": "MEDIUM",
+      "threshold": 0.5,
+      "window": "2024-05-02..2024-06-01"
+    }
+  },
+  "f7d6af5f-c40a-519c-8ddf-e26d3396b2c7": {
+    "counterfactual": {
+      "computable": true,
+      "finding_id": "f7d6af5f-c40a-519c-8ddf-e26d3396b2c7",
+      "metric_name": "alert_share_HIGH",
+      "plain_language": "If alert_share_HIGH had fallen to <= 0.25 instead of the observed 0.2955 (threshold 0.25), EG-004 would not fire for this entity.",
+      "reason_if_null": "",
+      "required_value": 0.249999,
+      "threshold_value": 0.25
+    },
+    "evidence_id": "f761f19a9930eec6e9699cef1af82419b32d2e59f701197e48fdc39cebaf229e",
+    "reason": {
+      "code": "EG-004",
+      "comparator": ">=",
+      "confidence": "MEDIUM",
+      "label": "Severity downgrade bias",
+      "observed": 0.29545454545454586,
+      "peer_baseline": {
+        "cohort_id": "unknown",
+        "median": 0.0,
+        "n": 110,
+        "p95": 0.0
+      },
+      "plain_language": "Signal EG-004 (Severity downgrade bias) was observed at 0.29545454545454586 against an expected bound of 0.25 with MEDIUM severity; a supervisor should review the cited evidence rows.",
+      "severity": "MEDIUM",
+      "threshold": 0.25,
+      "window": "2024-05-03..2024-05-31"
+    }
+  }
+}

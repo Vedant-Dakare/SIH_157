@@ -1,0 +1,874 @@
+{
+  "CSE_BULKCLOSE": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.464345+00:00",
+    "confidence": "MEDIUM",
+    "confidence_reason": "Data completeness 1.00; 86% of signals have adequate samples; cohort sizes adequate for peer comparison.",
+    "data_completeness": 1.0,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 1.9273486255897248,
+      "operational_discipline": 7.021055707505425,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [
+        "NS-011"
+      ],
+      "operational_discipline": [
+        "EG-006"
+      ],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 19.273486255897247,
+      "operational_discipline": 46.80703805003617,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "CSE_BULKCLOSE",
+    "flagged_signals": [
+      "EG-006",
+      "NS-011"
+    ],
+    "n_signals_flagged": 2,
+    "overall_score": 8.94840433309515,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-02..2024-06-01"
+  },
+  "CSE_BYPASS": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.496241+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 93% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9663461538461539,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 7.021055707505425,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [
+        "EG-003"
+      ],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 46.80703805003617,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "CSE_BYPASS",
+    "flagged_signals": [
+      "EG-003"
+    ],
+    "n_signals_flagged": 1,
+    "overall_score": 7.021055707505425,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-02..2024-06-01"
+  },
+  "CSE_FASTCLOSE": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.527633+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9697115384615385,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 4.9560393229450055,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 7.021055707505425,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [
+        "EG-004"
+      ],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [
+        "EG-001"
+      ],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 33.040262152966704,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 46.80703805003617,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "CSE_FASTCLOSE",
+    "flagged_signals": [
+      "EG-001",
+      "EG-004"
+    ],
+    "n_signals_flagged": 2,
+    "overall_score": 11.977095030450432,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-06-01"
+  },
+  "CSE_HEALTHY": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.559049+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9663461538461539,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "CSE_HEALTHY",
+    "flagged_signals": [],
+    "n_signals_flagged": 0,
+    "overall_score": 0.0,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-05-31"
+  },
+  "CSE_SILENT": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 7.142857142857142,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.590958+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9663461538461539,
+    "domain_contributions": {
+      "detection_coverage": 16.307042532367774,
+      "escalation_integrity": 4.9560393229450055,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 3.3040262152966706,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [
+        "NS-001",
+        "NS-002",
+        "NS-005",
+        "NS-009"
+      ],
+      "escalation_integrity": [
+        "EG-014"
+      ],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [
+        "NS-006"
+      ],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 81.53521266183887,
+      "escalation_integrity": 33.040262152966704,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 33.040262152966704,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "CSE_SILENT",
+    "flagged_signals": [
+      "EG-014",
+      "NS-001",
+      "NS-002",
+      "NS-005",
+      "NS-006",
+      "NS-009"
+    ],
+    "n_signals_flagged": 6,
+    "overall_score": 24.56710807060945,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-06-01"
+  },
+  "cse_alpha": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.635796+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9663461538461539,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_alpha",
+    "flagged_signals": [],
+    "n_signals_flagged": 0,
+    "overall_score": 0.0,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-02..2024-06-01"
+  },
+  "cse_bravo": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.695157+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9710576923076923,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 7.021055707505425,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [
+        "EG-001"
+      ],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 46.80703805003617,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_bravo",
+    "flagged_signals": [
+      "EG-001"
+    ],
+    "n_signals_flagged": 1,
+    "overall_score": 7.021055707505425,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-05-31"
+  },
+  "cse_charlie": {
+    "band": "MODERATE",
+    "calibrated": true,
+    "calibrated_score": 7.142857142857142,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.730134+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9663461538461539,
+    "domain_contributions": {
+      "detection_coverage": 16.307042532367774,
+      "escalation_integrity": 7.1829313380481015,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 3.3040262152966706,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [
+        "NS-001",
+        "NS-002",
+        "NS-005",
+        "NS-009"
+      ],
+      "escalation_integrity": [
+        "EG-004",
+        "EG-014"
+      ],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [
+        "NS-006"
+      ],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 81.53521266183887,
+      "escalation_integrity": 47.886208920320676,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 33.040262152966704,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_charlie",
+    "flagged_signals": [
+      "EG-004",
+      "EG-014",
+      "NS-001",
+      "NS-002",
+      "NS-005",
+      "NS-006",
+      "NS-009"
+    ],
+    "n_signals_flagged": 7,
+    "overall_score": 26.794000085712547,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-02..2024-06-01"
+  },
+  "cse_delta": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.762912+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9663461538461539,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 9.361407610007234,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [],
+      "governance": [],
+      "investigation_quality": [
+        "EG-010"
+      ],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 46.80703805003617,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_delta",
+    "flagged_signals": [
+      "EG-010"
+    ],
+    "n_signals_flagged": 1,
+    "overall_score": 9.361407610007234,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-02..2024-05-31"
+  },
+  "cse_echo": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.795978+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 1.00; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 1.0,
+    "domain_contributions": {
+      "detection_coverage": 6.608052430593341,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [
+        "EG-005"
+      ],
+      "escalation_integrity": [],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 33.040262152966704,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_echo",
+    "flagged_signals": [
+      "EG-005"
+    ],
+    "n_signals_flagged": 1,
+    "overall_score": 6.608052430593341,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-02..2024-06-01"
+  },
+  "cse_foxtrot": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.827040+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9663461538461539,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 4.9560393229450055,
+      "governance": 0.0,
+      "investigation_quality": 6.608052430593341,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [
+        "EG-004"
+      ],
+      "governance": [],
+      "investigation_quality": [
+        "EG-002"
+      ],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 33.040262152966704,
+      "governance": 0.0,
+      "investigation_quality": 33.040262152966704,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_foxtrot",
+    "flagged_signals": [
+      "EG-002",
+      "EG-004"
+    ],
+    "n_signals_flagged": 2,
+    "overall_score": 11.564091753538346,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-05-31"
+  },
+  "cse_golf": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.857641+00:00",
+    "confidence": "MEDIUM",
+    "confidence_reason": "Data completeness 1.00; 86% of signals have adequate samples; cohort sizes adequate for peer comparison.",
+    "data_completeness": 1.0,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 4.680703805003617,
+      "investigation_quality": 0.0,
+      "negative_space": 1.9273486255897248,
+      "operational_discipline": 7.021055707505425,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [],
+      "governance": [
+        "EG-007"
+      ],
+      "investigation_quality": [],
+      "negative_space": [
+        "NS-011"
+      ],
+      "operational_discipline": [
+        "EG-006"
+      ],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 46.80703805003617,
+      "investigation_quality": 0.0,
+      "negative_space": 19.273486255897247,
+      "operational_discipline": 46.80703805003617,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_golf",
+    "flagged_signals": [
+      "EG-006",
+      "EG-007",
+      "NS-011"
+    ],
+    "n_signals_flagged": 3,
+    "overall_score": 13.629108138098767,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-05-31"
+  },
+  "cse_hotel": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.888241+00:00",
+    "confidence": "MEDIUM",
+    "confidence_reason": "Data completeness 0.93; 72% of signals have adequate samples; cohort sizes adequate for peer comparison.",
+    "data_completeness": 0.9326923076923077,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 7.021055707505425,
+      "governance": 4.680703805003617,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [
+        "EG-003"
+      ],
+      "governance": [
+        "EG-007"
+      ],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 46.80703805003617,
+      "governance": 46.80703805003617,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_hotel",
+    "flagged_signals": [
+      "EG-003",
+      "EG-007"
+    ],
+    "n_signals_flagged": 2,
+    "overall_score": 11.701759512509042,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-06-01"
+  },
+  "cse_india": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": false,
+    "computed_at": "2026-09-17T12:38:22.920421+00:00",
+    "confidence": "HIGH",
+    "confidence_reason": "Data completeness 0.97; 97% of signals have adequate samples; cohort sizes adequate for peer comparison; feature missingness 0.0%.",
+    "data_completeness": 0.9666666666666667,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 4.9560393229450055,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [
+        "EG-014"
+      ],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 33.040262152966704,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_india",
+    "flagged_signals": [
+      "EG-014"
+    ],
+    "n_signals_flagged": 1,
+    "overall_score": 4.9560393229450055,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-03..2024-06-01"
+  },
+  "cse_juliet": {
+    "band": "LOW",
+    "calibrated": true,
+    "calibrated_score": 0.0,
+    "capped_by_completeness": true,
+    "computed_at": "2026-09-17T12:38:22.991324+00:00",
+    "confidence": "LOW",
+    "confidence_reason": "Data completeness 0.20 is below 0.60; feed routed to the insufficient-evidence queue for verification instead of the main ranking.",
+    "data_completeness": 0.19885144230769233,
+    "domain_contributions": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_members": {
+      "detection_coverage": [],
+      "escalation_integrity": [],
+      "governance": [],
+      "investigation_quality": [],
+      "negative_space": [],
+      "operational_discipline": [],
+      "peer_divergence": []
+    },
+    "domain_scores": {
+      "detection_coverage": 0.0,
+      "escalation_integrity": 0.0,
+      "governance": 0.0,
+      "investigation_quality": 0.0,
+      "negative_space": 0.0,
+      "operational_discipline": 0.0,
+      "peer_divergence": 0.0
+    },
+    "domain_weights": {
+      "detection_coverage": 0.2,
+      "escalation_integrity": 0.15,
+      "governance": 0.1,
+      "investigation_quality": 0.2,
+      "negative_space": 0.1,
+      "operational_discipline": 0.15,
+      "peer_divergence": 0.1
+    },
+    "entity_id": "cse_juliet",
+    "flagged_signals": [],
+    "n_signals_flagged": 0,
+    "overall_score": 0.0,
+    "run_id": "run-20260917123754",
+    "window": "2024-05-02..2024-05-31"
+  }
+}

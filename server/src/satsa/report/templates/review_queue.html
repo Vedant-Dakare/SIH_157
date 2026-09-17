@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Manual Review Queue — {{ run_id }}</title>
+<style>
+@page{size:A4 landscape;margin:1cm}
+body{font-family:Arial,Helvetica,sans-serif;margin:1em;color:#111}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.9em}
+th,td{border:1px solid #999;padding:5px;text-align:left}
+footer{margin-top:2em;font-size:.8em;color:#555;border-top:1px solid #ccc;padding-top:1em}
+</style>
+</head>
+<body>
+<h1>Prioritised Manual-Review Worklist</h1>
+<table>
+<tr><th>Rank</th><th>Entity</th><th>Focus area</th><th>Signals</th><th>Minutes</th><th>Sample alerts</th><th>Sample cases</th></tr>
+{% for e in entries %}
+<tr><td>{{ e.rank }}</td><td>{{ e.entity_id }}</td><td>{{ e.focus_area }}</td><td>{{ e.signal_ids }}</td><td>{{ e.minutes }}</td><td>{{ e.alerts }}</td><td>{{ e.cases }}</td></tr>
+{% endfor %}
+</table>
+<h2>Insufficient-evidence queue (verify feed, do not rank)</h2>
+<table>
+<tr><th>Entity</th><th>Completeness</th></tr>
+{% for e in insufficient %}
+<tr><td>{{ e.entity_id }}</td><td>{{ e.completeness }}</td></tr>
+{% endfor %}
+</table>
+<h2>Assumptions &amp; Limitations</h2>
+<p>{{ assumptions }}</p>
+<footer>generated_at {{ generated_at }} | run_id {{ run_id }} | pipeline_version {{ pipeline_version }} | Merkle root {{ merkle_root }}</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+# CSE metadata stubs for the 10 synthetic entities.
+entities:
+  cse_alpha:
+    name: Alpha Financial
+    sector: finance
+    size: large
+    environment: production
+    os_family: linux
+    internet_facing: true
+    criticality: high
+    cohort: FIN_LARGE_EXTERNAL
+  cse_bravo:
+    name: Bravo Bank
+    sector: finance
+    size: large
+    environment: production
+    os_family: linux
+    internet_facing: true
+    criticality: high
+    cohort: FIN_LARGE_EXTERNAL
+  cse_charlie:
+    name: Charlie Clinic
+    sector: healthcare
+    size: medium
+    environment: production
+    os_family: windows
+    internet_facing: true
+    criticality: high
+    cohort: FIN_MID_MIXED
+  cse_delta:
+    name: Delta Labs
+    sector: finance
+    size: medium
+    environment: staging
+    os_family: linux
+    internet_facing: false
+    criticality: medium
+    cohort: FIN_MID_MIXED
+  cse_echo:
+    name: Echo Health
+    sector: healthcare
+    size: large
+    environment: production
+    os_family: windows
+    internet_facing: true
+    criticality: medium
+    cohort: HEALTH_LARGE_EXTERNAL
+  cse_foxtrot:
+    name: Foxtrot Care
+    sector: healthcare
+    size: large
+    environment: production
+    os_family: linux
+    internet_facing: false
+    criticality: medium
+    cohort: HEALTH_LARGE_EXTERNAL
+  cse_golf:
+    name: Golf Tech
+    sector: technology
+    size: small
+    environment: development
+    os_family: linux
+    internet_facing: false
+    criticality: low
+    cohort: TECH_SMALL_INTERNAL
+  cse_hotel:
+    name: Hotel Systems
+    sector: technology
+    size: small
+    environment: production
+    os_family: linux
+    internet_facing: true
+    criticality: high
+    cohort: TECH_SMALL_INTERNAL
+  cse_india:
+    name: India Cloud
+    sector: technology
+    size: medium
+    environment: production
+    os_family: linux
+    internet_facing: true
+    criticality: medium
+    cohort: TECH_MID_MIXED
+  cse_juliet:
+    name: Juliet Ops
+    sector: technology
+    size: medium
+    environment: production
+    os_family: windows
+    internet_facing: true
+    criticality: high
+    cohort: TECH_MID_MIXED
