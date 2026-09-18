@@ -113,7 +113,7 @@ def duplicate_chain_depth(cases: pd.DataFrame) -> int:
 
 def orphan_cases(cases: pd.DataFrame) -> pd.DataFrame:
     """Return cases with no linked alerts."""
-    if cases.empty:
+    if cases.empty or "alert_ids" not in cases.columns:
         return cases.copy()
 
     def _linked(value: Any) -> bool:
@@ -123,7 +123,7 @@ def orphan_cases(cases: pd.DataFrame) -> pd.DataFrame:
         except Exception:
             return False
 
-    mask = ~cases["alert_ids"].apply(_linked) if "alert_ids" in cases.columns else True
+    mask = ~cases["alert_ids"].apply(_linked)
     return cases[mask].copy()
 
 
@@ -148,7 +148,7 @@ def orphan_alerts(
         pd.Series(pd.Timestamp.now(tz="UTC"), index=frame.index),
     ) / 60.0
     old_enough = frame["_age_hours"].isna() | (frame["_age_hours"] > window_hours)
-    unlinked = ~frame["alert_id"].astype(str).isin(linked) if "alert_id" in frame.columns else True
+    unlinked = ~frame["alert_id"].astype(str).isin(linked) if "alert_id" in frame.columns else pd.Series(True, index=frame.index)
     return frame[unlinked & old_enough].copy()
 
 

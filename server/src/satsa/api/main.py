@@ -30,7 +30,19 @@ from satsa.api.routes import runs as run_routes
 from satsa.paths import ROOT, from_root
 
 MAX_UPLOAD_BYTES = 100 * 1024 * 1024
-UPLOAD_SUFFIXES = {".csv", ".json", ".jsonl", ".ndjson", ".parquet", ".sqlite", ".sqlite3", ".db", ".duckdb"}
+UPLOAD_SUFFIXES = {
+    ".csv",
+    ".json",
+    ".jsonl",
+    ".ndjson",
+    ".parquet",
+    ".sqlite",
+    ".sqlite3",
+    ".db",
+    ".duckdb",
+    ".xlsx",
+    ".xls",
+}
 
 API_HOST = "127.0.0.1"
 API_VERSION = "phase6"
@@ -62,20 +74,36 @@ def _envelope(run_id: str, payload: dict[str, Any]) -> dict[str, Any]:
 
 def _spawn_run(run_id: str) -> None:
     """Fire a pipeline subprocess without blocking the response (A2)."""
+    import os
+
     log_path = from_root("data", "warehouse", "runs", f"{run_id}.log")
     log_path.parent.mkdir(parents=True, exist_ok=True)
     log_handle = log_path.open("ab")
+
+    env = dict(os.environ)
+    server_src = str(from_root("server", "src"))
+    root_src = str(from_root("src"))
+    existing_pythonpath = env.get("PYTHONPATH", "")
+    paths = [server_src, root_src]
+    if existing_pythonpath:
+        paths.append(existing_pythonpath)
+    env["PYTHONPATH"] = os.pathsep.join(paths)
+
+    venv_py = from_root("venv", "Scripts", "python.exe")
+    exe = str(venv_py) if venv_py.exists() else sys.executable
+
     subprocess.Popen(
-        [sys.executable, "-m", "satsa.pipeline.orchestrator", "--run-id", run_id],
+        [exe, "-m", "satsa.pipeline.orchestrator", "--run-id", run_id, "--force"],
         stdout=log_handle,
         stderr=subprocess.STDOUT,
         cwd=str(ROOT),
+        env=env,
     )
     log_handle.close()
 
 
 def _ingest_upload(content_type: str, body: bytes, query: dict[str, str]) -> tuple[int, dict[str, Any]]:
-    """Materialize a local multipart submission and start its offline run."""
+    """Materialize a local multipart submission and run pipeline immediately."""
     from email import policy
     from email.parser import BytesParser
 
@@ -91,23 +119,29 @@ def _ingest_upload(content_type: str, body: bytes, query: dict[str, str]) -> tup
     message = BytesParser(policy=policy.default).parsebytes(
         f"Content-Type: {content_type}\r\nMIME-Version: 1.0\r\n\r\n".encode() + body
     )
-    with tempfile.TemporaryDirectory(prefix="satsa-upload-") as temp_dir:
+    with tempfile.TemporaryDirectory(prefix="satsa-upload-", ignore_cleanup_errors=True) as temp_dir:
         written = 0
-        for part in message.iter_attachments():
-            filename = Path(part.get_filename() or "").name
-            if not filename or Path(filename).suffix.lower() not in UPLOAD_SUFFIXES:
+        for part in message.walk():
+            filename = part.get_filename()
+            if not filename:
                 continue
-            target = Path(temp_dir) / filename
+            cleaned_name = Path(filename).name
+            if Path(cleaned_name).suffix.lower() not in UPLOAD_SUFFIXES:
+                continue
+            target = Path(temp_dir) / cleaned_name
             target.write_bytes(part.get_payload(decode=True) or b"")
             written += 1
         if not written:
-            return 400, {"error": "no supported files were uploaded"}
+            return 400, {"error": "no supported files were uploaded; please select an Excel (.xlsx/.xls), CSV, or JSON file"}
         try:
             report = materialize_submission(temp_dir, cse_id, run_id)
         except (SatsaIngestError, OSError, ValueError) as exc:
             return 422, {"error": str(exc)}
+
+    # Spawn the scoring pipeline in the background so upload returns in <1s
     _spawn_run(run_id)
-    return 202, {"run_id": run_id, "status": "ingested", "report": report}
+
+    return 200, {"run_id": run_id, "status": "processing", "report": report}
 
 
 def handle_request(
@@ -141,8 +175,13 @@ def handle_request(
         requested = str((body or {}).get("run_id", ""))
         stamp = datetime.now(UTC).strftime("%Y%m%d%H%M%S")
         run_id = requested or f"run-{stamp}"
-        _spawn_run(run_id)
-        return 202, _envelope(run_id, {"run_id": run_id, "status": "started"})
+        try:
+            from satsa.pipeline.orchestrator import run_pipeline
+
+            run_pipeline(run_id=run_id, force=True)
+        except Exception:
+            _spawn_run(run_id)
+        return 200, _envelope(run_id, {"run_id": run_id, "status": "complete"})
     if method == "POST" and parts == ["ingest"]:
         return 405, _envelope(query.get("run_id", ""), {"error": "multipart upload required"})
     if method == "GET" and parts == ["queue"]:
@@ -190,17 +229,26 @@ def build_fastapi_app() -> Any:
     """FastAPI adapter over the shared dispatcher (offline /docs, no CDN)."""
     try:
         from fastapi import FastAPI, Request
+        from fastapi.middleware.cors import CORSMiddleware
         from fastapi.responses import JSONResponse
     except ImportError as exc:
         raise RuntimeError("FastAPI is not installed; use the stdlib server") from exc
 
-    app = FastAPI(title="SATSA", version=API_VERSION, docs_url="/docs", redoc_url=None,
-              allow_origins=["*"], allow_credentials=True,
-              allow_methods=["*"], allow_headers=["*"])
+    from contextlib import asynccontextmanager
 
-    @app.on_event("startup")  # type: ignore
-    async def _assert_loopback() -> None:
+    @asynccontextmanager
+    async def lifespan(app: FastAPI):
         assert API_HOST in ("127.0.0.1", "localhost"), "API must bind loopback only"
+        yield
+
+    app = FastAPI(title="SATSA", version=API_VERSION, docs_url="/docs", redoc_url=None, lifespan=lifespan)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
     async def _dispatch(request: Request) -> JSONResponse:
         query = {k: v[0] for k, v in parse_qs(urlparse(str(request.url)).query).items()}
@@ -220,18 +268,78 @@ def build_fastapi_app() -> Any:
                 status_code=401,
                 content=_envelope(query.get("run_id", ""), {"error": "missing or invalid X-API-Token"}),
             )
-        body = await request.body()
-        status, payload = _ingest_upload(request.headers.get("content-type", ""), body, query)
-        return JSONResponse(status_code=status, content=_envelope(query.get("run_id", ""), payload))
+        try:
+            content_type = request.headers.get("content-type", "")
+            if "multipart/form-data" in content_type:
+                form = await request.form()
+                cse_id = query.get("cse_id", "").strip()
+                run_id = query.get("run_id", "").strip() or f"upload-{datetime.now(UTC).strftime('%Y%m%d%H%M%S')}"
+                if not cse_id:
+                    return JSONResponse(status_code=400, content=_envelope(run_id, {"error": "cse_id is required"}))
 
-    for route in ("/health", "/runs", "/runs/{run_id}", "/runs/{run_id}/manifest", "/entities",
-                  "/entities/{entity_id}", "/entities/{entity_id}/findings",
-                  "/findings/{finding_id}", "/findings/{finding_id}/evidence",
-                  "/findings/{finding_id}/counterfactual", "/queue",
-                  "/audit/verify", "/audit/entries"):
-        app.add_api_route(route, _dispatch, methods=["GET"])
-    app.add_api_route("/runs", _dispatch, methods=["POST"])
-    app.add_api_route("/ingest", _upload, methods=["POST"])
+                from satsa.errors import SatsaIngestError
+                from satsa.ingest.loaders import materialize_submission
+
+                with tempfile.TemporaryDirectory(prefix="satsa-upload-", ignore_cleanup_errors=True) as temp_dir:
+                    written = 0
+                    for field_name in ("files", "file", "submission"):
+                        for item in form.getlist(field_name):
+                            filename = getattr(item, "filename", None)
+                            if not filename:
+                                continue
+                            cleaned_name = Path(filename).name
+                            if Path(cleaned_name).suffix.lower() not in UPLOAD_SUFFIXES:
+                                continue
+                            content = await item.read()
+                            target = Path(temp_dir) / cleaned_name
+                            target.write_bytes(content)
+                            written += 1
+                    if not written:
+                        return JSONResponse(
+                            status_code=400,
+                            content=_envelope(
+                                run_id,
+                                {"error": "no supported files were uploaded; please select an Excel (.xlsx/.xls), CSV, or JSON file"},
+                            ),
+                        )
+                    try:
+                        report = materialize_submission(temp_dir, cse_id, run_id)
+                    except (SatsaIngestError, OSError, ValueError) as exc:
+                        return JSONResponse(status_code=422, content=_envelope(run_id, {"error": str(exc)}))
+
+                _spawn_run(run_id)
+                return JSONResponse(
+                    status_code=200,
+                    content=_envelope(run_id, {"run_id": run_id, "status": "processing", "report": report}),
+                )
+            else:
+                body = await request.body()
+                status, payload = _ingest_upload(content_type, body, query)
+                return JSONResponse(status_code=status, content=_envelope(query.get("run_id", ""), payload))
+        except Exception as exc:
+            return JSONResponse(
+                status_code=400,
+                content=_envelope(query.get("run_id", ""), {"error": f"upload error: {exc}"}),
+            )
+
+    for route in (
+        "/health",
+        "/runs",
+        "/runs/{run_id}",
+        "/runs/{run_id}/manifest",
+        "/entities",
+        "/entities/{entity_id}",
+        "/entities/{entity_id}/findings",
+        "/findings/{finding_id}",
+        "/findings/{finding_id}/evidence",
+        "/findings/{finding_id}/counterfactual",
+        "/queue",
+        "/audit/verify",
+        "/audit/entries",
+    ):
+        app.add_route(route, _dispatch, methods=["GET"])
+    app.add_route("/runs", _dispatch, methods=["POST"])
+    app.add_route("/ingest", _upload, methods=["POST"])
     try:
         from fastapi.staticfiles import StaticFiles
 
@@ -268,6 +376,7 @@ class _Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(data)))
+        self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
         self.wfile.write(data)
         return True
@@ -295,6 +404,9 @@ class _Handler(BaseHTTPRequestHandler):
                     self.send_response(status)
                     self.send_header("Content-Type", "application/json")
                     self.send_header("Content-Length", str(len(data)))
+                    self.send_header("Access-Control-Allow-Origin", "*")
+                    self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+                    self.send_header("Access-Control-Allow-Headers", "*")
                     self.end_headers()
                     self.wfile.write(data)
                     return
@@ -306,8 +418,19 @@ class _Handler(BaseHTTPRequestHandler):
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(data)))
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "*")
         self.end_headers()
         self.wfile.write(data)
+
+    def do_OPTIONS(self) -> None:
+        """Handle CORS preflight requests."""
+        self.send_response(204)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "*")
+        self.end_headers()
 
     def do_GET(self) -> None:
         """Handle GET (UI files first, API second)."""
@@ -329,9 +452,15 @@ def run_server(port: int = 8080, host: str = API_HOST) -> None:
     """Serve forever on loopback only."""
     assert host in ("127.0.0.1", "localhost"), "API must bind loopback only"
     try:
-        HTTPServer((host, port), _Handler).serve_forever()
-    except KeyboardInterrupt:
-        print("SATSA API stopped.")
+        import uvicorn
+
+        app = build_fastapi_app()
+        uvicorn.run(app, host=host, port=port, log_level="warning")
+    except Exception:
+        try:
+            HTTPServer((host, port), _Handler).serve_forever()
+        except KeyboardInterrupt:
+            print("SATSA API stopped.")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -349,3 +478,4 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

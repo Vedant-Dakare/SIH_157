@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useQueryClient } from '@tanstack/react-query';
 import { z } from 'zod';
 
 import { EmptyState } from '@/components/common/EmptyState';
@@ -13,6 +14,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger } from '@/components/ui/select';
 import { useToast } from '@/components/ui/toaster';
 import { useHealth, useRuns } from '@/hooks/useRuns';
+import { queryKeys } from '@/lib/queryKeys';
 import { formatDate } from '@/lib/utils';
 import { uploadSubmission } from '@/lib/api';
 
@@ -39,6 +41,7 @@ function readPrefs(): Partial<SettingsForm> {
 
 /** Settings: token, display prefs (localStorage) and system info. */
 export default function SettingsPage() {
+  const queryClient = useQueryClient();
   const runsQuery = useRuns();
   const healthQuery = useHealth();
   const { toast } = useToast();
@@ -97,7 +100,8 @@ export default function SettingsPage() {
     setUploading(true);
     try {
       const result = await uploadSubmission(companyId.trim(), `upload-${Date.now()}`, uploadFiles);
-      toast({ title: 'Data uploaded', description: `Run ${result.run_id} started. Open Portfolio after processing completes.` });
+      await queryClient.invalidateQueries({ queryKey: queryKeys.runs.all });
+      toast({ title: 'Data uploaded', description: `Run ${result.run_id} processed successfully. Loading Portfolio view.` });
       setUploadFiles([]);
       navigate(`/portfolio?run=${encodeURIComponent(result.run_id)}`);
     } catch (error) {
@@ -147,9 +151,9 @@ export default function SettingsPage() {
               <Input id="company-id" value={companyId} onChange={(event) => setCompanyId(event.target.value)} className="mt-1" placeholder="acme_finance" />
             </div>
             <div>
-              <Label htmlFor="company-files">Submission files</Label>
-              <Input id="company-files" type="file" multiple accept=".csv,.json,.jsonl,.ndjson,.parquet,.sqlite,.sqlite3,.db,.duckdb" onChange={(event) => setUploadFiles(Array.from(event.target.files ?? []))} className="mt-1" />
-              <p className="mt-1 text-xs text-slate-500">{uploadFiles.length ? `${uploadFiles.length} file(s) selected` : 'Maximum upload size: 100 MB.'}</p>
+              <Label htmlFor="company-files">Submission files (.xlsx, .csv, .json, .parquet)</Label>
+              <Input id="company-files" type="file" multiple accept=".xlsx,.xls,.csv,.json,.jsonl,.ndjson,.parquet,.sqlite,.sqlite3,.db,.duckdb" onChange={(event) => setUploadFiles(Array.from(event.target.files ?? []))} className="mt-1" />
+              <p className="mt-1 text-xs text-slate-500">{uploadFiles.length ? `${uploadFiles.length} file(s) selected` : 'Supports Excel (.xlsx, .xls), CSV, JSON, and Parquet. Max size: 100 MB.'}</p>
             </div>
             <Button type="button" onClick={() => void onUpload()} disabled={uploading || !uploadFiles.length} aria-label="Upload company data">
               {uploading ? 'Uploading…' : 'Upload and Analyze'}

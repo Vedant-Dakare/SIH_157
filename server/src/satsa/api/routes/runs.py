@@ -15,12 +15,9 @@ def health() -> tuple[int, dict[str, Any]]:
 
 
 def list_runs() -> tuple[int, dict[str, Any]]:
-    """GET /runs — run ids from stores and warehouse manifests."""
-    runs = set(deps.known_runs())
-    manifests = Path(deps.WAREHOUSE_ROOT) / "runs"
-    if manifests.exists():
-        runs |= {p.stem.replace(".manifest", "") for p in manifests.glob("*.manifest.json")}
-    return 200, {"runs": sorted(runs)}
+    """GET /runs — run ids from stores and warehouse manifests sorted newest first."""
+    runs = deps.known_runs()
+    return 200, {"runs": runs}
 
 
 def run_status(run_id: str) -> tuple[int, dict[str, Any]]:

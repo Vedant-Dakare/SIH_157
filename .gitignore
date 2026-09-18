@@ -1,35 +1,118 @@
-# Python and local tooling
+# Virtual environments
+venv/
 .venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+**/venv/
+**/.venv/
+**/env/
+
+# Python caches and bytecode
 __pycache__/
+**/__pycache__/
 *.py[cod]
+**/*.py[cod]
+*$py.class
+*.egg-info/
+**/*.egg-info/
+.installed.cfg
+*.egg
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+lib/
+lib64/
+sdist/
+var/
+wheels/
+*.manifest
+
+# Testing and linters
 .pytest_cache/
+**/.pytest_cache/
 .mypy_cache/
+**/.mypy_cache/
 .ruff_cache/
+**/.ruff_cache/
 .hypothesis/
 .coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# Environment variables and secrets
 .env
+.env.local
+.env.*.local
+*.pem
+*.key
 
 # Frontend dependencies and generated bundles
+node_modules/
+**/node_modules/
 client/node_modules/
 client/dist/
+dist/
+**/dist/
 /ui/
+.npm/
 
-# Generated local analytics data
+# Scratch, temporary and test files
+scratch/
+**/scratch/
+scratch_*
+**/scratch_*
+*.tmp
+**/*.tmp
+*.bak
+*.swp
+*.swo
+
+# Local runtime analytics & generated data
+data/
+**/data/
 data/curated/
 data/processed/
 data/quarantine/
 data/scoring/
 data/warehouse/
-data/warehouse/*.malformed-backup
-data/warehouse/*.duplicate-backup
 data/synthetic/
+**/data/curated/
+**/data/processed/
+**/data/quarantine/
+**/data/scoring/
+**/data/warehouse/
+**/data/synthetic/
+*.duckdb
+*.duckdb.wal
+*.sqlite
+*.sqlite3
+*.db
+*.parquet
+**/*.duckdb
+**/*.parquet
+**/*.sqlite
+**/*.jsonl
+
+# Machine learning model artifacts & local embeddings
 models/artifacts/
 models/embeddings/
+**/models/artifacts/
+**/models/embeddings/
 
 # Editor and OS files
 .vscode/
+**/.vscode/
 .idea/
+**/.idea/
 *.log
+**/*.log
 Thumbs.db
-data/quarantine/amazon.jsonldata/quarantine/amazon.jsonl
-data/quarantine/
+.DS_Store

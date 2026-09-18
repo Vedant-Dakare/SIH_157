@@ -8,12 +8,13 @@ export function useEntities(
   runId: string | undefined,
   filters: EntityFilters = {},
 ): UseQueryResult<EntitiesResponse, Error> {
-  const isUploadRun = Boolean(runId?.startsWith('upload-'));
+  const isUploadRun = Boolean(runId?.startsWith('upload-') || runId?.startsWith('run-'));
   return useQuery({
     queryKey: queryKeys.entities.all(runId ?? '', filters),
     queryFn: () => getEntities(runId ?? '', filters),
     enabled: Boolean(runId),
-    retry: isUploadRun ? true : 1,
-    refetchInterval: (query) => isUploadRun && !query.state.data ? 2000 : false,
+    retry: isUploadRun ? 60 : 1,
+    retryDelay: 2000,
+    refetchInterval: (query) => (isUploadRun && !query.state.data ? 2000 : false),
   });
 }

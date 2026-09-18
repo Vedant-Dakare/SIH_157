@@ -73,7 +73,7 @@ function readToken(): string | null {
   return window.localStorage.getItem('satsa-api-token');
 }
 
-export const api: AxiosInstance = axios.create({ baseURL: resolveBaseUrl(), timeout: 30000 });
+export const api: AxiosInstance = axios.create({ baseURL: resolveBaseUrl(), timeout: 120000 });
 
 api.interceptors.request.use((config) => {
   const token = readToken();

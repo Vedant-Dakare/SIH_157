@@ -1,6 +1,0 @@
-{
-  "completed_at": "2026-09-17T16:58:39.661424+00:00",
-  "input_hash": "9c0ad46c0e1c4efc48aa0fa8971d530999def50efc0825f18157a617fbb3ada0",
-  "output_hash": "09032ec8f30e767e231cc42c5fd04e7258e4ccccb2147b0fca2655ff26580ee4",
-  "stage_name": "audit_seal"
-}

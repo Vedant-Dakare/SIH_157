@@ -60,8 +60,9 @@ def get_store(run_id: str, root: str | Path | None = None) -> dict[str, Any] | N
 
 
 def known_runs(root: str | Path | None = None) -> list[str]:
-    """Run ids with a materialised store on disk."""
+    """Run ids with a materialised store on disk, sorted newest first."""
     base = Path(root or STORE_ROOT)
     if not base.exists():
         return []
-    return sorted(p.name for p in base.iterdir() if p.is_dir() and (p / "run_store.json").exists())
+    valid = [p.name for p in base.iterdir() if p.is_dir() and (p / "run_store.json").exists()]
+    return sorted(valid, key=lambda name: (base / name / "run_store.json").stat().st_mtime, reverse=True)

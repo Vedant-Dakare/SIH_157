@@ -1,4 +1,4 @@
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Play } from 'lucide-react';
 
 import { RiskBandChart } from '@/components/charts/RiskBandChart';
@@ -6,6 +6,7 @@ import { SignalHeatmap } from '@/components/charts/SignalHeatmap';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { ErrorState } from '@/components/common/ErrorState';
 import { LoadingState } from '@/components/common/LoadingState';
+import { RiskBadge } from '@/components/common/RiskBadge';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { EntityRankTable } from '@/components/portfolio/EntityRankTable';
 import { PortfolioSummary } from '@/components/portfolio/PortfolioSummary';
@@ -22,16 +23,19 @@ import type { Entity, Finding, RiskBand } from '@/types/api';
 
 /** Portfolio overview: summary, bands, trends, heatmap, sectors, ranking. */
 export default function PortfolioPage() {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const runsQuery = useRuns();
   const runs = runsQuery.data?.runs ?? [];
   const runId = searchParams.get('run') ?? runs[0] ?? '';
+  const allRuns = runId && !runs.includes(runId) ? [runId, ...runs] : runs;
   const isUploadRun = runId.startsWith('upload-');
   const { toast } = useToast();
 
   const entitiesQuery = useEntities(runId || undefined);
   const queueQuery = useQueue(entitiesQuery.data ? runId : undefined);
   const entities: Entity[] = entitiesQuery.data?.entities ?? [];
+  const customEntities = entities.filter((e) => !e.entity_id.startsWith('cse_') && !e.entity_id.startsWith('CSE_'));
 
   function selectRun(next: string) {
     const params = new URLSearchParams(searchParams);
@@ -68,12 +72,12 @@ export default function PortfolioPage() {
         description={runId ? `Run ${runId}` : 'Select a run to begin.'}
         actions={
           <>
-            <Select value={runId} onValueChange={selectRun} disabled={runs.length === 0}>
+            <Select value={runId} onValueChange={selectRun} disabled={allRuns.length === 0}>
               <SelectTrigger className="h-9 w-44" aria-label="Select run">
                 <SelectValue placeholder={runsQuery.isLoading ? 'Loading…' : 'No runs'} />
               </SelectTrigger>
               <SelectContent>
-                {runs.map((id) => (
+                {allRuns.map((id) => (
                   <SelectItem key={id} value={id}>
                     {id}
                   </SelectItem>
@@ -87,8 +91,8 @@ export default function PortfolioPage() {
           </>
         }
       />
-      {isUploadRun && runId && !entitiesQuery.data && !entitiesQuery.error ? (
-        <LoadingState rows={3} message={`Processing run ${runId}…`} />
+      {isUploadRun && runId && !entitiesQuery.data ? (
+        <LoadingState rows={4} message={`Processing run ${runId}… Scoring custom dataset, computing 30 signals, and building portfolio.`} />
       ) : null}
       {runsQuery.error ? (
         <ErrorState
@@ -102,15 +106,45 @@ export default function PortfolioPage() {
           retry={() => void runsQuery.refetch()}
         />
       ) : null}
-      {entitiesQuery.isLoading || queueQuery.isLoading ? <LoadingState rows={6} message="Loading portfolio…" /> : null}
-      {entitiesQuery.error ? (
+      {!isUploadRun && (entitiesQuery.isLoading || queueQuery.isLoading) ? <LoadingState rows={6} message="Loading portfolio…" /> : null}
+      {!isUploadRun && entitiesQuery.error ? (
         <ErrorState
           error={entitiesQuery.error instanceof Error ? entitiesQuery.error : new Error('Failed to load entities.')}
           retry={() => void entitiesQuery.refetch()}
         />
       ) : null}
-      {!runsQuery.isLoading && !runsQuery.error && Boolean(entitiesQuery.data) && !entitiesQuery.isLoading && !entitiesQuery.error ? (
+      {Boolean(entitiesQuery.data) ? (
         <div className="space-y-6">
+          {customEntities.length > 0 ? (
+            <div className="rounded-lg border border-indigo-500/30 bg-indigo-950/20 p-4 shadow-sm">
+              <div className="mb-3 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-2 w-2 rounded-full bg-indigo-400" />
+                  <h3 className="text-sm font-semibold text-slate-100">Uploaded Datasets in this Run ({customEntities.length})</h3>
+                </div>
+                <span className="text-xs text-indigo-300">Click any company to open its deep analysis</span>
+              </div>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {customEntities.map((e) => (
+                  <button
+                    key={e.entity_id}
+                    type="button"
+                    onClick={() => navigate(`/entities/${e.entity_id}?run=${runId}`)}
+                    className="flex flex-col items-start justify-between rounded-lg border border-slate-700 bg-slate-900/90 p-3 text-left transition hover:border-indigo-400 hover:bg-slate-800"
+                  >
+                    <div className="flex w-full items-center justify-between">
+                      <span className="mono text-sm font-bold text-slate-100">{e.entity_id}</span>
+                      <RiskBadge band={e.band} size="sm" />
+                    </div>
+                    <div className="mt-2 flex w-full items-center justify-between text-xs text-slate-400">
+                      <span>Score: <strong className="text-slate-100">{e.overall_score.toFixed(1)}</strong></span>
+                      <span className="text-indigo-400 hover:underline">View details →</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
           <ErrorBoundary label="Portfolio summary">
             <PortfolioSummary
               summary={{

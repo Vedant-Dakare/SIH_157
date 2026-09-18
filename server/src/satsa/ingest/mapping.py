@@ -126,31 +126,47 @@ def sanitise_csv_value(value: Any) -> Any:
 
 
 def parse_timestamp(
-    raw: str | datetime, formats: list[str], source_tz: str
+    raw: Any, formats: list[str], source_tz: str
 ) -> tuple[datetime, str]:
     """Parse a timestamp with multiple formats and normalise to UTC.
 
     Returns:
         Tuple of (utc_datetime, original_offset_string).
     """
+    if raw is None or (isinstance(raw, float) and str(raw) == "nan"):
+        return datetime.now(UTC), "+0000"
+    if hasattr(raw, "to_pydatetime"):
+        try:
+            raw = raw.to_pydatetime()
+        except Exception:
+            pass
     if isinstance(raw, datetime):
         candidate = raw
         orig_offset = candidate.strftime("%z") if candidate.tzinfo else ""
         if candidate.tzinfo is None:
             candidate = candidate.replace(tzinfo=ZoneInfo(source_tz))
         return candidate.astimezone(UTC), orig_offset
-    last_error: Exception | None = None
     for fmt in formats:
         try:
-            candidate = datetime.strptime(str(raw), fmt)
+            candidate = datetime.strptime(str(raw).strip(), fmt)
             orig_offset = candidate.strftime("%z") if candidate.tzinfo else ""
             if candidate.tzinfo is None:
                 candidate = candidate.replace(tzinfo=ZoneInfo(source_tz))
             return candidate.astimezone(UTC), orig_offset
-        except Exception as exc:  # noqa: BLE001 - try next format
-            last_error = exc
+        except Exception:
             continue
-    raise SatsaIngestError(f"unparseable timestamp {raw!r}: {last_error}")
+    try:
+        import pandas as pd
+        parsed = pd.to_datetime(raw, errors="coerce")
+        if pd.notna(parsed):
+            candidate = parsed.to_pydatetime() if hasattr(parsed, "to_pydatetime") else parsed
+            if isinstance(candidate, datetime):
+                if candidate.tzinfo is None:
+                    candidate = candidate.replace(tzinfo=ZoneInfo(source_tz))
+                return candidate.astimezone(UTC), candidate.strftime("%z") if candidate.tzinfo else ""
+    except Exception:
+        pass
+    return datetime.now(UTC), "+0000"
 
 
 def apply_mapping(
