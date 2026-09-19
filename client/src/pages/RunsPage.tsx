@@ -20,32 +20,83 @@ function RunRow({ runId }: { runId: string }) {
   const manifestQuery = useRunManifest(runId);
   const manifest = manifestQuery.data?.manifest;
   const complete = manifest !== undefined;
+
   return (
-    <tr className="border-b border-slate-700 last:border-0">
-      <td className="mono px-3 py-2 text-slate-50">{runId}</td>
-      <td className="px-3 py-2 text-slate-400">{manifest ? formatDate(manifest.created_at) : '—'}</td>
-      <td className="px-3 py-2 text-slate-400">—</td>
-      <td className="px-3 py-2 text-slate-400">—</td>
-      <td className="px-3 py-2">
+    <tr className="border-b border-slate-200 last:border-0 hover:bg-blue-50/40">
+      <td className="mono px-3 py-3 font-medium text-slate-900">
+        {runId}
+      </td>
+
+      <td className="px-3 py-3 text-slate-700">
+        {manifest
+          ? formatDate(manifest.created_at)
+          : '—'}
+      </td>
+
+      <td className="px-3 py-3 text-slate-700">
+        —
+      </td>
+
+      <td className="px-3 py-3 text-slate-700">
+        —
+      </td>
+
+      <td className="px-3 py-3">
         {manifestQuery.isLoading ? (
-          <span className="text-slate-500">…</span>
+          <span className="text-slate-500">
+            …
+          </span>
         ) : (
-          <Badge variant={complete ? 'default' : 'secondary'}>{complete ? 'COMPLETE' : 'UNKNOWN'}</Badge>
+          <Badge
+            variant={
+              complete
+                ? 'default'
+                : 'secondary'
+            }
+          >
+            {complete
+              ? 'COMPLETE'
+              : 'UNKNOWN'}
+          </Badge>
         )}
       </td>
-      <td className="px-3 py-2 text-slate-50">{manifest?.entity_count ?? '—'}</td>
-      <td className="px-3 py-2 text-slate-50">{manifest?.finding_count ?? '—'}</td>
-      <td className="px-3 py-2">
-        <Link to={`/audit?run=${encodeURIComponent(runId)}`} className="text-slate-50 underline underline-offset-4">
+
+      <td className="px-3 py-3 font-medium tabular-nums text-slate-900">
+        {manifest?.entity_count ?? '—'}
+      </td>
+
+      <td className="px-3 py-3 font-medium tabular-nums text-slate-900">
+        {manifest?.finding_count ?? '—'}
+      </td>
+
+      <td className="px-3 py-3">
+        <Link
+          to={`/audit?run=${encodeURIComponent(
+            runId,
+          )}`}
+          className="font-medium text-[#123D73] underline underline-offset-4 hover:text-[#2563A8]"
+        >
           Manifest
         </Link>
       </td>
-      <td className="px-3 py-2">
+
+      <td className="px-3 py-3">
         <div className="flex gap-3">
-          <Link to={`/portfolio?run=${encodeURIComponent(runId)}`} className="text-slate-50 underline underline-offset-4">
+          <Link
+            to={`/portfolio?run=${encodeURIComponent(
+              runId,
+            )}`}
+            className="font-medium text-[#123D73] underline underline-offset-4 hover:text-[#2563A8]"
+          >
             Portfolio
           </Link>
-          <Link to={`/audit?run=${encodeURIComponent(runId)}`} className="text-slate-50 underline underline-offset-4">
+
+          <Link
+            to={`/audit?run=${encodeURIComponent(
+              runId,
+            )}`}
+            className="font-medium text-[#123D73] underline underline-offset-4 hover:text-[#2563A8]"
+          >
             Audit
           </Link>
         </div>
@@ -69,15 +120,27 @@ export default function RunsPage() {
   async function onTrigger(): Promise<void> {
     try {
       const result = await triggerRun();
-      toast({ title: 'Run started', description: `Run ${result.run_id} queued. Watch manifests appear below.` });
+
+      toast({
+        title: 'Run started',
+        description: `Run ${result.run_id} queued. Watch manifests appear below.`,
+      });
+
       await runsQuery.refetch();
+
       for (let attempt = 0; attempt < 12; attempt += 1) {
         await new Promise((resolve) => {
           setTimeout(resolve, 5000);
         });
+
         try {
           await getRunManifest(result.run_id);
-          toast({ title: 'Run complete — view results', description: `Manifest for ${result.run_id} is ready.` });
+
+          toast({
+            title: 'Run complete — view results',
+            description: `Manifest for ${result.run_id} is ready.`,
+          });
+
           await runsQuery.refetch();
           return;
         } catch {
@@ -87,55 +150,108 @@ export default function RunsPage() {
     } catch (error) {
       toast({
         title: 'Failed to trigger run',
-        description: error instanceof Error ? error.message : 'Unknown error',
+        description:
+          error instanceof Error
+            ? error.message
+            : 'Unknown error',
         variant: 'destructive',
       });
     }
   }
 
   return (
-    <div>
+    <div className="text-slate-900">
       <PageHeader
         title="Run History"
         description="Every pipeline run. Health is polled every 5 seconds."
         actions={
-          <Button type="button" onClick={() => void onTrigger()} aria-label="Trigger pipeline run" size="lg">
-            <Play className="h-4 w-4" aria-hidden="true" />
+          <Button
+            type="button"
+            onClick={() => void onTrigger()}
+            aria-label="Trigger pipeline run"
+            size="lg"
+          >
+            <Play
+              className="h-4 w-4"
+              aria-hidden="true"
+            />
             Trigger Run
           </Button>
         }
       />
-      {runsQuery.isLoading ? <LoadingState rows={4} message="Loading runs…" /> : null}
-      {runsQuery.error ? (
-        <ErrorState
-          error={runsQuery.error instanceof Error ? runsQuery.error : new Error('Runs unavailable.')}
-          retry={() => void runsQuery.refetch()}
+
+      {runsQuery.isLoading ? (
+        <LoadingState
+          rows={4}
+          message="Loading runs…"
         />
       ) : null}
-      {!runsQuery.isLoading && !runsQuery.error && runs.length === 0 ? (
-        <EmptyState title="No runs yet" description="Trigger the first run to get started." />
+
+      {runsQuery.error ? (
+        <ErrorState
+          error={
+            runsQuery.error instanceof Error
+              ? runsQuery.error
+              : new Error(
+                  'Runs unavailable.',
+                )
+          }
+          retry={() =>
+            void runsQuery.refetch()
+          }
+        />
       ) : null}
-      {!runsQuery.isLoading && !runsQuery.error && runs.length > 0 ? (
+
+      {!runsQuery.isLoading &&
+      !runsQuery.error &&
+      runs.length === 0 ? (
+        <EmptyState
+          title="No runs yet"
+          description="Trigger the first run to get started."
+        />
+      ) : null}
+
+      {!runsQuery.isLoading &&
+      !runsQuery.error &&
+      runs.length > 0 ? (
         <ErrorBoundary label="Run history table">
-          <div className="overflow-x-auto rounded-md border border-slate-700">
-          <table aria-label="Pipeline runs" className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-slate-700 text-left text-slate-400">
-                {['Run ID', 'Started', 'Finished', 'Duration', 'Status', 'Entities', 'Findings', 'Manifest', 'Actions'].map(
-                  (header) => (
-                    <th key={header} className="px-3 py-2 font-medium">
+          <div className="overflow-x-auto rounded-md border border-slate-200 bg-white">
+            <table
+              aria-label="Pipeline runs"
+              className="w-full text-sm text-slate-900"
+            >
+              <thead>
+                <tr className="border-b border-slate-200 bg-slate-50 text-left">
+                  {[
+                    'Run ID',
+                    'Started',
+                    'Finished',
+                    'Duration',
+                    'Status',
+                    'Entities',
+                    'Findings',
+                    'Manifest',
+                    'Actions',
+                  ].map((header) => (
+                    <th
+                      key={header}
+                      className="px-3 py-3 font-semibold text-slate-900"
+                    >
                       {header}
                     </th>
-                  ),
-                )}
-              </tr>
-            </thead>
-            <tbody>
-              {runs.map((runId) => (
-                <RunRow key={runId} runId={runId} />
-              ))}
-            </tbody>
-          </table>
+                  ))}
+                </tr>
+              </thead>
+
+              <tbody>
+                {runs.map((runId) => (
+                  <RunRow
+                    key={runId}
+                    runId={runId}
+                  />
+                ))}
+              </tbody>
+            </table>
           </div>
         </ErrorBoundary>
       ) : null}

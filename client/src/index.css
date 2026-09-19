@@ -3,22 +3,130 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #020617;
-  color: #f8fafc;
+  margin: 0;
+  min-width: 320px;
+  background: #f7f9fc;
+  color: #172033;
   font-family:
+    Inter,
+    "IBM Plex Sans",
+    ui-sans-serif,
     system-ui,
     -apple-system,
-    'Segoe UI',
-    Roboto,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
 }
 
-code,
-.mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Accessible focus treatment */
+*:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Lightweight scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef2f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7c2d0;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f9daf;
+}
+
+/* Shared dashboard surfaces */
+.console-card {
+  @apply rounded-lg border border-slate-200 bg-white;
+}
+
+.console-section-header {
+  @apply border-b border-slate-200 px-5 py-4;
+}
+
+.console-label {
+  @apply text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500;
+}
+
+.metric-number {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Severity is never communicated by colour alone */
+.severity-high {
+  @apply border-red-200 bg-red-50 text-red-800;
+}
+
+.severity-elevated {
+  @apply border-amber-200 bg-amber-50 text-amber-800;
+}
+
+.severity-moderate {
+  @apply border-yellow-200 bg-yellow-50 text-yellow-800;
+}
+
+.severity-low {
+  @apply border-emerald-200 bg-emerald-50 text-emerald-800;
+}
+
+/* Subtle interaction only */
+.console-interactive {
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.console-interactive:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Government/institutional accent */
+.tricolour-line {
+  height: 3px;
+  background:
+    linear-gradient(
+      90deg,
+      #e87524 0%,
+      #e87524 33.33%,
+      #ffffff 33.33%,
+      #ffffff 66.66%,
+      #198754 66.66%,
+      #198754 100%
+    );
 }
