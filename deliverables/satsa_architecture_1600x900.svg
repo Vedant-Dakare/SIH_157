@@ -1,0 +1,655 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" style="background:#070b14; font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow1" cx="20%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#0f2b48" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#070b14" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="80%" cy="85%" r="60%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#070b14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1726" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#090f1d" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="layerHeader1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="layerHeader2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="layerHeader3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="layerHeader4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Sub-card gradient -->
+    <linearGradient id="subCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#162238" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#101827" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Drop Shadows & Glow Filters -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Markers -->
+    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#818cf8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrowMuted" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1600" height="900" fill="#070b14"/>
+  <rect width="1600" height="900" fill="url(#bgGlow1)"/>
+  <rect width="1600" height="900" fill="url(#bgGlow2)"/>
+
+  <!-- Subtle Blueprint Grid -->
+  <g opacity="0.04">
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1"/>
+    </pattern>
+    <rect width="1600" height="900" fill="url(#gridPattern)"/>
+  </g>
+
+  <!-- ================= HEADER SECTION ================= -->
+  <g transform="translate(50, 32)">
+    <!-- Brand / Title -->
+    <g>
+      <rect x="0" y="2" width="42" height="42" rx="10" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- Shield Radar Icon -->
+      <path d="M 21 9 L 33 14 V 23 C 33 30 21 37 21 37 C 21 37 9 30 9 23 V 14 Z" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="21" cy="22" r="4" fill="#38bdf8"/>
+      <path d="M 21 15 A 7 7 0 0 1 28 22" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+
+      <text x="54" y="26" fill="url(#headerGrad)" font-size="26" font-weight="800" letter-spacing="1">SATSA SYSTEM ARCHITECTURE</text>
+      <text x="54" y="44" fill="#94a3b8" font-size="13" font-weight="500">SOC Alert Triage &amp; Security Analytics &bull; Air-Gapped Negative Space &amp; Execution Gap Detection Engine</text>
+    </g>
+
+    <!-- Header Badges (Right Aligned) -->
+    <g transform="translate(1010, 4)">
+      <!-- Airgap Badge -->
+      <g transform="translate(0, 0)">
+        <rect width="150" height="34" rx="17" fill="#064e3b" fill-opacity="0.4" stroke="#10b981" stroke-width="1.2"/>
+        <circle cx="16" cy="17" r="4.5" fill="#10b981"/>
+        <circle cx="16" cy="17" r="8" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6"/>
+        <text x="28" y="21" fill="#34d399" font-size="11" font-weight="700" letter-spacing="0.5">100% AIR-GAPPED</text>
+      </g>
+
+      <!-- Tamper-evident Badge -->
+      <g transform="translate(160, 0)">
+        <rect width="175" height="34" rx="17" fill="#311042" fill-opacity="0.4" stroke="#c084fc" stroke-width="1.2"/>
+        <path d="M 14 12 L 20 12 L 20 22 L 14 22 Z M 16 12 V 9 C 16 7.5 18 7.5 18 9 V 12" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+        <text x="28" y="21" fill="#e9d5ff" font-size="11" font-weight="700" letter-spacing="0.5">MERKLE AUDIT TRAIL</text>
+      </g>
+
+      <!-- Zero-API LLM Badge -->
+      <g transform="translate(345, 0)">
+        <rect width="145" height="34" rx="17" fill="#1e293b" fill-opacity="0.8" stroke="#64748b" stroke-width="1.2"/>
+        <text x="14" y="21" fill="#e2e8f0" font-size="11" font-weight="700" letter-spacing="0.5">TEMPLATE-FIRST AI</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= MAIN ARCHITECTURE GRID (4 COLUMNS) ================= -->
+
+  <!-- ================= COLUMN 1: INGESTION & CANONICAL STORE ================= -->
+  <g transform="translate(50, 100)">
+    <!-- Column Card Background -->
+    <rect width="345" height="690" rx="16" fill="url(#cardGrad1)" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.4" filter="url(#shadow)"/>
+    <rect width="345" height="52" rx="16" fill="url(#layerHeader1)"/>
+    <path d="M 0 52 L 345 52" stroke="#0284c7" stroke-width="1" stroke-opacity="0.3"/>
+
+    <!-- Column Title -->
+    <circle cx="26" cy="26" r="12" fill="#0284c7" fill-opacity="0.3"/>
+    <text x="26" y="31" fill="#38bdf8" font-size="13" font-weight="800" text-anchor="middle">1</text>
+    <text x="46" y="25" fill="#f8fafc" font-size="15" font-weight="700">Ingestion &amp; Normalization</text>
+    <text x="46" y="41" fill="#38bdf8" font-size="11" font-weight="500">Air-Gap Boundary &amp; Privacy Sanitization</text>
+
+    <!-- Component 1.1: Multi-Source Raw Feeds -->
+    <g transform="translate(15, 68)">
+      <rect width="315" height="115" rx="10" fill="url(#subCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <rect x="0" y="0" width="315" height="28" rx="10" fill="#0f172a" fill-opacity="0.6"/>
+      <path d="M 0 28 L 315 28" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="19" fill="#93c5fd" font-size="11.5" font-weight="700">RAW CSE TELEMETRY &amp; SUBMISSIONS</text>
+      <rect x="245" y="6" width="60" height="16" rx="4" fill="#0369a1" fill-opacity="0.4"/>
+      <text x="275" y="18" fill="#7dd3fc" font-size="9" font-weight="700" text-anchor="middle">OFFLINE</text>
+
+      <!-- 6 Canonical Source Chips -->
+      <g transform="translate(12, 38)">
+        <rect x="0" y="0" width="90" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+        <text x="45" y="15" fill="#e2e8f0" font-size="10.5" font-weight="500" text-anchor="middle">Alerts.csv/json</text>
+
+        <rect x="98" y="0" width="90" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+        <text x="143" y="15" fill="#e2e8f0" font-size="10.5" font-weight="500" text-anchor="middle">Cases.jsonl</text>
+
+        <rect x="196" y="0" width="95" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+        <text x="243" y="15" fill="#e2e8f0" font-size="10.5" font-weight="500" text-anchor="middle">Investigations</text>
+
+        <rect x="0" y="30" width="90" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+        <text x="45" y="45" fill="#e2e8f0" font-size="10.5" font-weight="500" text-anchor="middle">Escalations</text>
+
+        <rect x="98" y="30" width="90" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+        <text x="143" y="45" fill="#e2e8f0" font-size="10.5" font-weight="500" text-anchor="middle">Assets.csv</text>
+
+        <rect x="196" y="30" width="95" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+        <text x="243" y="45" fill="#e2e8f0" font-size="10.5" font-weight="500" text-anchor="middle">Telemetry.csv</text>
+      </g>
+      <text x="12" y="104" fill="#64748b" font-size="9.5">Formats: CSV &bull; JSONL &bull; Parquet &bull; SQLite &bull; DuckDB</text>
+    </g>
+
+    <!-- Connector Down 1 -->
+    <path d="M 172 183 L 172 201" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowCyan)"/>
+
+    <!-- Component 1.2: Validation, Schema Mapping & Anonymizer -->
+    <g transform="translate(15, 203)">
+      <rect width="315" height="155" rx="10" fill="url(#subCardBg)" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.7"/>
+      <rect x="0" y="0" width="315" height="28" rx="10" fill="#0369a1" fill-opacity="0.2"/>
+      <path d="M 0 28 L 315 28" stroke="#0284c7" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="12" y="19" fill="#38bdf8" font-size="11.5" font-weight="700">SCHEMA VALIDATOR &amp; ANONYMIZER</text>
+
+      <g transform="translate(12, 38)">
+        <!-- Step 1 -->
+        <circle cx="6" cy="8" r="3" fill="#38bdf8"/>
+        <text x="16" y="12" fill="#f1f5f9" font-size="11" font-weight="600">Dynamic YAML Field Mapping</text>
+        <text x="16" y="26" fill="#94a3b8" font-size="9.5">Auto-matches timestamps, enums, severities</text>
+
+        <!-- Step 2 -->
+        <circle cx="6" cy="44" r="3" fill="#38bdf8"/>
+        <text x="16" y="48" fill="#f1f5f9" font-size="11" font-weight="600">Salted SHA-256 Privacy Engine</text>
+        <text x="16" y="62" fill="#94a3b8" font-size="9.5">Anonymizes analyst IDs to 64-hex tokens</text>
+
+        <!-- Step 3 -->
+        <circle cx="6" cy="80" r="3" fill="#f43f5e"/>
+        <text x="16" y="84" fill="#f1f5f9" font-size="11" font-weight="600">Strict Quarantine Isolation</text>
+        <text x="16" y="98" fill="#fda4af" font-size="9.5">Malformed/partial rows &rarr; quarantine.jsonl</text>
+      </g>
+    </g>
+
+    <!-- Connector Down 2 -->
+    <path d="M 172 358 L 172 376" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyan)"/>
+
+    <!-- Component 1.3: High-Speed Local Parquet Storage -->
+    <g transform="translate(15, 378)">
+      <rect width="315" height="135" rx="10" fill="url(#subCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <rect x="0" y="0" width="315" height="28" rx="10" fill="#0f172a" fill-opacity="0.6"/>
+      <path d="M 0 28 L 315 28" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="19" fill="#93c5fd" font-size="11.5" font-weight="700">CANONICAL STORAGE &amp; PARQUET</text>
+
+      <g transform="translate(12, 38)">
+        <rect x="0" y="0" width="140" height="38" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+        <text x="70" y="17" fill="#38bdf8" font-size="10.5" font-weight="700" text-anchor="middle">DuckDB Engine</text>
+        <text x="70" y="30" fill="#94a3b8" font-size="9" text-anchor="middle">Zero-Copy In-Memory</text>
+
+        <rect x="150" y="0" width="140" height="38" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+        <text x="220" y="17" fill="#38bdf8" font-size="10.5" font-weight="700" text-anchor="middle">Apache Parquet</text>
+        <text x="220" y="30" fill="#94a3b8" font-size="9" text-anchor="middle">Columnar Fast I/O</text>
+      </g>
+      <text x="12" y="102" fill="#cbd5e1" font-size="10" font-weight="500">&bull; Checkpointed runs &bull; Partitioned by CSE ID</text>
+      <text x="12" y="118" fill="#64748b" font-size="9">Path: <tspan fill="#38bdf8">data/synthetic/&lt;cse_id&gt;/*.parquet</tspan></text>
+    </g>
+
+    <!-- Component 1.4: Orchestration & Checkpointing -->
+    <g transform="translate(15, 530)">
+      <rect width="315" height="135" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="22" fill="#e2e8f0" font-size="11.5" font-weight="700">PIPELINE RUNNER &amp; CHECKPOINTS</text>
+      
+      <g transform="translate(12, 34)">
+        <rect x="0" y="0" width="290" height="26" rx="4" fill="#1e293b"/>
+        <text x="10" y="17" fill="#94a3b8" font-size="10">Stage Status: <tspan fill="#34d399" font-weight="700">ingest &rarr; feat &rarr; sig &rarr; score</tspan></text>
+
+        <rect x="0" y="32" width="290" height="26" rx="4" fill="#1e293b"/>
+        <text x="10" y="49" fill="#94a3b8" font-size="10">Resilience: <tspan fill="#38bdf8">Incremental Stage Skip Logic</tspan></text>
+      </g>
+      <text x="12" y="115" fill="#64748b" font-size="9">CLI / Daemon Entry: <tspan fill="#e2e8f0">python -m satsa.pipeline</tspan></text>
+    </g>
+  </g>
+
+  <!-- Flow Connector: Col 1 to Col 2 -->
+  <g transform="translate(395, 450)">
+    <path d="M 0 0 L 35 0" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowCyan)"/>
+    <rect x="5" y="-18" width="25" height="12" rx="3" fill="#0284c7"/>
+    <text x="17.5" y="-9" fill="#ffffff" font-size="8" font-weight="800" text-anchor="middle">SYNC</text>
+  </g>
+
+  <!-- ================= COLUMN 2: FEATURE ENGINEERING & DETECTION ================= -->
+  <g transform="translate(430, 100)">
+    <!-- Column Card Background -->
+    <rect width="355" height="690" rx="16" fill="url(#cardGrad1)" stroke="#6366f1" stroke-width="1.5" stroke-opacity="0.4" filter="url(#shadow)"/>
+    <rect width="355" height="52" rx="16" fill="url(#layerHeader2)"/>
+    <path d="M 0 52 L 355 52" stroke="#6366f1" stroke-width="1" stroke-opacity="0.3"/>
+
+    <!-- Column Title -->
+    <circle cx="26" cy="26" r="12" fill="#6366f1" fill-opacity="0.3"/>
+    <text x="26" y="31" fill="#818cf8" font-size="13" font-weight="800" text-anchor="middle">2</text>
+    <text x="46" y="25" fill="#f8fafc" font-size="15" font-weight="700">Analytics &amp; Detection Engine</text>
+    <text x="46" y="41" fill="#818cf8" font-size="11" font-weight="500">29 Signals &bull; MAD Stats &bull; ML Ensembles</text>
+
+    <!-- Component 2.1: 6-Dimensional Feature Extractor -->
+    <g transform="translate(15, 68)">
+      <rect width="325" height="150" rx="10" fill="url(#subCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <rect x="0" y="0" width="325" height="28" rx="10" fill="#1e1b4b" fill-opacity="0.6"/>
+      <path d="M 0 28 L 325 28" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="19" fill="#c7d2fe" font-size="11.5" font-weight="700">MULTI-DIMENSIONAL FEATURE MATRICES</text>
+
+      <g transform="translate(10, 36)">
+        <!-- Feature 1 -->
+        <rect x="0" y="0" width="148" height="28" rx="4" fill="#1e293b"/>
+        <text x="8" y="13" fill="#e0e7ff" font-size="10" font-weight="600">Temporal Dynamics</text>
+        <text x="8" y="23" fill="#818cf8" font-size="8.5">MTTR, TT-Escalate, Off-hours</text>
+
+        <!-- Feature 2 -->
+        <rect x="156" y="0" width="148" height="28" rx="4" fill="#1e293b"/>
+        <text x="164" y="13" fill="#e0e7ff" font-size="10" font-weight="600">Workflow &amp; Queue</text>
+        <text x="164" y="23" fill="#818cf8" font-size="8.5">Re-open %, Burst closes, Drift</text>
+
+        <!-- Feature 3 -->
+        <rect x="0" y="34" width="148" height="28" rx="4" fill="#1e293b"/>
+        <text x="8" y="47" fill="#e0e7ff" font-size="10" font-weight="600">NLP &amp; Ticket Text</text>
+        <text x="8" y="57" fill="#818cf8" font-size="8.5">Notes length, Boilerplate Sim</text>
+
+        <!-- Feature 4 -->
+        <rect x="156" y="34" width="148" height="28" rx="4" fill="#1e293b"/>
+        <text x="164" y="47" fill="#e0e7ff" font-size="10" font-weight="600">Entity &amp; Coverage</text>
+        <text x="164" y="57" fill="#818cf8" font-size="8.5">Asset Tier, Dark/Silent nodes</text>
+
+        <!-- Feature 5 & 6 Bar -->
+        <rect x="0" y="68" width="304" height="28" rx="4" fill="#1e293b"/>
+        <text x="8" y="81" fill="#e0e7ff" font-size="10" font-weight="600">Cohort Normalization &amp; Trend Decomposition</text>
+        <text x="8" y="91" fill="#818cf8" font-size="8.5">12-Week Seasonality Detrending &bull; Peer Group Baselines</text>
+      </g>
+    </g>
+
+    <!-- Connector Down -->
+    <path d="M 177 218 L 177 236" stroke="#818cf8" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+    <!-- Component 2.2: 29 Rule Signals Library (Core IP) -->
+    <g transform="translate(15, 238)">
+      <rect width="325" height="240" rx="10" fill="url(#subCardBg)" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.8"/>
+      <rect x="0" y="0" width="325" height="28" rx="10" fill="#312e81" fill-opacity="0.4"/>
+      <path d="M 0 28 L 325 28" stroke="#6366f1" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="12" y="19" fill="#a5b4fc" font-size="11.5" font-weight="700">29 SIGNAL DETECTION CATALOGUE</text>
+
+      <!-- Execution Gaps -->
+      <g transform="translate(10, 36)">
+        <rect width="305" height="60" rx="6" fill="#1e1b4b" stroke="#4338ca" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#f43f5e" font-size="10.5" font-weight="700">14 Execution Gap Signals (EG-001..014)</text>
+        <text x="10" y="32" fill="#cbd5e1" font-size="9.5">&bull; Premature Closes (EG-001) &bull; Burst Closes (EG-006)</text>
+        <text x="10" y="47" fill="#cbd5e1" font-size="9.5">&bull; Bypassed Escalation (EG-003) &bull; Disposition Drift</text>
+        <rect x="235" y="6" width="60" height="16" rx="3" fill="#be123c"/>
+        <text x="265" y="17" fill="#fff" font-size="8.5" font-weight="700" text-anchor="middle">87.5% Truth</text>
+      </g>
+
+      <!-- Negative Space -->
+      <g transform="translate(10, 102)">
+        <rect width="305" height="60" rx="6" fill="#0f2b38" stroke="#0284c7" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#38bdf8" font-size="10.5" font-weight="700">12 Negative Space Signals (NS-001..012)</text>
+        <text x="10" y="32" fill="#cbd5e1" font-size="9.5">&bull; Dark Critical Assets (NS-001) &bull; Silent Estates (NS-010)</text>
+        <text x="10" y="47" fill="#cbd5e1" font-size="9.5">&bull; Truncated Telemetry (NS-012) &bull; Zero-Alert Gaps</text>
+        <rect x="235" y="6" width="60" height="16" rx="3" fill="#0284c7"/>
+        <text x="265" y="17" fill="#fff" font-size="8.5" font-weight="700" text-anchor="middle">12.5% Truth</text>
+      </g>
+
+      <!-- Composite & Stats Filter -->
+      <g transform="translate(10, 168)">
+        <rect width="305" height="58" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#fbbf24" font-size="10.5" font-weight="700">Statistical Peer Benchmarking</text>
+        <text x="10" y="32" fill="#94a3b8" font-size="9">&bull; MAD Modified Z-Scores (Robust to extreme outliers)</text>
+        <text x="10" y="46" fill="#94a3b8" font-size="9">&bull; Benjamini-Hochberg False Discovery Rate (FDR 12-metric)</text>
+      </g>
+    </g>
+
+    <!-- Connector Down -->
+    <path d="M 177 478 L 177 496" stroke="#818cf8" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+    <!-- Component 2.3: Local Machine Learning Anomaly Ensemble -->
+    <g transform="translate(15, 498)">
+      <rect width="325" height="165" rx="10" fill="url(#subCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <rect x="0" y="0" width="325" height="28" rx="10" fill="#0f172a" fill-opacity="0.6"/>
+      <path d="M 0 28 L 325 28" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="19" fill="#c7d2fe" font-size="11.5" font-weight="700">LOCAL ML &amp; ANOMALY ENSEMBLE</text>
+
+      <g transform="translate(10, 36)">
+        <rect x="0" y="0" width="148" height="42" rx="4" fill="#0f172a" stroke="#6366f1" stroke-width="0.8"/>
+        <text x="74" y="16" fill="#e0e7ff" font-size="10" font-weight="700" text-anchor="middle">Isolation Forest</text>
+        <text x="74" y="31" fill="#818cf8" font-size="8.5" text-anchor="middle">Triage Outlier Scoring</text>
+
+        <rect x="156" y="0" width="148" height="42" rx="4" fill="#0f172a" stroke="#6366f1" stroke-width="0.8"/>
+        <text x="230" y="16" fill="#e0e7ff" font-size="10" font-weight="700" text-anchor="middle">DBSCAN Clustering</text>
+        <text x="230" y="31" fill="#818cf8" font-size="8.5" text-anchor="middle">Burst &amp; Shift Patterns</text>
+
+        <rect x="0" y="48" width="304" height="38" rx="4" fill="#1e1b4b" stroke="#4f46e5" stroke-width="0.8"/>
+        <text x="152" y="17" fill="#a5b4fc" font-size="10" font-weight="700" text-anchor="middle">Hybrid Ensemble Blender</text>
+        <text x="152" y="30" fill="#e2e8f0" font-size="8.5" text-anchor="middle">Rule-Confidence &times; ML Anomaly Score</text>
+      </g>
+      <text x="12" y="148" fill="#64748b" font-size="9">Air-gap Verified: <tspan fill="#34d399">100% On-Device &bull; No Remote Inference</tspan></text>
+    </g>
+  </g>
+
+  <!-- Flow Connector: Col 2 to Col 3 -->
+  <g transform="translate(785, 450)">
+    <path d="M 0 0 L 35 0" stroke="#818cf8" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowPurple)"/>
+    <rect x="5" y="-18" width="25" height="12" rx="3" fill="#4f46e5"/>
+    <text x="17.5" y="-9" fill="#ffffff" font-size="8" font-weight="800" text-anchor="middle">SIG</text>
+  </g>
+
+  <!-- ================= COLUMN 3: RISK SCORING, AI NARRATIVE & MERKLE AUDIT ================= -->
+  <g transform="translate(820, 100)">
+    <!-- Column Card Background -->
+    <rect width="355" height="690" rx="16" fill="url(#cardGrad1)" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.4" filter="url(#shadow)"/>
+    <rect width="355" height="52" rx="16" fill="url(#layerHeader3)"/>
+    <path d="M 0 52 L 355 52" stroke="#10b981" stroke-width="1" stroke-opacity="0.3"/>
+
+    <!-- Column Title -->
+    <circle cx="26" cy="26" r="12" fill="#10b981" fill-opacity="0.3"/>
+    <text x="26" y="31" fill="#34d399" font-size="13" font-weight="800" text-anchor="middle">3</text>
+    <text x="46" y="25" fill="#f8fafc" font-size="15" font-weight="700">Risk, AI &amp; Merkle Audit</text>
+    <text x="46" y="41" fill="#34d399" font-size="11" font-weight="500">0–100 Composite &bull; Offline AI &bull; Hash Chain</text>
+
+    <!-- Component 3.1: Composite Scoring & Confidence Gating -->
+    <g transform="translate(15, 68)">
+      <rect width="325" height="150" rx="10" fill="url(#subCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <rect x="0" y="0" width="325" height="28" rx="10" fill="#064e3b" fill-opacity="0.4"/>
+      <path d="M 0 28 L 325 28" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="19" fill="#a7f3d0" font-size="11.5" font-weight="700">0–100 COMPOSITE RISK ENGINE</text>
+
+      <g transform="translate(10, 36)">
+        <rect x="0" y="0" width="148" height="34" rx="4" fill="#1e293b"/>
+        <text x="8" y="15" fill="#e2e8f0" font-size="10" font-weight="600">Domain Weights</text>
+        <text x="8" y="27" fill="#34d399" font-size="8.5">SecOps &bull; Compliance &bull; SLA</text>
+
+        <rect x="156" y="0" width="148" height="34" rx="4" fill="#1e293b"/>
+        <text x="164" y="15" fill="#e2e8f0" font-size="10" font-weight="600">Confidence Gate</text>
+        <text x="164" y="27" fill="#34d399" font-size="8.5">Sample size &amp; completeness</text>
+
+        <rect x="0" y="40" width="304" height="36" rx="4" fill="#0f172a" stroke="#059669" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#34d399" font-size="10" font-weight="700">S10 Segregation &amp; Partial Feed Queue</text>
+        <text x="10" y="29" fill="#94a3b8" font-size="8.5">Feed completeness &lt; 0.6 quarantined to isolated queue</text>
+      </g>
+      <text x="12" y="136" fill="#cbd5e1" font-size="9.5">Outputs: <tspan fill="#34d399">Calibrated Risk Score (0-100) + Action Tier</tspan></text>
+    </g>
+
+    <!-- Connector Down -->
+    <path d="M 177 218 L 177 236" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+    <!-- Component 3.2: 3-Tier Offline AI & Explainability -->
+    <g transform="translate(15, 238)">
+      <rect width="325" height="195" rx="10" fill="url(#subCardBg)" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.8"/>
+      <rect x="0" y="0" width="325" height="28" rx="10" fill="#065f46" fill-opacity="0.4"/>
+      <path d="M 0 28 L 325 28" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="12" y="19" fill="#a7f3d0" font-size="11.5" font-weight="700">3-TIER AIR-GAPPED AI NARRATOR</text>
+
+      <g transform="translate(10, 36)">
+        <!-- Mode 1 -->
+        <rect x="0" y="0" width="305" height="38" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+        <text x="10" y="16" fill="#6ee7b7" font-size="10.5" font-weight="700">Mode 1: Deterministic Template Engine (Default)</text>
+        <text x="10" y="30" fill="#e2e8f0" font-size="8.5">100% Deterministic &bull; Zero model files &bull; Instant render</text>
+
+        <!-- Mode 2 -->
+        <rect x="0" y="44" width="148" height="34" rx="4" fill="#1e293b"/>
+        <text x="8" y="15" fill="#e2e8f0" font-size="10" font-weight="600">Mode 2: Local GGUF</text>
+        <text x="8" y="27" fill="#94a3b8" font-size="8.5">llama-cpp on-device</text>
+
+        <!-- Mode 3 -->
+        <rect x="156" y="44" width="148" height="34" rx="4" fill="#1e293b"/>
+        <text x="164" y="15" fill="#e2e8f0" font-size="10" font-weight="600">Mode 3: Ollama Loop</text>
+        <text x="164" y="27" fill="#94a3b8" font-size="8.5">127.0.0.1:11434 only</text>
+
+        <!-- Explainability -->
+        <rect x="0" y="84" width="305" height="36" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#fbbf24" font-size="10" font-weight="700">Explainable Findings &amp; Root-Cause</text>
+        <text x="10" y="28" fill="#94a3b8" font-size="8.5">Reason Code + Evidence + Counterfactuals + Confidence</text>
+      </g>
+      <text x="12" y="180" fill="#34d399" font-size="9">Guardrail Policy: <tspan fill="#e2e8f0">Template fallback if LLM disabled/fails</tspan></text>
+    </g>
+
+    <!-- Connector Down -->
+    <path d="M 177 433 L 177 451" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+    <!-- Component 3.3: Tamper-Evident Merkle Hash Chain -->
+    <g transform="translate(15, 453)">
+      <rect width="325" height="210" rx="10" fill="url(#subCardBg)" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.8"/>
+      <rect x="0" y="0" width="325" height="28" rx="10" fill="#3b0764" fill-opacity="0.5"/>
+      <path d="M 0 28 L 325 28" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="12" y="19" fill="#e9d5ff" font-size="11.5" font-weight="700">TAMPER-EVIDENT MERKLE AUDIT LEDGER</text>
+
+      <!-- Visual Hash Chain -->
+      <g transform="translate(12, 38)">
+        <!-- Node 0 -->
+        <rect x="0" y="0" width="62" height="34" rx="4" fill="#1e1b4b" stroke="#818cf8" stroke-width="1"/>
+        <text x="31" y="15" fill="#a5b4fc" font-size="9" font-weight="700" text-anchor="middle">Seq 0</text>
+        <text x="31" y="27" fill="#64748b" font-size="8" text-anchor="middle">hash_0</text>
+
+        <path d="M 64 17 L 76 17" stroke="#c084fc" stroke-width="1.5" marker-end="url(#arrowMuted)"/>
+
+        <!-- Node 1 -->
+        <rect x="78" y="0" width="62" height="34" rx="4" fill="#1e1b4b" stroke="#818cf8" stroke-width="1"/>
+        <text x="109" y="15" fill="#a5b4fc" font-size="9" font-weight="700" text-anchor="middle">Seq 1</text>
+        <text x="109" y="27" fill="#64748b" font-size="8" text-anchor="middle">hash_1</text>
+
+        <path d="M 142 17 L 154 17" stroke="#c084fc" stroke-width="1.5" marker-end="url(#arrowMuted)"/>
+
+        <!-- Node N -->
+        <rect x="156" y="0" width="62" height="34" rx="4" fill="#1e1b4b" stroke="#818cf8" stroke-width="1"/>
+        <text x="187" y="15" fill="#a5b4fc" font-size="9" font-weight="700" text-anchor="middle">Seq N</text>
+        <text x="187" y="27" fill="#64748b" font-size="8" text-anchor="middle">hash_N</text>
+
+        <path d="M 220 17 L 232 17" stroke="#c084fc" stroke-width="1.5" marker-end="url(#arrowMuted)"/>
+
+        <!-- Root -->
+        <rect x="234" y="0" width="66" height="34" rx="4" fill="#4a044e" stroke="#f43f5e" stroke-width="1"/>
+        <text x="267" y="15" fill="#fbcfe8" font-size="9" font-weight="700" text-anchor="middle">Merkle</text>
+        <text x="267" y="27" fill="#fda4af" font-size="8" text-anchor="middle">Root</text>
+      </g>
+
+      <g transform="translate(10, 88)">
+        <rect width="305" height="42" rx="4" fill="#1e293b"/>
+        <text x="10" y="16" fill="#e9d5ff" font-size="10" font-weight="700">HMAC-Signed Sealed Manifests</text>
+        <text x="10" y="30" fill="#cbd5e1" font-size="8.5">Keyed with <tspan fill="#38bdf8">manifest_key</tspan> &bull; SHA-256 state hashing</text>
+
+        <rect y="48" width="305" height="38" rx="4" fill="#0f172a" stroke="#c084fc" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#34d399" font-size="10" font-weight="700">1-Command Verification &amp; Export</text>
+        <text x="10" y="29" fill="#94a3b8" font-size="8.5">satsa audit verify &bull; Mathematical integrity proof</text>
+      </g>
+      <text x="12" y="195" fill="#64748b" font-size="8.5">Authoritative Ledger: <tspan fill="#e9d5ff">data/warehouse/audit_ledger.jsonl</tspan></text>
+    </g>
+  </g>
+
+  <!-- Flow Connector: Col 3 to Col 4 -->
+  <g transform="translate(1175, 450)">
+    <path d="M 0 0 L 35 0" stroke="#34d399" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowGreen)"/>
+    <rect x="5" y="-18" width="25" height="12" rx="3" fill="#059669"/>
+    <text x="17.5" y="-9" fill="#ffffff" font-size="8" font-weight="800" text-anchor="middle">API</text>
+  </g>
+
+  <!-- ================= COLUMN 4: API & USER EXPERIENCE ================= -->
+  <g transform="translate(1210, 100)">
+    <!-- Column Card Background -->
+    <rect width="340" height="690" rx="16" fill="url(#cardGrad1)" stroke="#f59e0b" stroke-width="1.5" stroke-opacity="0.4" filter="url(#shadow)"/>
+    <rect width="340" height="52" rx="16" fill="url(#layerHeader4)"/>
+    <path d="M 0 52 L 340 52" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.3"/>
+
+    <!-- Column Title -->
+    <circle cx="26" cy="26" r="12" fill="#f59e0b" fill-opacity="0.3"/>
+    <text x="26" y="31" fill="#fbbf24" font-size="13" font-weight="800" text-anchor="middle">4</text>
+    <text x="46" y="25" fill="#f8fafc" font-size="15" font-weight="700">API &amp; Presentation Layer</text>
+    <text x="46" y="41" fill="#fbbf24" font-size="11" font-weight="500">FastAPI &bull; React Client &bull; Reports</text>
+
+    <!-- Component 4.1: Secure Loopback FastAPI Server -->
+    <g transform="translate(15, 68)">
+      <rect width="310" height="140" rx="10" fill="url(#subCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <rect x="0" y="0" width="310" height="28" rx="10" fill="#451a03" fill-opacity="0.4"/>
+      <path d="M 0 28 L 310 28" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="19" fill="#fde68a" font-size="11.5" font-weight="700">SECURE LOOPBACK FASTAPI SERVER</text>
+
+      <g transform="translate(10, 36)">
+        <rect x="0" y="0" width="140" height="34" rx="4" fill="#1e293b"/>
+        <text x="70" y="15" fill="#e2e8f0" font-size="10" font-weight="600" text-anchor="middle">Host: 127.0.0.1:8080</text>
+        <text x="70" y="27" fill="#34d399" font-size="8.5" text-anchor="middle">Loopback Only</text>
+
+        <rect x="150" y="0" width="140" height="34" rx="4" fill="#1e293b"/>
+        <text x="220" y="15" fill="#e2e8f0" font-size="10" font-weight="600" text-anchor="middle">Token Auth</text>
+        <text x="220" y="27" fill="#fbbf24" font-size="8.5" text-anchor="middle">Bearer Header Auth</text>
+
+        <rect x="0" y="40" width="290" height="34" rx="4" fill="#0f172a" stroke="#d97706" stroke-width="0.8"/>
+        <text x="145" y="15" fill="#fbbf24" font-size="9.5" font-weight="700" text-anchor="middle">REST Endpoints &amp; SPA Static Mount</text>
+        <text x="145" y="27" fill="#94a3b8" font-size="8.5" text-anchor="middle">/api/v1/queue &bull; /runs &bull; /entities &bull; /audit</text>
+      </g>
+      <text x="12" y="125" fill="#64748b" font-size="9">Airgap Gate: <tspan fill="#34d399">CI strace asserts 0 external sockets</tspan></text>
+    </g>
+
+    <!-- Connector Down -->
+    <path d="M 170 208 L 170 226" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrowAmber)"/>
+
+    <!-- Component 4.2: Modern React/Vite Frontend -->
+    <g transform="translate(15, 228)">
+      <rect width="310" height="245" rx="10" fill="url(#subCardBg)" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.8"/>
+      <rect x="0" y="0" width="310" height="28" rx="10" fill="#78350f" fill-opacity="0.4"/>
+      <path d="M 0 28 L 310 28" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="12" y="19" fill="#fde68a" font-size="11.5" font-weight="700">REACT 18 &bull; VITE &bull; TAILWIND UI</text>
+
+      <g transform="translate(10, 36)">
+        <!-- View 1 -->
+        <rect x="0" y="0" width="140" height="32" rx="4" fill="#1e293b"/>
+        <text x="10" y="15" fill="#f8fafc" font-size="10" font-weight="600">Portfolio View</text>
+        <text x="10" y="26" fill="#94a3b8" font-size="8">Enterprise run overview</text>
+
+        <!-- View 2 -->
+        <rect x="150" y="0" width="140" height="32" rx="4" fill="#1e293b"/>
+        <text x="160" y="15" fill="#f8fafc" font-size="10" font-weight="600">Triage Queue</text>
+        <text x="160" y="26" fill="#94a3b8" font-size="8">Risk-ranked findings</text>
+
+        <!-- View 3 -->
+        <rect x="0" y="38" width="140" height="32" rx="4" fill="#1e293b"/>
+        <text x="10" y="53" fill="#f8fafc" font-size="10" font-weight="600">Entity Deep-Dive</text>
+        <text x="10" y="64" fill="#94a3b8" font-size="8">Evidence &amp; scores</text>
+
+        <!-- View 4 -->
+        <rect x="150" y="38" width="140" height="32" rx="4" fill="#1e293b"/>
+        <text x="160" y="53" fill="#f8fafc" font-size="10" font-weight="600">Audit Inspector</text>
+        <text x="160" y="64" fill="#94a3b8" font-size="8">Hash-chain verifier</text>
+
+        <!-- View 5 -->
+        <rect x="0" y="76" width="140" height="32" rx="4" fill="#1e293b"/>
+        <text x="10" y="91" fill="#f8fafc" font-size="10" font-weight="600">Validation View</text>
+        <text x="10" y="102" fill="#94a3b8" font-size="8">Precision/Recall/Kappa</text>
+
+        <!-- View 6 -->
+        <rect x="150" y="76" width="140" height="32" rx="4" fill="#1e293b"/>
+        <text x="160" y="91" fill="#f8fafc" font-size="10" font-weight="600">Run Comparison</text>
+        <text x="160" y="102" fill="#94a3b8" font-size="8">Cross-run delta stats</text>
+
+        <!-- Ingest Modal -->
+        <rect x="0" y="114" width="290" height="42" rx="4" fill="#0f172a" stroke="#d97706" stroke-width="0.8"/>
+        <text x="145" y="130" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">Interactive CSE Ingestion Modal</text>
+        <text x="145" y="145" fill="#cbd5e1" font-size="8.5" text-anchor="middle">Upload 6 tables &bull; Auto-triggers pipeline analysis</text>
+      </g>
+      <text x="12" y="233" fill="#94a3b8" font-size="8.5">Stack: TypeScript &bull; Lucide Icons &bull; Recharts &bull; MSW offline</text>
+    </g>
+
+    <!-- Connector Down -->
+    <path d="M 170 473 L 170 491" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrowAmber)"/>
+
+    <!-- Component 4.3: Multi-Format Sealed Reports -->
+    <g transform="translate(15, 493)">
+      <rect width="310" height="170" rx="10" fill="url(#subCardBg)" stroke="#1e293b" stroke-width="1.2"/>
+      <rect x="0" y="0" width="310" height="28" rx="10" fill="#0f172a" fill-opacity="0.6"/>
+      <path d="M 0 28 L 310 28" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="19" fill="#fde68a" font-size="11.5" font-weight="700">MULTI-FORMAT SEALED ARTIFACTS</text>
+
+      <g transform="translate(10, 36)">
+        <rect x="0" y="0" width="65" height="36" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="0.8"/>
+        <text x="32" y="16" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">HTML</text>
+        <text x="32" y="28" fill="#94a3b8" font-size="7.5" text-anchor="middle">Interactive</text>
+
+        <rect x="74" y="0" width="65" height="36" rx="4" fill="#1e293b" stroke="#f43f5e" stroke-width="0.8"/>
+        <text x="106" y="16" fill="#f43f5e" font-size="10" font-weight="700" text-anchor="middle">PDF</text>
+        <text x="106" y="28" fill="#94a3b8" font-size="7.5" text-anchor="middle">Sealed</text>
+
+        <rect x="148" y="0" width="65" height="36" rx="4" fill="#1e293b" stroke="#34d399" stroke-width="0.8"/>
+        <text x="180" y="16" fill="#34d399" font-size="10" font-weight="700" text-anchor="middle">CSV</text>
+        <text x="180" y="28" fill="#94a3b8" font-size="7.5" text-anchor="middle">Metrics</text>
+
+        <rect x="222" y="0" width="65" height="36" rx="4" fill="#1e293b" stroke="#fbbf24" stroke-width="0.8"/>
+        <text x="254" y="16" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">XLSX</text>
+        <text x="254" y="28" fill="#94a3b8" font-size="7.5" text-anchor="middle">Workbook</text>
+
+        <rect x="0" y="44" width="287" height="36" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+        <text x="10" y="16" fill="#c084fc" font-size="9.5" font-weight="700">Cryptographic Seal Embedding</text>
+        <text x="10" y="28" fill="#cbd5e1" font-size="8.5">Every report embeds Merkle root + HMAC signature</text>
+      </g>
+      <text x="12" y="152" fill="#64748b" font-size="8.5">Destination: <tspan fill="#fde68a">data/curated/reports/&lt;run_id&gt;/</tspan></text>
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM BANNER: KEY VALUE PROPOSITIONS & BENCHMARKS ================= -->
+  <g transform="translate(50, 805)">
+    <rect width="1500" height="70" rx="12" fill="#0c1322" stroke="#1e293b" stroke-width="1.2" filter="url(#shadow)"/>
+
+    <!-- Pill 1: Performance -->
+    <g transform="translate(25, 12)">
+      <circle cx="22" cy="22" r="18" fill="#0284c7" fill-opacity="0.2"/>
+      <path d="M 16 23 L 20 27 L 29 17" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+      <text x="50" y="18" fill="#f8fafc" font-size="12" font-weight="700">Ultra-Fast Pipeline</text>
+      <text x="50" y="34" fill="#94a3b8" font-size="10.5">~1 min on synthetic &bull; &lt;15 min on 50k alerts</text>
+    </g>
+
+    <line x1="375" y1="15" x2="375" y2="55" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Pill 2: Security & Air-Gap -->
+    <g transform="translate(400, 12)">
+      <circle cx="22" cy="22" r="18" fill="#10b981" fill-opacity="0.2"/>
+      <path d="M 22 13 L 29 17 V 23 C 29 27 22 31 22 31 C 22 31 15 27 15 23 V 17 Z" fill="none" stroke="#34d399" stroke-width="1.8"/>
+      <text x="50" y="18" fill="#f8fafc" font-size="12" font-weight="700">Zero-Trust Air-Gap</text>
+      <text x="50" y="34" fill="#94a3b8" font-size="10.5">Read-only FS, non-root uid 1000, 0 remote sockets</text>
+    </g>
+
+    <line x1="750" y1="15" x2="750" y2="55" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Pill 3: Detection Power -->
+    <g transform="translate(775, 12)">
+      <circle cx="22" cy="22" r="18" fill="#6366f1" fill-opacity="0.2"/>
+      <path d="M 15 26 L 20 18 L 24 22 L 29 15" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="50" y="18" fill="#f8fafc" font-size="12" font-weight="700">80.0% Recall / 1.0 S2</text>
+      <text x="50" y="34" fill="#94a3b8" font-size="10.5">29 signals &bull; Outlier-robust MAD modified z-scores</text>
+    </g>
+
+    <line x1="1125" y1="15" x2="1125" y2="55" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Pill 4: Deployment Topology -->
+    <g transform="translate(1150, 12)">
+      <circle cx="22" cy="22" r="18" fill="#f59e0b" fill-opacity="0.2"/>
+      <path d="M 15 24 L 22 17 L 29 24 M 22 17 V 30" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+      <text x="50" y="18" fill="#f8fafc" font-size="12" font-weight="700">Flexible Deployment</text>
+      <text x="50" y="34" fill="#94a3b8" font-size="10.5">Bare-metal venv &bull; Docker none-net &bull; Offline bundle</text>
+    </g>
+  </g>
+
+</svg>

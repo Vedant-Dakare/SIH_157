@@ -2,8 +2,69 @@
 
 Air-gapped detection of SOC execution gaps and negative space, with
 explainable findings and a tamper-evident audit trail.
-Architecture one-liner: validated signals → calibrated risk → templated
-narratives → sealed reports, all offline. See [ARCHITECTURE.md](ARCHITECTURE.md).
+
+![SATSA System Architecture](architecture.png)
+
+## Technical Architecture & Design
+
+```mermaid
+flowchart LR
+    subgraph L1["1. Ingestion & Air-Gap"]
+        IN1["6 Canonical Tables\n(Alerts, Cases, Investigations,\nEscalations, Assets, Telemetry)"]
+        IN2["Dynamic YAML Mapping &\nSalted SHA-256 Anonymizer"]
+        IN3["Canonical Parquet\n(DuckDB / Local Storage)"]
+        IN1 --> IN2 --> IN3
+    end
+
+    subgraph L2["2. Feature & Detection Engine"]
+        F1["6D Feature Matrices\n(Temporal, Workflow, NLP, Graph)"]
+        F2["29 Rule Signals\n(14 EG + 12 NS + 3 COMP)"]
+        F3["MAD Modified Z-Scores &\nIsolation Forest Ensemble"]
+        IN3 --> F1 --> F2 --> F3
+    end
+
+    subgraph L3["3. Scoring, AI & Merkle Audit"]
+        S1["0–100 Composite Risk Engine\n& S10 Confidence Gate"]
+        S2["3-Tier Offline AI Narrator\n(Template Engine / GGUF)"]
+        S3["Tamper-Evident Ledger\n(Hash-Chained Merkle Roots)"]
+        F3 --> S1 --> S2
+        S1 --> S3
+    end
+
+    subgraph L4["4. Presentation & Delivery"]
+        P1["Loopback FastAPI\n(127.0.0.1:8080)"]
+        P2["React 18 + Vite UI\n(Portfolio, Queue, Entity)"]
+        P3["Sealed Multi-Reports\n(HTML, PDF, CSV, XLSX)"]
+        S2 --> P1 --> P2
+        S3 --> P3
+    end
+```
+
+### Architectural Pillars (Technical POV)
+
+1. **Air-Gapped Ingestion & Privacy Boundary**:
+   - Ingests 6 canonical tables across CSV, JSONL, Parquet, SQLite, and DuckDB formats.
+   - Dynamic schema mapper (`configs/mappings`) resolves field drifts automatically.
+   - Privacy-preserving analyst hashing using salted SHA-256 tokens (`analyst_salt`).
+   - Strict row quarantine (`data/quarantine/*.jsonl`) isolates malformed rows.
+
+2. **High-Performance Analytics & Hybrid Detection**:
+   - In-memory zero-copy columnar querying via DuckDB & Apache Parquet.
+   - Multi-dimensional feature extraction: triage MTTR, burst closes, re-open rates, text similarity, and 12-week seasonality detrending.
+   - 29 Deterministic Rule Signals (14 Execution Gaps + 12 Negative Space + 3 Composite).
+   - Statistical peer benchmarking (Median Absolute Deviation modified z-scores with Benjamini-Hochberg FDR correction) ensembled with local Isolation Forests & DBSCAN.
+
+3. **Risk Scoring, Offline AI & Merkle Audit**:
+   - Calibrated 0–100 domain-weighted composite risk scoring with confidence gating and S10 partial-feed isolation.
+   - 3-Tier Offline AI Narrator: Mode 1 Deterministic Templates (zero model files, default), Mode 2 Local GGUF via `llama-cpp`, Mode 3 Local Ollama on loopback.
+   - Cryptographic tamper-evident audit ledger (`audit_ledger.jsonl`) with sequential SHA-256 hash chains, Merkle root verification, and HMAC-signed manifests.
+
+4. **Hardened Loopback API & Modern Client UI**:
+   - FastAPI backend bound strictly to `127.0.0.1:8080` (verified zero outbound network sockets).
+   - React 18 + TypeScript + Vite + Tailwind CSS dashboard with live queue triage, entity deep-dives, audit chain inspection, and benchmark comparisons.
+   - Multi-format sealed report generators emitting interactive HTML, PDF, CSV, and XLSX workbooks.
+
+Architecture reference: see [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## 5-command quickstart
 

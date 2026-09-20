@@ -4,21 +4,22 @@ SOC Alert Triage & Security Analytics: air-gapped detection of execution
 gaps and negative space across CSE triage feeds, with template-first
 narratives and a hash-chained audit trail.
 
-## Component overview
+## System Architecture Overview
+
+![SATSA System Architecture](architecture.png)
 
 ```mermaid
 flowchart LR
-    SYN[(synthetic/warehouse)] --> ING[ingest]
-    ING --> FEA[features]
-    FEA --> SIG[signals]
-    SIG --> SCO[score]
-    SCO --> REP[report]
-    SIG --> MLAI[ML/AI template-first]
-    SCO --> EXP[explain + audit ledger]
-    REP --> API[API 127.0.0.1]
+    SYN[(synthetic/warehouse)] --> ING[1. Ingest & Quarantine]
+    ING --> FEA[2. Feature Matrices]
+    FEA --> SIG[3. 29 Signals & ML]
+    SIG --> SCO[4. Composite Risk]
+    SCO --> MLAI[5. Offline AI Narratives]
+    SCO --> EXP[6. Explain & Merkle Ledger]
+    SCO --> REP[7. Sealed Multi-Reports]
+    MLAI --> API[8. Loopback FastAPI 127.0.0.1]
+    API --> UI[9. React 18 / Vite UI]
 ```
-
-![Pre-rendered fallback](architecture.png)
 
 ## Data flow (ingest→features→signals→score→report)
 
