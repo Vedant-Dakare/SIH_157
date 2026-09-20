@@ -1,7 +1,12 @@
 import { ArrowDown, ArrowUp, Minus } from 'lucide-react';
 
 import { ConfidenceBadge } from '@/components/common/ConfidenceBadge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { formatPercent } from '@/lib/utils';
 import type { PortfolioSummary } from '@/types/api';
@@ -28,11 +33,30 @@ function Delta({ delta }: { delta?: StatDelta }) {
   if (!delta) {
     return null;
   }
-  const Icon = delta.value > 0 ? ArrowUp : delta.value < 0 ? ArrowDown : Minus;
-  const colour = delta.value > 0 ? 'text-red-400' : delta.value < 0 ? 'text-green-400' : 'text-slate-500';
+
+  const Icon =
+    delta.value > 0
+      ? ArrowUp
+      : delta.value < 0
+        ? ArrowDown
+        : Minus;
+
+  const colour =
+    delta.value > 0
+      ? 'text-red-200'
+      : delta.value < 0
+        ? 'text-green-200'
+        : 'text-blue-100';
+
   return (
-    <p className={`mt-1 flex items-center gap-1 text-xs ${colour}`}>
-      <Icon className="h-3 w-3" aria-hidden="true" />
+    <p
+      className={`mt-1 flex items-center gap-1 text-xs ${colour}`}
+    >
+      <Icon
+        className="h-3 w-3"
+        aria-hidden="true"
+      />
+
       {delta.value > 0 ? '+' : ''}
       {delta.value} {delta.label}
     </p>
@@ -40,15 +64,25 @@ function Delta({ delta }: { delta?: StatDelta }) {
 }
 
 /** Four portfolio stat cards with deltas and confidence. */
-export function PortfolioSummary({ summary, isLoading, findingsCount, avgCompleteness, deltas }: PortfolioSummaryProps) {
+export function PortfolioSummary({
+  summary,
+  isLoading,
+  findingsCount,
+  avgCompleteness,
+  deltas,
+}: PortfolioSummaryProps) {
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4" aria-label="Loading summary">
+      <div
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4"
+        aria-label="Loading summary"
+      >
         {[0, 1, 2, 3].map((index) => (
           <Card key={index}>
             <CardHeader>
               <Skeleton className="h-4 w-24" />
             </CardHeader>
+
             <CardContent>
               <Skeleton className="h-8 w-16" />
             </CardContent>
@@ -57,48 +91,98 @@ export function PortfolioSummary({ summary, isLoading, findingsCount, avgComplet
       </div>
     );
   }
-  const total = Object.values(summary.entity_count_by_band).reduce((sum, count) => sum + count, 0);
-  const high = summary.entity_count_by_band.HIGH ?? 0;
+
+  const total = Object.values(
+    summary.entity_count_by_band,
+  ).reduce((sum, count) => sum + count, 0);
+
+  const high =
+    summary.entity_count_by_band.HIGH ?? 0;
+
+  const cardClass =
+    'border-[#123D73] bg-[#123D73] text-white';
+
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-      <Card>
+      <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-400">Total Entities</CardTitle>
+          <CardTitle className="text-sm font-medium text-blue-100">
+            Total Entities
+          </CardTitle>
         </CardHeader>
+
         <CardContent>
-          <p className="text-2xl font-bold text-slate-50">{total}</p>
+          <p className="text-2xl font-bold text-white">
+            {total}
+          </p>
+
           <Delta delta={deltas?.entities} />
         </CardContent>
       </Card>
-      <Card className={high > 0 ? 'border-red-500' : undefined}>
+
+      <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-400">HIGH Risk Entities</CardTitle>
+          <CardTitle className="text-sm font-medium text-blue-100">
+            HIGH Risk Entities
+          </CardTitle>
         </CardHeader>
+
         <CardContent>
-          <p className={`text-2xl font-bold ${high > 0 ? 'text-red-500' : 'text-slate-50'}`}>{high}</p>
+          <p className="text-2xl font-bold text-white">
+            {high}
+          </p>
+
           <Delta delta={deltas?.high} />
         </CardContent>
       </Card>
-      <Card>
+
+      <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-400">Active Findings</CardTitle>
+          <CardTitle className="text-sm font-medium text-blue-100">
+            Active Findings
+          </CardTitle>
         </CardHeader>
+
         <CardContent>
-          <p className="text-2xl font-bold text-slate-50">{findingsCount ?? '—'}</p>
+          <p className="text-2xl font-bold text-white">
+            {findingsCount ?? '—'}
+          </p>
+
           <Delta delta={deltas?.findings} />
         </CardContent>
       </Card>
-      <Card>
+
+      <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-400">Data Quality</CardTitle>
+          <CardTitle className="text-sm font-medium text-blue-100">
+            Data Quality
+          </CardTitle>
         </CardHeader>
+
         <CardContent>
-          <p className={`text-2xl font-bold ${(avgCompleteness ?? 1) >= 0.9 ? 'text-green-500' : (avgCompleteness ?? 1) >= 0.7 ? 'text-yellow-500' : 'text-red-500'}`}>
-            {avgCompleteness === undefined ? '—' : formatPercent(avgCompleteness)}
+          <p
+            className={`text-2xl font-bold ${
+              (avgCompleteness ?? 1) >= 0.9
+                ? 'text-green-300'
+                : (avgCompleteness ?? 1) >= 0.7
+                  ? 'text-yellow-300'
+                  : 'text-red-300'
+            }`}
+          >
+            {avgCompleteness === undefined
+              ? '—'
+              : formatPercent(avgCompleteness)}
           </p>
+
           <Delta delta={deltas?.quality} />
+
           <div className="mt-2">
-            <ConfidenceBadge confidence={high > 0 ? 'MEDIUM' : 'HIGH'} reason="Portfolio-level aggregate confidence" />
+            <ConfidenceBadge
+              confidence={
+                high > 0 ? 'MEDIUM' : 'HIGH'
+              }
+              reason="Portfolio-level aggregate confidence"
+            />
           </div>
         </CardContent>
       </Card>

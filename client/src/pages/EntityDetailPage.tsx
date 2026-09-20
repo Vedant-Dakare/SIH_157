@@ -77,7 +77,10 @@ export default function EntityDetailPage() {
   return (
     <div className="space-y-6">
       <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-400">
-        <Link to={backTo} className="underline underline-offset-4 hover:text-slate-50">
+        <Link
+          to={backTo}
+          className="rounded-md border border-slate-200 bg-white px-2 py-1 text-slate-600 underline underline-offset-4 transition-colors hover:bg-blue-50 hover:text-[#123d73]"
+        >
           Portfolio
         </Link>
         <span aria-hidden="true">›</span>
@@ -85,9 +88,9 @@ export default function EntityDetailPage() {
         <button
           type="button"
           onClick={() => navigate(backTo)}
-          className="ml-2 inline-flex items-center gap-1 rounded-sm text-xs underline underline-offset-4 hover:text-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+          className="ml-2 inline-flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-xs font-medium text-slate-600 underline underline-offset-4 transition-colors hover:bg-blue-50 hover:text-[#123d73] focus:outline-none focus:ring-2 focus:ring-blue-200"
         >
-          <ArrowLeft className="h-3 w-3" aria-hidden="true" />
+         
           Back
         </button>
       </nav>
@@ -104,61 +107,61 @@ export default function EntityDetailPage() {
         <TabsContent forceMount value="overview">
           <ErrorBoundary label="overview panel">
 
-          <div className="grid grid-cols-1 gap-6 xl:grid-cols-5">
-            <div className="rounded-md border border-slate-700 bg-slate-900 p-4 xl:col-span-3">
-              <DomainScorePanel
-                domainScores={Object.entries(entity.domain_scores).map(([domain, score]) => ({
-                  domain,
-                  score,
-                  contribution: entity.domain_contributions[domain] ?? 0,
-                  signals: entity.domain_members[domain] ?? [],
-                }))}
-                overallScore={entity.overall_score}
-                selectedSignals={signalFilter}
-                onSelectDomain={(_domain, signals) => setSignalFilter(signals)}
-              />
+            <div className="grid grid-cols-1 gap-6 xl:grid-cols-5">
+              <div className="rounded-md border border-slate-700 bg-slate-900 p-4 xl:col-span-3">
+                <DomainScorePanel
+                  domainScores={Object.entries(entity.domain_scores).map(([domain, score]) => ({
+                    domain,
+                    score,
+                    contribution: entity.domain_contributions[domain] ?? 0,
+                    signals: entity.domain_members[domain] ?? [],
+                  }))}
+                  overallScore={entity.overall_score}
+                  selectedSignals={signalFilter}
+                  onSelectDomain={(_domain, signals) => setSignalFilter(signals)}
+                />
+              </div>
+              <div className="rounded-md border border-slate-700 bg-slate-900 p-4 xl:col-span-2">
+                <TrendLine data={[]} entityId={entityId} isLoading={false} />
+              </div>
             </div>
-            <div className="rounded-md border border-slate-700 bg-slate-900 p-4 xl:col-span-2">
-              <TrendLine data={[]} entityId={entityId} isLoading={false} />
-            </div>
-          </div>
           </ErrorBoundary>
         </TabsContent>
         <TabsContent forceMount value="findings">
           <ErrorBoundary label="findings panel">
 
-          <FindingsTable
-            findings={rows}
-            isLoading={false}
-            signalFilter={signalFilter}
-            onClearSignalFilter={() => setSignalFilter(null)}
-            onSelect={(finding) =>
-              navigate(`/findings/${finding.finding_id}?run=${encodeURIComponent(runId)}`)
-            }
-          />
+            <FindingsTable
+              findings={rows}
+              isLoading={false}
+              signalFilter={signalFilter}
+              onClearSignalFilter={() => setSignalFilter(null)}
+              onSelect={(finding) =>
+                navigate(`/findings/${finding.finding_id}?run=${encodeURIComponent(runId)}`)
+              }
+            />
           </ErrorBoundary>
         </TabsContent>
         <TabsContent forceMount value="coverage">
           <ErrorBoundary label="coverage panel">
 
-          <NegativeSpaceMap entityId={entityId} runId={runId} />
+            <NegativeSpaceMap entityId={entityId} runId={runId} />
           </ErrorBoundary>
         </TabsContent>
         <TabsContent forceMount value="quality">
           <ErrorBoundary label="quality panel">
 
-          <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-            <div className="rounded-md border border-slate-700 bg-slate-900 p-4">
-              <DataQualityCard cseId={entityId} runId={runId} />
+            <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
+              <div className="rounded-md border border-slate-700 bg-slate-900 p-4">
+                <DataQualityCard cseId={entityId} runId={runId} />
+              </div>
+              <div className="rounded-md border border-slate-700 bg-slate-900 p-4">
+                <h3 className="mb-2 text-sm font-semibold text-slate-50">Quarantine breakdown</h3>
+                <p className="text-sm text-slate-400">
+                  Completeness {Math.round(entity.data_completeness * 100)}%
+                  {entity.capped_by_completeness ? ' — capped, see header banner.' : '.'}
+                </p>
+              </div>
             </div>
-            <div className="rounded-md border border-slate-700 bg-slate-900 p-4">
-              <h3 className="mb-2 text-sm font-semibold text-slate-50">Quarantine breakdown</h3>
-              <p className="text-sm text-slate-400">
-                Completeness {Math.round(entity.data_completeness * 100)}%
-                {entity.capped_by_completeness ? ' — capped, see header banner.' : '.'}
-              </p>
-            </div>
-          </div>
           </ErrorBoundary>
         </TabsContent>
       </Tabs>

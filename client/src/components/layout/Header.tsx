@@ -1,88 +1,44 @@
-import { useLocation, useSearchParams } from 'react-router-dom';
-import { Play } from 'lucide-react';
+import { Search } from 'lucide-react';
 
-import { HashDisplay } from '@/components/common/HashDisplay';
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/components/ui/toaster';
-import { useHealth } from '@/hooks/useRuns';
-import { triggerRun } from '@/lib/api';
-import { formatDate } from '@/lib/utils';
-
-const TITLES: Record<string, string> = {
-  '/portfolio': 'Portfolio Dashboard',
-  '/entities': 'Entities',
-  '/queue': 'Review Queue',
-  '/runs': 'Run History',
-  '/validation': 'Validation Report',
-  '/audit': 'Audit & Ledger',
-  '/settings': 'Settings',
-};
-
-function titleFor(pathname: string): string {
-  if (pathname.startsWith('/findings/')) {
-    return 'Finding Detail';
-  }
-  if (pathname.startsWith('/entities/')) {
-    return 'Entity Detail';
-  }
-  if (pathname.startsWith('/audit/')) {
-    return 'Run Manifest';
-  }
-  if (pathname.startsWith('/portfolio/')) {
-    return 'Portfolio Dashboard';
-  }
-  return TITLES[pathname] ?? 'SAT-SA';
-}
-
-/** Fixed 56px header: title, run badge, health dot, trigger-run button. */
 export function Header() {
-  const location = useLocation();
-  const [searchParams] = useSearchParams();
-  const healthQuery = useHealth();
-  const { toast } = useToast();
-  const runId = searchParams.get('run') ?? '';
-
-  async function onTrigger(): Promise<void> {
-    try {
-      const result = await triggerRun();
-      toast({ title: 'Pipeline run started', description: `Run ${result.run_id} queued.` });
-    } catch (error) {
-      toast({
-        title: 'Failed to trigger run',
-        description: error instanceof Error ? error.message : 'Unknown error',
-        variant: 'destructive',
-      });
-    }
-  }
-
-  const healthy = healthQuery.data?.status === 'ok';
-
   return (
-    <header className="fixed left-60 right-0 top-0 z-40 flex h-14 items-center justify-between gap-4 border-b border-slate-700 bg-slate-900 px-6">
-      <h1 className="text-sm font-semibold text-slate-50">{titleFor(location.pathname)}</h1>
-      <div className="flex items-center gap-3">
-        {runId ? (
-          <span className="flex items-center gap-2 text-xs text-slate-400" aria-label={`Current run ${runId}`}>
-            <HashDisplay hash={runId} chars={12} label="run" />
-            {healthQuery.data ? <span>{formatDate(healthQuery.data.generated_at)}</span> : null}
-          </span>
-        ) : null}
-        <span
-          role="status"
-          aria-label={healthy ? 'Pipeline reachable' : 'Pipeline unreachable'}
-          title={healthy ? 'Pipeline reachable' : 'Pipeline unreachable'}
-          className={`h-2.5 w-2.5 rounded-full ${healthy ? 'bg-green-500' : 'bg-red-500'}`}
-        />
-        <Button
-          type="button"
-          size="sm"
-          variant="outline"
-          onClick={() => void onTrigger()}
-          aria-label="Trigger pipeline run"
-        >
-          <Play className="h-3.5 w-3.5" aria-hidden="true" />
-          Run
-        </Button>
+    <header className="fixed left-0 right-0 top-0 z-40 h-[110px] bg-white">
+      {/* Top utility bar */}
+      <div className="flex h-8 items-center justify-end gap-4 bg-[#082b57] px-5 text-[11px] text-blue-50 sm:px-6">
+        <span>Accessibility</span>
+        <span>English</span>
+        <span>A-</span>
+        <span className="font-semibold">A</span>
+        <span>A+</span>
+        <span className="text-blue-300">|</span>
+        <span>Help</span>
+      </div>
+
+      {/* Main header */}
+      <div className="flex h-[78px] items-center justify-end gap-6 bg-white px-5 sm:px-6 lg:ml-[248px]">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="relative hidden w-[300px] xl:block">
+            <Search
+              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+              aria-hidden="true"
+            />
+
+            <input
+              type="search"
+              aria-label="Search cases or entities"
+              placeholder="Search cases or entities"
+              className="h-10 w-full rounded-md border border-slate-300 bg-slate-50 pl-10 pr-3 text-sm text-slate-700 outline-none placeholder:text-slate-400 transition-colors focus:border-blue-400 focus:bg-white focus:ring-2 focus:ring-blue-100"
+            />
+          </div>
+
+          <div className="hidden h-10 items-center gap-2 rounded-md border border-slate-200 bg-slate-50 px-3 text-xs text-slate-700 md:flex">
+            <span
+              className="h-2.5 w-2.5 rounded-full bg-emerald-500"
+              aria-hidden="true"
+            />
+            <span>System operational</span>
+          </div>
+        </div>
       </div>
     </header>
   );
