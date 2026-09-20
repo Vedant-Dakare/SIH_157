@@ -4,12 +4,12 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const alertVariants = cva(
-  'relative w-full rounded-md border px-4 py-3 text-sm [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-slate-50 [&_svg]:size-4',
+  'relative w-full rounded-md border px-4 py-3 text-sm [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-[#123D73] [&_svg]:size-4',
   {
     variants: {
       variant: {
-        default: 'border-slate-700 bg-slate-900 text-slate-50',
-        destructive: 'border-red-500 bg-red-950 text-red-500',
+        default: 'border-blue-200 bg-blue-50 text-slate-800',
+        destructive: 'border-red-200 bg-red-50 text-red-800',
       },
     },
     defaultVariants: { variant: 'default' },
@@ -33,7 +33,7 @@ AlertTitle.displayName = 'AlertTitle';
 
 const AlertDescription = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn('text-sm text-slate-400 [&_p]:leading-relaxed', className)} {...props} />
+    <div ref={ref} className={cn('text-sm text-slate-600 [&_p]:leading-relaxed', className)} {...props} />
   ),
 );
 AlertDescription.displayName = 'AlertDescription';

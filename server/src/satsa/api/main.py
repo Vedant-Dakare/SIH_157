@@ -271,7 +271,14 @@ def build_fastapi_app() -> Any:
         try:
             content_type = request.headers.get("content-type", "")
             if "multipart/form-data" in content_type:
-                form = await request.form()
+                try:
+                    form = await request.form()
+                except Exception:
+                    # python-multipart is optional; fall back to the stdlib
+                    # email parser so uploads keep working without it.
+                    body = await request.body()
+                    status, payload = _ingest_upload(content_type, body, query)
+                    return JSONResponse(status_code=status, content=_envelope(query.get("run_id", ""), payload))
                 cse_id = query.get("cse_id", "").strip()
                 run_id = query.get("run_id", "").strip() or f"upload-{datetime.now(UTC).strftime('%Y%m%d%H%M%S')}"
                 if not cse_id:

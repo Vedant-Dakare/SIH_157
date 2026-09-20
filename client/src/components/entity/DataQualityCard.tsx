@@ -44,29 +44,29 @@ export function DataQualityCard({ cseId, runId, quality, quarantineRecords = [],
   return (
     <div className="space-y-4" aria-label={`Data quality for ${cseId}`}>
       <dl className="grid grid-cols-2 gap-3 text-sm">
-        <div className="rounded-md border border-slate-700 bg-slate-900 p-3">
+        <div className="rounded-md border border-slate-200 bg-slate-50 p-3">
           <dt className="text-xs text-slate-500">Total received</dt>
-          <dd className="text-xl font-bold text-slate-50">{quality.total}</dd>
+          <dd className="text-xl font-bold text-slate-900">{quality.total}</dd>
         </div>
-        <div className="rounded-md border border-slate-700 bg-slate-900 p-3">
+        <div className="rounded-md border border-slate-200 bg-slate-50 p-3">
           <dt className="text-xs text-slate-500">Valid</dt>
-          <dd className="text-xl font-bold text-green-500">{quality.valid}</dd>
+          <dd className="text-xl font-bold text-green-700">{quality.valid}</dd>
         </div>
-        <div className="rounded-md border border-slate-700 bg-slate-900 p-3">
+        <div className="rounded-md border border-slate-200 bg-slate-50 p-3">
           <dt className="text-xs text-slate-500">Quarantined</dt>
-          <dd className={`text-xl font-bold ${elevated ? 'text-red-500' : 'text-slate-50'}`}>
+          <dd className={`text-xl font-bold ${elevated ? 'text-red-600' : 'text-slate-900'}`}>
             {quality.quarantined}
           </dd>
         </div>
-        <div className="rounded-md border border-slate-700 bg-slate-900 p-3">
+        <div className="rounded-md border border-slate-200 bg-slate-50 p-3">
           <dt className="text-xs text-slate-500">Quarantine rate</dt>
-          <dd className={`text-xl font-bold ${elevated ? 'text-red-500' : 'text-slate-50'}`}>
+          <dd className={`text-xl font-bold ${elevated ? 'text-red-600' : 'text-slate-900'}`}>
             {formatPercent(quality.quarantineRate)}
           </dd>
         </div>
       </dl>
       {elevated ? (
-        <p role="note" className="flex items-center gap-2 rounded-md border border-red-500 bg-red-950 px-3 py-2 text-sm text-red-500">
+        <p role="note" className="flex items-center gap-2 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
           <AlertTriangle className="h-4 w-4" aria-hidden="true" />
           Quarantine rate above 10% — verify the feed before trusting scores.
         </p>
@@ -81,7 +81,7 @@ export function DataQualityCard({ cseId, runId, quality, quarantineRecords = [],
           <ul className="space-y-2">
             {quality.topReasons.slice(0, 3).map((entry) => (
               <li key={entry.reason}>
-                <div className="mb-1 flex justify-between text-xs text-slate-400">
+                <div className="mb-1 flex justify-between text-xs text-slate-600">
                   <span className="font-mono">{entry.reason}</span>
                   <span>{entry.count}</span>
                 </div>
@@ -91,7 +91,7 @@ export function DataQualityCard({ cseId, runId, quality, quarantineRecords = [],
                   aria-valuemin={0}
                   aria-valuemax={maxReason}
                   aria-label={`${entry.reason} count`}
-                  className="h-2 w-full overflow-hidden rounded-full bg-slate-800"
+                  className="h-2 w-full overflow-hidden rounded-full bg-slate-200"
                 >
                   <div className="h-full bg-yellow-500" style={{ width: `${(entry.count / maxReason) * 100}%` }} />
                 </div>
@@ -134,11 +134,11 @@ export function DataQualityCard({ cseId, runId, quality, quarantineRecords = [],
             <DialogTitle>Quarantine records for {cseId}</DialogTitle>
           </DialogHeader>
           {quarantineRecords.length === 0 ? (
-            <p className="text-sm text-slate-400">No quarantine records in this run.</p>
+            <p className="text-sm text-slate-600">No quarantine records in this run.</p>
           ) : (
             <ul className="max-h-96 space-y-2 overflow-y-auto">
               {quarantineRecords.map((record, index) => (
-                <li key={index} className="mono rounded-sm bg-slate-800 p-2 text-xs text-slate-50">
+                <li key={index} className="mono rounded-sm border border-slate-200 bg-slate-50 p-2 text-xs text-slate-700">
                   {JSON.stringify(record)}
                 </li>
               ))}

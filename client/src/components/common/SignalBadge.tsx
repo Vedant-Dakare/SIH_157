@@ -52,6 +52,12 @@ const FAMILY_STYLES: Record<
       'border-[#b9d4ea] bg-[#edf5fb] text-[#24577d]',
   },
 
+  anomaly: {
+    label: 'Anomaly',
+    className:
+      'border-[#f5c99b] bg-[#fef4e8] text-[#9a5b1e]',
+  },
+
   peer: {
     label: 'Peer',
     className:

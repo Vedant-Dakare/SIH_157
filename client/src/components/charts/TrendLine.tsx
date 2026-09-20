@@ -60,24 +60,25 @@ export function TrendLine({ data, entityId, isLoading }: TrendLineProps) {
     <div aria-label={`Score trend for ${entityId}`} className="h-64 w-full">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={rows} margin={{ top: 8, right: 16, bottom: 8, left: 0 }}>
-          <CartesianGrid stroke="#1e293b" strokeDasharray="3 3" />
+          <CartesianGrid stroke="#e2e8f0" strokeDasharray="3 3" />
           <ReferenceArea y1={0} y2={25} fill="#22c55e" fillOpacity={0.07} />
           <ReferenceArea y1={25} y2={50} fill="#eab308" fillOpacity={0.07} />
           <ReferenceArea y1={50} y2={75} fill="#f97316" fillOpacity={0.07} />
           <ReferenceArea y1={75} y2={100} fill="#ef4444" fillOpacity={0.07} />
           {BAND_LIMITS.map((limit) => (
-            <ReferenceLine key={limit} y={limit} stroke="#475569" strokeDasharray="4 4" />
+            <ReferenceLine key={limit} y={limit} stroke="#94a3b8" strokeDasharray="4 4" />
           ))}
-          <XAxis dataKey="short" tick={{ fill: '#94a3b8', fontSize: 11 }} stroke="#334155" />
+          <XAxis dataKey="short" tick={{ fill: '#64748b', fontSize: 11 }} stroke="#cbd5e1" />
           <YAxis
             domain={[0, 100]}
-            tick={{ fill: '#94a3b8', fontSize: 11 }}
-            stroke="#334155"
+            tick={{ fill: '#64748b', fontSize: 11 }}
+            stroke="#cbd5e1"
             width={36}
           />
           <Tooltip
-            contentStyle={{ backgroundColor: '#0f172a', border: '1px solid #334155' }}
-            labelStyle={{ color: '#f8fafc' }}
+            contentStyle={{ backgroundColor: '#ffffff', border: '1px solid #dbe3ec', borderRadius: '8px' }}
+            labelStyle={{ color: '#123d73', fontWeight: 600 }}
+            itemStyle={{ color: '#475569' }}
             formatter={(value, _name, props) => {
               const payload = (props as { payload?: TrendPoint }).payload;
               return [`Score ${String(value ?? '—')} (${payload?.band ?? '—'})`, payload?.window ?? ''];

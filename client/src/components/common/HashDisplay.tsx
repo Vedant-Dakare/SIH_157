@@ -30,7 +30,7 @@ export function HashDisplay({ hash, chars = 8, label }: HashDisplayProps) {
       <TooltipProvider delayDuration={0}>
         <Tooltip>
           <TooltipTrigger asChild>
-            <code aria-label={label ? `${label} ${hash}` : `Hash ${hash}`} className="mono rounded-sm bg-slate-800 px-1.5 py-0.5 text-xs text-slate-50">
+            <code aria-label={label ? `${label} ${hash}` : `Hash ${hash}`} className="mono rounded-sm border border-slate-200 bg-slate-100 px-1.5 py-0.5 text-xs text-slate-700">
               {truncateHash(hash, chars)}
             </code>
           </TooltipTrigger>
@@ -43,7 +43,7 @@ export function HashDisplay({ hash, chars = 8, label }: HashDisplayProps) {
         type="button"
         onClick={() => void copy()}
         aria-label={copied ? 'Copied' : `Copy ${label ?? 'hash'} to clipboard`}
-        className="rounded-sm p-1 text-slate-400 hover:bg-slate-800 hover:text-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400"
+        className="rounded-sm p-1 text-slate-500 hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-200"
       >
         {copied ? <Check className="h-3.5 w-3.5" aria-hidden="true" /> : <Copy className="h-3.5 w-3.5" aria-hidden="true" />}
       </button>

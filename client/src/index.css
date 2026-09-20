@@ -70,7 +70,21 @@ textarea {
 
 /* Shared dashboard surfaces */
 .console-card {
-  @apply rounded-lg border border-slate-200 bg-white;
+  @apply rounded-lg border border-slate-200 bg-white shadow-sm;
+}
+
+.gov-card {
+  @apply rounded-lg border border-slate-200 bg-white shadow-sm;
+}
+
+/* Monospace for ids, hashes and windows */
+.mono {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
 }
 
 .console-section-header {

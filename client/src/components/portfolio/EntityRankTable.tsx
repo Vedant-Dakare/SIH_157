@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { ColumnDef } from '@tanstack/react-table';
-import { ArrowRight } from 'lucide-react';
 
 import { ConfidenceBadge } from '@/components/common/ConfidenceBadge';
 import { DataTable } from '@/components/common/DataTable';

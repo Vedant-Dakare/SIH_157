@@ -133,7 +133,7 @@ export function DataTable<TData>({
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="rounded-md border border-slate-700">
+      <div className="rounded-md border border-slate-200 bg-white">
         <Table aria-label="Data table">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -145,7 +145,7 @@ export function DataTable<TData>({
                         type="button"
                         aria-label={`Sort by ${String(header.column.id)}`}
                         onClick={header.column.getToggleSortingHandler()}
-                        className="inline-flex items-center gap-1 rounded-sm focus:outline-none focus:ring-2 focus:ring-slate-400"
+                        className="inline-flex items-center gap-1 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
                       >
                         {flexRender(header.column.columnDef.header, header.getContext())}
                         {header.column.getIsSorted() === 'asc' ? (
@@ -165,7 +165,7 @@ export function DataTable<TData>({
           <TableBody>
             {table.getRowModel().rows.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={columns.length} className="text-center text-slate-400">
+                <TableCell colSpan={columns.length} className="text-center text-slate-500">
                   No rows match the current filter.
                 </TableCell>
               </TableRow>
@@ -203,7 +203,7 @@ export function DataTable<TData>({
       </div>
       {pagination ? (
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-sm text-slate-400">
+          <div className="flex items-center gap-2 text-sm text-slate-600">
             <label htmlFor="page-size-select">Rows per page</label>
             <Select
               value={String(pageSize)}
@@ -232,7 +232,7 @@ export function DataTable<TData>({
             >
               Previous
             </Button>
-            <span aria-live="polite" className="text-sm text-slate-400">
+            <span aria-live="polite" className="text-sm text-slate-600">
               Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
             </span>
             <Button
