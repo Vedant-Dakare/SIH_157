@@ -15,7 +15,7 @@ const DialogOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
     ref={ref}
-    className={cn('fixed inset-0 z-50 bg-black/80', className)}
+    className={cn('fixed inset-0 z-50 bg-slate-900/30', className)}
     {...props}
   />
 ));
@@ -30,7 +30,7 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 rounded-md border border-slate-700 bg-slate-900 p-6 text-slate-50 shadow-lg',
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 rounded-md border border-slate-200 bg-white p-6 text-slate-900 shadow-lg',
         className,
       )}
       {...props}
@@ -38,7 +38,7 @@ const DialogContent = React.forwardRef<
       {children}
       <DialogPrimitive.Close
         aria-label="Close dialog"
-        className="absolute right-4 top-4 rounded-sm text-slate-400 opacity-70 transition-opacity hover:text-slate-50 hover:opacity-100 focus:outline-none"
+        className="absolute right-4 top-4 rounded-sm text-slate-500 opacity-70 transition-opacity hover:text-slate-900 hover:opacity-100 focus:outline-none"
       >
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
@@ -69,7 +69,7 @@ const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
-  <DialogPrimitive.Description ref={ref} className={cn('text-sm text-slate-400', className)} {...props} />
+  <DialogPrimitive.Description ref={ref} className={cn('text-sm text-slate-500', className)} {...props} />
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
 

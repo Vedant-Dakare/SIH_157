@@ -21,9 +21,9 @@ function Suspended({ children }: { children: React.ReactNode }) {
 function NotFound() {
   return (
     <div className="flex flex-col items-center gap-3 py-16 text-center">
-      <h2 className="text-lg font-semibold text-slate-50">Page not found</h2>
-      <p className="text-sm text-slate-400">The requested view does not exist.</p>
-      <Link to="/portfolio" className="text-sm text-slate-50 underline underline-offset-4">
+      <h2 className="text-lg font-semibold text-slate-900">Page not found</h2>
+      <p className="text-sm text-slate-600">The requested view does not exist.</p>
+      <Link to="/portfolio" className="text-sm font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]">
         Back to portfolio
       </Link>
     </div>

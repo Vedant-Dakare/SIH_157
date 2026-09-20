@@ -11,7 +11,7 @@ const SheetClose = SheetPrimitive.Close;
 const SheetPortal = SheetPrimitive.Portal;
 
 const sheetVariants = cva(
-  'fixed z-50 gap-4 border-slate-700 bg-slate-900 text-slate-50 p-6 shadow-lg transition ease-in-out',
+  'fixed z-50 gap-4 border-slate-200 bg-white text-slate-900 p-6 shadow-lg transition ease-in-out',
   {
     variants: {
       side: {
@@ -34,12 +34,12 @@ const SheetContent = React.forwardRef<
   SheetContentProps
 >(({ side = 'right', className, children, ...props }, ref) => (
   <SheetPortal>
-    <SheetPrimitive.Overlay className="fixed inset-0 z-50 bg-black/80" />
+    <SheetPrimitive.Overlay className="fixed inset-0 z-50 bg-slate-900/30" />
     <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
       {children}
       <SheetPrimitive.Close
         aria-label="Close panel"
-        className="absolute right-4 top-4 rounded-sm text-slate-400 opacity-70 transition-opacity hover:text-slate-50 hover:opacity-100 focus:outline-none"
+        className="absolute right-4 top-4 rounded-sm text-slate-500 opacity-70 transition-opacity hover:text-slate-900 hover:opacity-100 focus:outline-none"
       >
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
@@ -60,7 +60,7 @@ const SheetTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
     ref={ref}
-    className={cn('text-lg font-semibold text-slate-50', className)}
+    className={cn('text-lg font-semibold text-slate-900', className)}
     {...props}
   />
 ));
@@ -70,7 +70,7 @@ const SheetDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (
-  <SheetPrimitive.Description ref={ref} className={cn('text-sm text-slate-400', className)} {...props} />
+  <SheetPrimitive.Description ref={ref} className={cn('text-sm text-slate-500', className)} {...props} />
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
 

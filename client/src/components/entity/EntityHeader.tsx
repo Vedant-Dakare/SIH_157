@@ -36,20 +36,20 @@ export function EntityHeader({ entity, runId, sizeBand, peerCohortId, isInQueue 
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="space-y-2">
           <div className="flex flex-wrap items-center gap-2">
-            <code className="mono text-xl font-bold text-slate-50">{entity.entity_id}</code>
+            <code className="mono text-xl font-bold text-[#102A56]">{entity.entity_id}</code>
             <Badge variant="secondary">{entity.sector}</Badge>
             {sizeBand ? <Badge variant="outline">{sizeBand}</Badge> : null}
             <RiskBadge band={entity.band} size="lg" showIcon />
           </div>
           <div className="flex flex-wrap items-center gap-4 text-sm">
-            <span className="text-slate-400">
+            <span className="text-slate-600">
               Score{' '}
-              <strong className={entity.overall_score >= 75 ? 'text-red-500' : entity.overall_score >= 50 ? 'text-orange-500' : entity.overall_score >= 25 ? 'text-yellow-500' : 'text-green-500'}>
+              <strong className={entity.overall_score >= 75 ? 'text-red-600' : entity.overall_score >= 50 ? 'text-orange-600' : entity.overall_score >= 25 ? 'text-yellow-700' : 'text-green-700'}>
                 {formatScore(entity.overall_score)}
               </strong>
             </span>
             <ConfidenceBadge confidence={entity.confidence} reason={entity.confidence_reason} />
-            <span className="text-slate-400">
+            <span className="text-slate-600">
               {entity.n_signals_flagged} signal{entity.n_signals_flagged === 1 ? '' : 's'} flagged
             </span>
           </div>
@@ -57,7 +57,7 @@ export function EntityHeader({ entity, runId, sizeBand, peerCohortId, isInQueue 
             {peerCohortId ? (
               <div className="flex gap-1">
                 <dt>Peer cohort:</dt>
-                <dd className="mono text-slate-400">{peerCohortId}</dd>
+                <dd className="mono text-slate-600">{peerCohortId}</dd>
               </div>
             ) : null}
             <div className="flex gap-1">
@@ -84,7 +84,7 @@ export function EntityHeader({ entity, runId, sizeBand, peerCohortId, isInQueue 
           {isInQueue ? (
             <Link
               to={`/queue?run=${encodeURIComponent(runId)}`}
-              className="text-sm text-slate-50 underline underline-offset-4"
+              className="text-sm font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]"
               aria-label={`View ${entity.entity_id} in review queue`}
             >
               View in Queue
@@ -93,7 +93,7 @@ export function EntityHeader({ entity, runId, sizeBand, peerCohortId, isInQueue 
         </div>
       </div>
       <div>
-        <div className="mb-1 flex items-center justify-between text-xs text-slate-400">
+        <div className="mb-1 flex items-center justify-between text-xs text-slate-600">
           <span>Data completeness</span>
           <span>{Math.round(entity.data_completeness * 100)}%</span>
         </div>
@@ -102,7 +102,7 @@ export function EntityHeader({ entity, runId, sizeBand, peerCohortId, isInQueue 
       {lowEvidence ? (
         <div
           role="note"
-          className="rounded-md border border-yellow-500 bg-yellow-950 px-4 py-3 text-sm text-yellow-500"
+          className="rounded-md border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900"
         >
           <strong className="flex items-center gap-2">
             <AlertTriangle className="h-4 w-4" aria-hidden="true" />

@@ -43,10 +43,10 @@ function Delta({ delta }: { delta?: StatDelta }) {
 
   const colour =
     delta.value > 0
-      ? 'text-red-200'
+      ? 'text-red-600'
       : delta.value < 0
-        ? 'text-green-200'
-        : 'text-blue-100';
+        ? 'text-green-700'
+        : 'text-slate-500';
 
   return (
     <p
@@ -100,19 +100,19 @@ export function PortfolioSummary({
     summary.entity_count_by_band.HIGH ?? 0;
 
   const cardClass =
-    'border-[#123D73] bg-[#123D73] text-white';
+    'border-slate-200 bg-white text-slate-900';
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
       <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-blue-100">
+          <CardTitle className="text-sm font-medium text-slate-500">
             Total Entities
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <p className="text-2xl font-bold text-white">
+          <p className="text-2xl font-bold text-[#123D73]">
             {total}
           </p>
 
@@ -122,13 +122,13 @@ export function PortfolioSummary({
 
       <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-blue-100">
+          <CardTitle className="text-sm font-medium text-slate-500">
             HIGH Risk Entities
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <p className="text-2xl font-bold text-white">
+          <p className={`text-2xl font-bold ${high > 0 ? 'text-red-500' : 'text-[#123D73]'}`}>
             {high}
           </p>
 
@@ -138,13 +138,13 @@ export function PortfolioSummary({
 
       <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-blue-100">
+          <CardTitle className="text-sm font-medium text-slate-500">
             Active Findings
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <p className="text-2xl font-bold text-white">
+          <p className="text-2xl font-bold text-[#123D73]">
             {findingsCount ?? '—'}
           </p>
 
@@ -154,7 +154,7 @@ export function PortfolioSummary({
 
       <Card className={cardClass}>
         <CardHeader>
-          <CardTitle className="text-sm font-medium text-blue-100">
+          <CardTitle className="text-sm font-medium text-slate-500">
             Data Quality
           </CardTitle>
         </CardHeader>
@@ -163,10 +163,10 @@ export function PortfolioSummary({
           <p
             className={`text-2xl font-bold ${
               (avgCompleteness ?? 1) >= 0.9
-                ? 'text-green-300'
+                ? 'text-green-700'
                 : (avgCompleteness ?? 1) >= 0.7
-                  ? 'text-yellow-300'
-                  : 'text-red-300'
+                  ? 'text-amber-600'
+                  : 'text-red-600'
             }`}
           >
             {avgCompleteness === undefined

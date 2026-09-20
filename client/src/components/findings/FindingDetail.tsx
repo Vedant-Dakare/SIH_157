@@ -56,8 +56,8 @@ function familyOf(signalId: string): SignalFamily {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section aria-label={title} className="rounded-md border border-slate-700 bg-slate-900 p-4">
-      <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">{title}</h3>
+    <section aria-label={title} className="console-card p-4 sm:p-5">
+      <h3 className="console-label mb-3">{title}</h3>
       {children}
     </section>
   );
@@ -98,7 +98,7 @@ export function FindingDetail({
     <div className="space-y-4">
       <Section title="Finding header">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="mono text-lg font-bold text-slate-50">{finding.signal_id}</span>
+          <span className="mono text-lg font-bold text-[#102A56]">{finding.signal_id}</span>
           <SignalBadge signalId={finding.signal_id} family={familyOf(finding.signal_id)} />
           <Badge variant="outline">{finding.severity}</Badge>
           <ConfidenceBadge confidence={finding.confidence} reason={finding.confidence_reason} />
@@ -107,7 +107,7 @@ export function FindingDetail({
         <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-xs text-slate-500">
           <div className="flex gap-1">
             <dt>Sample size:</dt>
-            <dd className="text-slate-400">{finding.is_flagged ? 'flagged' : 'not flagged'}</dd>
+            <dd className="font-medium text-slate-700">{finding.is_flagged ? 'flagged' : 'not flagged'}</dd>
           </div>
           <div className="flex gap-1">
             <dt>Window:</dt>
@@ -128,7 +128,7 @@ export function FindingDetail({
           <button
             type="button"
             onClick={() => setSelectedLeaf(null)}
-            className="mt-2 text-xs text-slate-400 underline underline-offset-4"
+            className="mt-2 text-xs font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]"
           >
             Back to composite reason
           </button>
@@ -136,7 +136,7 @@ export function FindingDetail({
       </Section>
 
       <Section title="Narrative">
-        <p className="text-base leading-relaxed text-slate-50">
+        <p className="text-base leading-relaxed text-slate-800">
           {finding.rationale ?? finding.plain_language}
         </p>
         <div className="mt-3 grid grid-cols-1 gap-2 md:grid-cols-3">
@@ -148,11 +148,11 @@ export function FindingDetail({
             ] as Array<[string, string | undefined]>
           ).map(([label, text]) =>
             text ? (
-              <details key={label} className="rounded-md border border-slate-700 bg-slate-900 p-2">
-                <summary className="cursor-pointer text-xs font-semibold text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400">
+              <details key={label} className="rounded-md border border-slate-200 bg-slate-50 p-2">
+                <summary className="cursor-pointer text-xs font-semibold text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-200">
                   {label}
                 </summary>
-                <p className="mt-1 text-sm text-slate-50">{text}</p>
+                <p className="mt-1 text-sm text-slate-800">{text}</p>
               </details>
             ) : null,
           )}
@@ -161,7 +161,7 @@ export function FindingDetail({
           {finding.confidence_statement ?? `Confidence ${finding.confidence}.`}
         </p>
         {finding.suggested_review_focus ? (
-          <p className="mt-2 flex gap-2 rounded-md border border-yellow-500 bg-yellow-950 px-3 py-2 text-sm text-yellow-500">
+            <p className="mt-2 flex gap-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
             <HelpCircle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
             {finding.suggested_review_focus}
           </p>
@@ -190,9 +190,9 @@ export function FindingDetail({
 
       <Section title="Audit reference">
         {auditSeq !== null && auditSeq !== undefined ? (
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-600">
             Ledger entry seq {auditSeq} —{' '}
-            <Link to="/audit" className="text-slate-50 underline underline-offset-4">
+            <Link to="/audit" className="font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]">
               open audit ledger
             </Link>
           </p>

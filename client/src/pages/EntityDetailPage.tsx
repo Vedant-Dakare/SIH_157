@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
 
 import { TrendLine } from '@/components/charts/TrendLine';
 import { EmptyState } from '@/components/common/EmptyState';
@@ -76,7 +75,7 @@ export default function EntityDetailPage() {
 
   return (
     <div className="space-y-6">
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-400">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500">
         <Link
           to={backTo}
           className="rounded-md border border-slate-200 bg-white px-2 py-1 text-slate-600 underline underline-offset-4 transition-colors hover:bg-blue-50 hover:text-[#123d73]"
@@ -84,7 +83,7 @@ export default function EntityDetailPage() {
           Portfolio
         </Link>
         <span aria-hidden="true">›</span>
-        <span className="mono text-slate-50">{entityId}</span>
+        <span className="mono font-medium text-slate-900">{entityId}</span>
         <button
           type="button"
           onClick={() => navigate(backTo)}
@@ -108,7 +107,7 @@ export default function EntityDetailPage() {
           <ErrorBoundary label="overview panel">
 
             <div className="grid grid-cols-1 gap-6 xl:grid-cols-5">
-              <div className="rounded-md border border-slate-700 bg-slate-900 p-4 xl:col-span-3">
+              <div className="console-card p-4 xl:col-span-3 sm:p-5">
                 <DomainScorePanel
                   domainScores={Object.entries(entity.domain_scores).map(([domain, score]) => ({
                     domain,
@@ -121,7 +120,7 @@ export default function EntityDetailPage() {
                   onSelectDomain={(_domain, signals) => setSignalFilter(signals)}
                 />
               </div>
-              <div className="rounded-md border border-slate-700 bg-slate-900 p-4 xl:col-span-2">
+              <div className="console-card p-4 xl:col-span-2 sm:p-5">
                 <TrendLine data={[]} entityId={entityId} isLoading={false} />
               </div>
             </div>
@@ -151,12 +150,12 @@ export default function EntityDetailPage() {
           <ErrorBoundary label="quality panel">
 
             <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-              <div className="rounded-md border border-slate-700 bg-slate-900 p-4">
+              <div className="console-card p-4 sm:p-5">
                 <DataQualityCard cseId={entityId} runId={runId} />
               </div>
-              <div className="rounded-md border border-slate-700 bg-slate-900 p-4">
-                <h3 className="mb-2 text-sm font-semibold text-slate-50">Quarantine breakdown</h3>
-                <p className="text-sm text-slate-400">
+              <div className="console-card p-4 sm:p-5">
+                <h3 className="mb-2 text-sm font-semibold text-slate-900">Quarantine breakdown</h3>
+                <p className="text-sm text-slate-600">
                   Completeness {Math.round(entity.data_completeness * 100)}%
                   {entity.capped_by_completeness ? ' — capped, see header banner.' : '.'}
                 </p>

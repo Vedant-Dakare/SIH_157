@@ -24,10 +24,10 @@ export interface NegativeSpaceMapProps {
 }
 
 const STATE_STYLE: Record<CoverageState, { bg: string; glyph: string; label: string }> = {
-  COVERED: { bg: 'bg-green-900', glyph: '✓', label: 'Covered' },
-  PARTIAL: { bg: 'bg-yellow-900', glyph: '⚠', label: 'Partial' },
-  ABSENT: { bg: 'bg-red-900', glyph: '✗', label: 'Absent' },
-  NA: { bg: 'bg-slate-800', glyph: '—', label: 'Not applicable' },
+  COVERED: { bg: 'bg-emerald-100 text-emerald-900', glyph: '✓', label: 'Covered' },
+  PARTIAL: { bg: 'bg-amber-100 text-amber-900', glyph: '⚠', label: 'Partial' },
+  ABSENT: { bg: 'bg-red-100 text-red-900', glyph: '✗', label: 'Absent' },
+  NA: { bg: 'bg-slate-100 text-slate-500', glyph: '—', label: 'Not applicable' },
 };
 
 /** Asset × source coverage grid derived from NS findings (or explicit cells). */
@@ -66,32 +66,32 @@ export function NegativeSpaceMap({ entityId, runId, cells, isLoading = false }: 
 
   return (
     <div className="space-y-3">
-      <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-400">
+      <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-600">
         <input
           type="checkbox"
           checked={criticalOnly}
           onChange={(event) => setCriticalOnly(event.target.checked)}
-          className="h-4 w-4 accent-slate-100"
+          className="h-4 w-4 accent-[#123D73]"
         />
         Show only CRITICAL assets
       </label>
-      <div className="overflow-x-auto">
-        <table aria-label={`Coverage map for ${entityId}`} className="text-sm">
+      <div className="overflow-x-auto rounded-md border border-slate-200 bg-white">
+        <table aria-label={`Coverage map for ${entityId}`} className="w-full text-sm">
           <thead>
-            <tr>
-              <th className="p-1 text-left font-medium text-slate-400">Asset \ Source</th>
+            <tr className="border-b border-slate-200 bg-slate-50">
+              <th className="p-2 text-left font-medium text-slate-600">Asset \ Source</th>
               {sourceTypes.map((source) => (
-                <th key={source} className="p-1 font-mono text-xs font-medium text-slate-400">
+                <th key={source} className="p-2 font-mono text-xs font-medium text-slate-600">
                   {source}
                 </th>
               ))}
-              <th className="p-1 font-medium text-slate-400">Row score</th>
+              <th className="p-2 font-medium text-slate-600">Row score</th>
             </tr>
           </thead>
           <tbody>
             {assetTypes.map((asset) => (
-              <tr key={asset}>
-                <th className="p-1 text-left font-mono text-xs font-medium text-slate-50">{asset}</th>
+              <tr key={asset} className="border-b border-slate-100 last:border-0">
+                <th className="p-2 text-left font-mono text-xs font-medium text-slate-800">{asset}</th>
                 {sourceTypes.map((source) => {
                   const cell = byCell.get(`${asset}|${source}`);
                   const state = cell?.state ?? 'NA';
@@ -102,12 +102,12 @@ export function NegativeSpaceMap({ entityId, runId, cells, isLoading = false }: 
                     </span>
                   );
                   return (
-                    <td key={source} className={cn('p-1 text-center text-xs text-slate-50', style.bg)}>
+                    <td key={source} className={cn('border border-white p-2 text-center text-xs font-medium', style.bg)}>
                       {cell?.findingId ? (
                         <Link
                           to={`/findings/${cell.findingId}`}
                           aria-label={`${asset} ${source}: ${style.label}${cell.signalId ? `, covered by ${cell.signalId}` : ''}. Open finding.`}
-                          className="underline underline-offset-2 focus:outline-none focus:ring-2 focus:ring-slate-100"
+                          className="underline underline-offset-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                         >
                           {inner}
                         </Link>
@@ -117,15 +117,15 @@ export function NegativeSpaceMap({ entityId, runId, cells, isLoading = false }: 
                     </td>
                   );
                 })}
-                <td className="p-1 text-center text-xs text-slate-400">
+                <td className="p-2 text-center text-xs text-slate-500">
                   {average((cell) => cell.assetType === asset)}
                 </td>
               </tr>
             ))}
-            <tr className="border-t border-slate-700">
-              <th className="p-1 text-left text-xs font-medium text-slate-400">Column score</th>
+            <tr className="border-t border-slate-200 bg-slate-50">
+              <th className="p-2 text-left text-xs font-medium text-slate-600">Column score</th>
               {sourceTypes.map((source) => (
-                <td key={source} className="p-1 text-center text-xs text-slate-400">
+                <td key={source} className="p-2 text-center text-xs text-slate-500">
                   {average((cell) => cell.sourceType === source)}
                 </td>
               ))}

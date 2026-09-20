@@ -197,7 +197,7 @@ export default function PortfolioPage() {
         />
       ) : null}
 
-      {Boolean(entitiesQuery.data) ? (
+      {entitiesQuery.data ? (
         <div className="space-y-6">
 
           {/* Existing portfolio summary */}
