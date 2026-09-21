@@ -58,7 +58,7 @@ export default function AuditPage() {
             disabled={runs.length === 0}
           >
             <SelectTrigger
-              className="h-9 w-44 border-[#BFDBFE] bg-[#EFF6FF] text-[#123D73] hover:bg-blue-100"
+              className="h-9 w-44 border-[#D9E2EC] bg-white text-xs font-medium text-[#1F2933] hover:border-[#1F5F8B] focus:ring-1 focus:ring-[#1F5F8B]"
               aria-label="Select run"
             >
               <SelectValue
@@ -66,12 +66,12 @@ export default function AuditPage() {
               />
             </SelectTrigger>
 
-            <SelectContent className="border-[#BFDBFE] bg-white">
+            <SelectContent className="border-[#D9E2EC] bg-white text-xs">
               {runs.map((id) => (
                 <SelectItem
                   key={id}
                   value={id}
-                  className="text-[#123D73] focus:bg-blue-50 focus:text-[#123D73]"
+                  className="text-[#1F2933] focus:bg-[#EAF3F8] focus:text-[#123B5D]"
                 >
                   {id}
                 </SelectItem>

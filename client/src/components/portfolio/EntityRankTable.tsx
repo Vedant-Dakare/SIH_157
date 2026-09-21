@@ -336,14 +336,14 @@ export function EntityRankTable({
         </div>
 
         {customCount > 0 ? (
-          <div className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 p-1">
+          <div className="flex items-center gap-1.5 rounded-md border border-[#D9E2EC] bg-[#F8FAFC] p-1">
             <button
               type="button"
               onClick={() => setOnlyCustom(false)}
               className={`rounded px-2.5 py-1 text-xs font-medium transition-colors ${
                 !onlyCustom
-                  ? 'bg-[#123D73] text-white shadow-sm'
-                  : 'text-slate-700 hover:bg-white hover:text-slate-900'
+                  ? 'bg-[#123B5D] text-white shadow-xs'
+                  : 'text-[#52606D] hover:bg-white hover:text-[#1F2933]'
               }`}
             >
               All Entities ({entities.length})
@@ -354,8 +354,8 @@ export function EntityRankTable({
               onClick={() => setOnlyCustom(true)}
               className={`rounded px-2.5 py-1 text-xs font-medium transition-colors ${
                 onlyCustom
-                  ? 'bg-[#123D73] text-white shadow-sm'
-                  : 'text-slate-700 hover:bg-white hover:text-slate-900'
+                  ? 'bg-[#123B5D] text-white shadow-xs'
+                  : 'text-[#52606D] hover:bg-white hover:text-[#1F2933]'
               }`}
             >
               Custom Uploads ({customCount})
@@ -378,7 +378,7 @@ export function EntityRankTable({
         }
         getRowClassName={(row) =>
           row.band === 'HIGH'
-            ? 'bg-blue-50/50'
+            ? 'bg-red-50/60 hover:bg-red-100/50 red-950/20'
             : ''
         }
       />

@@ -29,14 +29,14 @@ describe('EntityHeader', () => {
     expect(id.className).toMatch(/mono/);
   });
 
-  it('shows a yellow warning banner when completeness is low', () => {
+  it('does not display intrusive yellow warning banner when completeness is low', () => {
     render(
       <MemoryRouter>
         <EntityHeader entity={LOW_DETAIL} runId="demo" />
       </MemoryRouter>,
     );
-    expect(screen.getByText('Insufficient evidence')).toBeInTheDocument();
-    expect(screen.getByText(/excluded from the main ranking/)).toBeInTheDocument();
+    expect(screen.getByText('Data completeness')).toBeInTheDocument();
+    expect(screen.queryByText('Insufficient evidence')).not.toBeInTheDocument();
   });
 
   it('risk badge matches the band in mock data', () => {

@@ -75,21 +75,20 @@ export default function EntityDetailPage() {
 
   return (
     <div className="space-y-6">
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#52606D]">
         <Link
           to={backTo}
-          className="rounded-md border border-slate-200 bg-white px-2 py-1 text-slate-600 underline underline-offset-4 transition-colors hover:bg-blue-50 hover:text-[#123d73]"
+          className="rounded border border-[#D9E2EC] bg-white px-2.5 py-1 text-xs font-medium text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B] transition-colors"
         >
           Portfolio
         </Link>
-        <span aria-hidden="true">›</span>
-        <span className="mono font-medium text-slate-900">{entityId}</span>
+        <span aria-hidden="true" className="text-slate-400">›</span>
+        <span className="mono font-semibold text-[#1F2933]">{entityId}</span>
         <button
           type="button"
           onClick={() => navigate(backTo)}
-          className="ml-2 inline-flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2 py-1 text-xs font-medium text-slate-600 underline underline-offset-4 transition-colors hover:bg-blue-50 hover:text-[#123d73] focus:outline-none focus:ring-2 focus:ring-blue-200"
+          className="ml-2 inline-flex items-center gap-1 rounded border border-[#D9E2EC] bg-white px-2.5 py-1 text-xs font-medium text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1F5F8B]"
         >
-         
           Back
         </button>
       </nav>
@@ -157,7 +156,7 @@ export default function EntityDetailPage() {
                 <h3 className="mb-2 text-sm font-semibold text-slate-900">Quarantine breakdown</h3>
                 <p className="text-sm text-slate-600">
                   Completeness {Math.round(entity.data_completeness * 100)}%
-                  {entity.capped_by_completeness ? ' — capped, see header banner.' : '.'}
+                  {entity.capped_by_completeness ? ' — capped due to completeness threshold.' : '.'}
                 </p>
               </div>
             </div>

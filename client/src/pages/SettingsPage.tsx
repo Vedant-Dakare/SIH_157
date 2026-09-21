@@ -16,6 +16,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
+  SelectValue,
 } from '@/components/ui/select';
 import { useToast } from '@/components/ui/toaster';
 import { useHealth, useRuns } from '@/hooks/useRuns';
@@ -162,10 +163,10 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="max-w-2xl space-y-6">
+    <div className="max-w-3xl space-y-6">
       <PageHeader
-        title="Settings"
-        description="Local-only preferences. Nothing leaves this workstation."
+        title="Settings & System Configuration"
+        description="Local-only supervisory preferences and secure ingestion gateway. All operations are confined to this air-gapped workstation."
       />
 
       <form
@@ -178,96 +179,103 @@ export default function SettingsPage() {
         {/* API Configuration */}
         <section
           aria-label="API configuration"
-          className="rounded-lg border border-[#BFDBFE] bg-[#EFF6FF] p-5"
+          className="gov-card p-5 sm:p-6"
         >
-          <h3 className="mb-4 text-sm font-semibold text-[#123D73]">
-            API Configuration
-          </h3>
-
-          <div className="mb-4">
-            <Label
-              htmlFor="api-url"
-              className="text-[#334155]"
-            >
-              API Base URL
-            </Label>
-
-            <Input
-              id="api-url"
-              value="http://127.0.0.1:8080"
-              readOnly
-              aria-readonly="true"
-              className="mt-1 border-[#BFDBFE] bg-white text-[#123D73] opacity-80"
-            />
-
-            <p className="mt-1 text-xs text-[#64748B]">
-              Pinned to loopback. Cannot point at external hosts.
+          <div className="mb-4 border-b border-[#D9E2EC] pb-3">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#123B5D]">
+              API Loopback Configuration
+            </h2>
+            <p className="mt-1 text-xs text-[#52606D]">
+              Local supervisory gateway endpoint connection parameters.
             </p>
           </div>
 
-          <div>
-            <Label
-              htmlFor="api-token"
-              className="text-[#334155]"
-            >
-              API Token
-            </Label>
+          <div className="space-y-4">
+            <div>
+              <Label
+                htmlFor="api-url"
+                className="text-xs font-semibold text-[#1F2933]"
+              >
+                API Base URL
+              </Label>
 
-            <Input
-              id="api-token"
-              type="password"
-              autoComplete="off"
-              placeholder="Empty unless the token gate is enabled"
-              {...register('token')}
-              className="mt-1 border-[#BFDBFE] bg-white text-[#123D73] placeholder:text-slate-400 focus:border-[#123D73] focus:ring-blue-100"
-            />
+              <Input
+                id="api-url"
+                value="http://127.0.0.1:8080"
+                readOnly
+                aria-readonly="true"
+                className="mt-1 border-[#D9E2EC] bg-[#F8FAFC] font-mono text-xs text-[#1F2933]"
+              />
 
-            {errors.token ? (
-              <p className="mt-1 text-xs text-red-600">
-                {errors.token.message}
+              <p className="mt-1 text-[11px] text-[#52606D]">
+                Pinned to loopback interface (127.0.0.1). Outbound transmission is strictly disallowed.
               </p>
-            ) : null}
+            </div>
+
+            <div>
+              <Label
+                htmlFor="api-token"
+                className="text-xs font-semibold text-[#1F2933]"
+              >
+                API Authentication Token
+              </Label>
+
+              <Input
+                id="api-token"
+                type="password"
+                autoComplete="off"
+                placeholder="Empty unless the token gate is enabled"
+                {...register('token')}
+                className="mt-1 border-[#D9E2EC] bg-white text-xs text-[#1F2933] placeholder:text-slate-400 focus:border-[#1F5F8B] focus:ring-1 focus:ring-[#1F5F8B]"
+              />
+
+              {errors.token ? (
+                <p className="mt-1 text-xs text-red-600">
+                  {errors.token.message}
+                </p>
+              ) : null}
+            </div>
           </div>
         </section>
 
         {/* Upload Company Data */}
         <section
           aria-label="Private company data upload"
-          className="rounded-lg border border-[#BFDBFE] bg-[#E0EEFF] p-5"
+          className="gov-card p-5 sm:p-6"
         >
-          <h3 className="mb-1 text-sm font-semibold text-[#123D73]">
-            Upload Company Data
-          </h3>
-
-          <p className="mb-4 text-xs leading-5 text-[#5B7595]">
-            Processed locally on this workstation. Use files named alerts,
-            cases, investigations, escalations, assets, or telemetry.
-          </p>
+          <div className="mb-4 border-b border-[#D9E2EC] pb-3">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#123B5D]">
+              Secure Ingestion Gateway
+            </h2>
+            <p className="mt-1 text-xs text-[#52606D]">
+              Upload telemetry or operational case datasets for local analysis. Ingestion files: alerts, cases, investigations, escalations, assets, or telemetry.
+            </p>
+          </div>
 
           <div className="space-y-4">
             <div>
               <Label
                 htmlFor="company-id"
-                className="text-[#334155]"
+                className="text-xs font-semibold text-[#1F2933]"
               >
-                Company identifier
+                Entity / Company Identifier
               </Label>
 
               <Input
                 id="company-id"
                 value={companyId}
                 onChange={(event) => setCompanyId(event.target.value)}
-                className="mt-1 border-[#BFDBFE] bg-white text-[#123D73] placeholder:text-slate-400 focus:border-[#123D73] focus:ring-blue-100"
-                placeholder="acme_finance"
+                className="mt-1 border-[#D9E2EC] bg-white text-xs text-[#1F2933] placeholder:text-slate-400 focus:border-[#1F5F8B] focus:ring-1 focus:ring-[#1F5F8B]"
+                placeholder="e.g. acme_finance"
               />
             </div>
 
             <div>
               <Label
                 htmlFor="company-files"
-                className="text-[#334155]"
+                className="text-xs font-semibold text-[#1F2933]"
               >
-                Submission files (.xlsx, .csv, .json, .parquet)
+                Submission Files (.xlsx, .csv, .json, .parquet)
               </Label>
 
               <Input
@@ -278,13 +286,13 @@ export default function SettingsPage() {
                 onChange={(event) =>
                   setUploadFiles(Array.from(event.target.files ?? []))
                 }
-                className="mt-1 border-[#BFDBFE] bg-white text-[#334155] file:mr-3 file:rounded-md file:border-0 file:bg-[#123D73] file:px-3 file:py-1.5 file:text-xs file:font-medium file:text-white hover:file:bg-[#0B315D]"
+                className="mt-1 border-[#D9E2EC] bg-white text-xs text-[#1F2933] file:mr-3 file:rounded file:border-0 file:bg-[#123B5D] file:px-3 file:py-1.5 file:text-xs file:font-medium file:text-white hover:file:bg-[#0E2F4B]"
               />
 
-              <p className="mt-1 text-xs text-[#64748B]">
+              <p className="mt-1 text-[11px] text-[#52606D]">
                 {uploadFiles.length
                   ? `${uploadFiles.length} file(s) selected`
-                  : 'Supports Excel (.xlsx, .xls), CSV, JSON, and Parquet. Max size: 100 MB.'}
+                  : 'Supported formats: Excel (.xlsx, .xls), CSV, JSON, Parquet, SQLite, DuckDB. Max size: 100 MB.'}
               </p>
             </div>
 
@@ -293,9 +301,9 @@ export default function SettingsPage() {
               onClick={() => void onUpload()}
               disabled={uploading || !uploadFiles.length}
               aria-label="Upload company data"
-              className="border-[#123D73] bg-[#123D73] text-white hover:border-[#BFDBFE] hover:bg-blue-100 hover:text-[#123D73]"
+              className="border-[#123B5D] bg-[#123B5D] text-white hover:bg-[#0E2F4B]"
             >
-              {uploading ? 'Uploading…' : 'Upload and Analyze'}
+              {uploading ? 'Processing & Ingesting…' : 'Upload and Analyze'}
             </Button>
           </div>
         </section>
@@ -303,133 +311,145 @@ export default function SettingsPage() {
         {/* Display Preferences */}
         <section
           aria-label="Display preferences"
-          className="rounded-lg border border-[#BFDBFE] bg-[#EFF6FF] p-5"
+          className="gov-card p-5 sm:p-6"
         >
-          <h3 className="mb-4 text-sm font-semibold text-[#123D73]">
-            Display Preferences
-          </h3>
-
-          <div className="mb-4">
-            <Label
-              htmlFor="default-run"
-              className="text-[#334155]"
-            >
-              Default run
-            </Label>
-
-            <Select
-              value={defaultRun}
-              onValueChange={(value) => setValue('defaultRun', value)}
-            >
-              <SelectTrigger
-                id="default-run"
-                className="mt-1 border-[#BFDBFE] bg-white text-[#123D73] hover:bg-blue-50"
-                aria-label="Default run"
-              >
-                {defaultRun || 'Select a run'}
-              </SelectTrigger>
-
-              <SelectContent className="border-[#BFDBFE] bg-white">
-                {runs.map((id) => (
-                  <SelectItem
-                    key={id}
-                    value={id}
-                    className="text-[#123D73] focus:bg-blue-50 focus:text-[#123D73]"
-                  >
-                    {id}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+          <div className="mb-4 border-b border-[#D9E2EC] pb-3">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#123B5D]">
+              Supervisory Display Preferences
+            </h2>
+            <p className="mt-1 text-xs text-[#52606D]">
+              Default interface filters and presentation options.
+            </p>
           </div>
 
-          <div className="mb-4">
-            <Label
-              htmlFor="queue-limit"
-              className="text-[#334155]"
-            >
-              Default queue limit
-            </Label>
-
-            <Select
-              value={queueLimit}
-              onValueChange={(value) =>
-                setValue(
-                  'queueLimit',
-                  value as SettingsForm['queueLimit'],
-                )
-              }
-            >
-              <SelectTrigger
-                id="queue-limit"
-                className="mt-1 border-[#BFDBFE] bg-white text-[#123D73] hover:bg-blue-50"
-                aria-label="Default queue limit"
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div>
+              <Label
+                htmlFor="default-run"
+                className="text-xs font-semibold text-[#1F2933]"
               >
-                {queueLimit}
-              </SelectTrigger>
+                Default Pipeline Run
+              </Label>
 
-              <SelectContent className="border-[#BFDBFE] bg-white">
-                {['10', '25', '50'].map((value) => (
-                  <SelectItem
-                    key={value}
-                    value={value}
-                    className="text-[#123D73] focus:bg-blue-50 focus:text-[#123D73]"
-                  >
-                    {value}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div>
-            <Label
-              htmlFor="date-format"
-              className="text-[#334155]"
-            >
-              Date format
-            </Label>
-
-            <Select
-              value={dateFormat}
-              onValueChange={(value) =>
-                setValue(
-                  'dateFormat',
-                  value as SettingsForm['dateFormat'],
-                )
-              }
-            >
-              <SelectTrigger
-                id="date-format"
-                className="mt-1 border-[#BFDBFE] bg-white text-[#123D73] hover:bg-blue-50"
-                aria-label="Date format"
+              <Select
+                value={defaultRun}
+                onValueChange={(value) => setValue('defaultRun', value)}
               >
-                {dateFormat}
-              </SelectTrigger>
+                <SelectTrigger
+                  id="default-run"
+                  className="mt-1 border-[#D9E2EC] bg-white text-xs text-[#1F2933] hover:border-[#1F5F8B]"
+                  aria-label="Default run"
+                >
+                  <SelectValue placeholder={defaultRun || 'Select a run'} />
+                </SelectTrigger>
 
-              <SelectContent className="border-[#BFDBFE] bg-white">
-                {['UTC', 'ISO', 'Local'].map((value) => (
-                  <SelectItem
-                    key={value}
-                    value={value}
-                    className="text-[#123D73] focus:bg-blue-50 focus:text-[#123D73]"
-                  >
-                    {value}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                <SelectContent className="border-[#D9E2EC] bg-white text-xs">
+                  {runs.map((id) => (
+                    <SelectItem
+                      key={id}
+                      value={id}
+                      className="text-xs text-[#1F2933] focus:bg-[#EAF3F8] focus:text-[#123B5D]"
+                    >
+                      {id}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label
+                htmlFor="queue-limit"
+                className="text-xs font-semibold text-[#1F2933]"
+              >
+                Default Queue Limit
+              </Label>
+
+              <Select
+                value={queueLimit}
+                onValueChange={(value) =>
+                  setValue(
+                    'queueLimit',
+                    value as SettingsForm['queueLimit'],
+                  )
+                }
+              >
+                <SelectTrigger
+                  id="queue-limit"
+                  className="mt-1 border-[#D9E2EC] bg-white text-xs text-[#1F2933] hover:border-[#1F5F8B]"
+                  aria-label="Default queue limit"
+                >
+                  <SelectValue />
+                </SelectTrigger>
+
+                <SelectContent className="border-[#D9E2EC] bg-white text-xs">
+                  {['10', '25', '50'].map((value) => (
+                    <SelectItem
+                      key={value}
+                      value={value}
+                      className="text-xs text-[#1F2933] focus:bg-[#EAF3F8] focus:text-[#123B5D]"
+                    >
+                      {value}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label
+                htmlFor="date-format"
+                className="text-xs font-semibold text-[#1F2933]"
+              >
+                Date &amp; Time Format
+              </Label>
+
+              <Select
+                value={dateFormat}
+                onValueChange={(value) =>
+                  setValue(
+                    'dateFormat',
+                    value as SettingsForm['dateFormat'],
+                  )
+                }
+              >
+                <SelectTrigger
+                  id="date-format"
+                  className="mt-1 border-[#D9E2EC] bg-white text-xs text-[#1F2933] hover:border-[#1F5F8B]"
+                  aria-label="Date format"
+                >
+                  <SelectValue />
+                </SelectTrigger>
+
+                <SelectContent className="border-[#D9E2EC] bg-white text-xs">
+                  {['UTC', 'ISO', 'Local'].map((value) => (
+                    <SelectItem
+                      key={value}
+                      value={value}
+                      className="text-xs text-[#1F2933] focus:bg-[#EAF3F8] focus:text-[#123B5D]"
+                    >
+                      {value}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
           </div>
         </section>
 
         {/* System Information */}
         <section
           aria-label="System information"
-          className="rounded-lg border border-[#BFDBFE] bg-[#E0EEFF] p-5"
+          className="gov-card p-5 sm:p-6"
         >
-          <h3 className="mb-4 text-sm font-semibold text-[#123D73]">
-            System Information
-          </h3>
+          <div className="mb-4 border-b border-[#D9E2EC] pb-3">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#123B5D]">
+              System Health &amp; Operational Information
+            </h2>
+            <p className="mt-1 text-xs text-[#52606D]">
+              Status verification for active air-gapped backend engine.
+            </p>
+          </div>
 
           {healthQuery.isLoading ? (
             <LoadingState
@@ -437,33 +457,31 @@ export default function SettingsPage() {
               message="Loading system info…"
             />
           ) : healthQuery.data ? (
-            <dl className="space-y-3 text-sm">
-              <div className="flex gap-2">
-                <dt className="text-[#64748B]">
-                  Pipeline version:
+            <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3 text-sm">
+              <div className="rounded border border-[#D9E2EC] bg-[#F8FAFC] p-3">
+                <dt className="text-xs font-bold uppercase tracking-wider text-[#52606D]">
+                  Pipeline Version
                 </dt>
-
-                <dd className="mono font-medium text-[#123D73]">
+                <dd className="mono mt-1 text-sm font-semibold text-[#123B5D]">
                   {healthQuery.data.pipeline_version}
                 </dd>
               </div>
 
-              <div className="flex gap-2">
-                <dt className="text-[#64748B]">
-                  Last report:
+              <div className="rounded border border-[#D9E2EC] bg-[#F8FAFC] p-3">
+                <dt className="text-xs font-bold uppercase tracking-wider text-[#52606D]">
+                  Last Report Generated
                 </dt>
-
-                <dd className="text-[#123D73]">
+                <dd className="mt-1 text-sm font-medium text-[#1F2933]">
                   {formatDate(healthQuery.data.generated_at)}
                 </dd>
               </div>
 
-              <div className="flex gap-2">
-                <dt className="text-[#64748B]">
-                  Status:
+              <div className="rounded border border-[#D9E2EC] bg-[#F8FAFC] p-3">
+                <dt className="text-xs font-bold uppercase tracking-wider text-[#52606D]">
+                  System Status
                 </dt>
-
-                <dd className="font-medium text-[#123D73]">
+                <dd className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-emerald-700">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
                   {healthQuery.data.status}
                 </dd>
               </div>
@@ -477,13 +495,13 @@ export default function SettingsPage() {
         </section>
 
         {/* Actions */}
-        <div className="flex gap-2">
+        <div className="flex gap-3 pt-2">
           <Button
             type="submit"
             aria-label="Save settings"
-            className="border-[#123D73] bg-[#123D73] text-white hover:border-[#BFDBFE] hover:bg-blue-100 hover:text-[#123D73]"
+            className="border-[#123B5D] bg-[#123B5D] text-white hover:bg-[#0E2F4B]"
           >
-            Save
+            Save Preferences
           </Button>
 
           <Button
@@ -491,9 +509,9 @@ export default function SettingsPage() {
             variant="outline"
             onClick={onReset}
             aria-label="Reset settings"
-            className="border-[#BFDBFE] bg-[#EFF6FF] text-[#123D73] hover:bg-blue-100 hover:text-[#123D73]"
+            className="border-[#D9E2EC] bg-white text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B]"
           >
-            Reset
+            Reset Defaults
           </Button>
         </div>
       </form>

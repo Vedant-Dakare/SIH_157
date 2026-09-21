@@ -73,30 +73,37 @@ export default function QueuePage() {
         actions={
           <>
             <Select value={runId} onValueChange={selectRun} disabled={runs.length === 0}>
-              <SelectTrigger className="h-9 w-40" aria-label="Select run">
+              <SelectTrigger className="h-9 w-40 border-[#D9E2EC] bg-white text-xs font-medium text-[#1F2933] hover:border-[#1F5F8B] focus:ring-1 focus:ring-[#1F5F8B]" aria-label="Select run">
                 <SelectValue placeholder="Run" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="border-[#D9E2EC] bg-white text-xs">
                 {runs.map((id) => (
-                  <SelectItem key={id} value={id}>
+                  <SelectItem key={id} value={id} className="text-xs text-[#1F2933] focus:bg-[#EAF3F8] focus:text-[#123B5D]">
                     {id}
                   </SelectItem>
                 ))}
               </SelectContent>
             </Select>
             <Select value={String(limit)} onValueChange={selectLimit}>
-              <SelectTrigger className="h-9 w-24" aria-label="Select queue limit">
+              <SelectTrigger className="h-9 w-24 border-[#D9E2EC] bg-white text-xs font-medium text-[#1F2933] hover:border-[#1F5F8B] focus:ring-1 focus:ring-[#1F5F8B]" aria-label="Select queue limit">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="border-[#D9E2EC] bg-white text-xs">
                 {LIMITS.map((value) => (
-                  <SelectItem key={value} value={String(value)}>
+                  <SelectItem key={value} value={String(value)} className="text-xs text-[#1F2933] focus:bg-[#EAF3F8] focus:text-[#123B5D]">
                     {value}
                   </SelectItem>
                 ))}
               </SelectContent>
             </Select>
-            <Button type="button" variant="outline" size="sm" onClick={exportCsv} aria-label="Export queue as CSV">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={exportCsv}
+              aria-label="Export queue as CSV"
+              className="border-[#D9E2EC] bg-white text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B]"
+            >
               Export CSV
             </Button>
           </>

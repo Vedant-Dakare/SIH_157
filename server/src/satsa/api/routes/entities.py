@@ -63,7 +63,7 @@ def resolve_store(query: dict[str, str]) -> tuple[dict[str, Any] | None, str]:
     run_id = query.get("run_id", "")
     if not run_id:
         known = deps.known_runs()
-        run_id = known[-1] if known else ""
+        run_id = known[0] if known else ""
     if not run_id:
         return None, ""
     return deps.get_store(run_id), run_id

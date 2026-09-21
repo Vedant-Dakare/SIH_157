@@ -15,9 +15,9 @@ export const queryKeys: {
     findings: (entityId: string, runId: string) => QueryKey;
   };
   findings: {
-    detail: (findingId: string) => QueryKey;
-    evidence: (findingId: string) => QueryKey;
-    counterfactual: (findingId: string) => QueryKey;
+    detail: (findingId: string, runId?: string) => QueryKey;
+    evidence: (findingId: string, runId?: string) => QueryKey;
+    counterfactual: (findingId: string, runId?: string) => QueryKey;
   };
   queue: { list: (runId: string, limit: number) => QueryKey };
   audit: { verify: QueryKey; entries: (runId?: string) => QueryKey };
@@ -40,9 +40,12 @@ export const queryKeys: {
       ['entities', 'findings', entityId, runId] as const,
   },
   findings: {
-    detail: (findingId: string) => ['findings', 'detail', findingId] as const,
-    evidence: (findingId: string) => ['findings', 'evidence', findingId] as const,
-    counterfactual: (findingId: string) => ['findings', 'counterfactual', findingId] as const,
+    detail: (findingId: string, runId?: string) =>
+      ['findings', 'detail', findingId, runId ?? ''] as const,
+    evidence: (findingId: string, runId?: string) =>
+      ['findings', 'evidence', findingId, runId ?? ''] as const,
+    counterfactual: (findingId: string, runId?: string) =>
+      ['findings', 'counterfactual', findingId, runId ?? ''] as const,
   },
   queue: {
     list: (runId: string, limit: number) => ['queue', 'list', runId, limit] as const,

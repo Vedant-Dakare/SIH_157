@@ -22,28 +22,28 @@ function RunRow({ runId }: { runId: string }) {
   const complete = manifest !== undefined;
 
   return (
-    <tr className="border-b border-slate-200 last:border-0 hover:bg-blue-50/40">
-      <td className="mono px-3 py-3 font-medium text-slate-900">
+    <tr className="border-b border-[#D9E2EC] last:border-0 hover:bg-[#F8FAFC]">
+      <td className="mono px-3 py-3 font-medium text-[#1F2933]">
         {runId}
       </td>
 
-      <td className="px-3 py-3 text-slate-700">
+      <td className="px-3 py-3 text-[#52606D]">
         {manifest
           ? formatDate(manifest.created_at)
           : '—'}
       </td>
 
-      <td className="px-3 py-3 text-slate-700">
+      <td className="px-3 py-3 text-[#52606D]">
         —
       </td>
 
-      <td className="px-3 py-3 text-slate-700">
+      <td className="px-3 py-3 text-[#52606D]">
         —
       </td>
 
       <td className="px-3 py-3">
         {manifestQuery.isLoading ? (
-          <span className="text-slate-500">
+          <span className="text-[#52606D]">
             …
           </span>
         ) : (
@@ -61,11 +61,11 @@ function RunRow({ runId }: { runId: string }) {
         )}
       </td>
 
-      <td className="px-3 py-3 font-medium tabular-nums text-slate-900">
+      <td className="px-3 py-3 font-medium tabular-nums text-[#1F2933]">
         {manifest?.entity_count ?? '—'}
       </td>
 
-      <td className="px-3 py-3 font-medium tabular-nums text-slate-900">
+      <td className="px-3 py-3 font-medium tabular-nums text-[#1F2933]">
         {manifest?.finding_count ?? '—'}
       </td>
 
@@ -74,7 +74,7 @@ function RunRow({ runId }: { runId: string }) {
           to={`/audit?run=${encodeURIComponent(
             runId,
           )}`}
-          className="font-medium text-[#123D73] underline underline-offset-4 hover:text-[#2563A8]"
+          className="font-medium text-[#123B5D] underline underline-offset-4 hover:text-[#0E2F4B]"
         >
           Manifest
         </Link>
@@ -86,7 +86,7 @@ function RunRow({ runId }: { runId: string }) {
             to={`/portfolio?run=${encodeURIComponent(
               runId,
             )}`}
-            className="font-medium text-[#123D73] underline underline-offset-4 hover:text-[#2563A8]"
+            className="font-medium text-[#123B5D] underline underline-offset-4 hover:text-[#0E2F4B]"
           >
             Portfolio
           </Link>
@@ -95,7 +95,7 @@ function RunRow({ runId }: { runId: string }) {
             to={`/audit?run=${encodeURIComponent(
               runId,
             )}`}
-            className="font-medium text-[#123D73] underline underline-offset-4 hover:text-[#2563A8]"
+            className="font-medium text-[#123B5D] underline underline-offset-4 hover:text-[#0E2F4B]"
           >
             Audit
           </Link>
@@ -215,13 +215,13 @@ export default function RunsPage() {
       !runsQuery.error &&
       runs.length > 0 ? (
         <ErrorBoundary label="Run history table">
-          <div className="overflow-x-auto rounded-md border border-slate-200 bg-white">
+          <div className="overflow-x-auto rounded-md border border-[#D9E2EC] bg-white shadow-xs">
             <table
               aria-label="Pipeline runs"
-              className="w-full text-sm text-slate-900"
+              className="w-full text-sm text-[#1F2933]"
             >
               <thead>
-                <tr className="border-b border-slate-200 bg-slate-50 text-left">
+                <tr className="border-b border-[#D9E2EC] bg-[#F0F4F8] text-left">
                   {[
                     'Run ID',
                     'Started',
@@ -235,7 +235,7 @@ export default function RunsPage() {
                   ].map((header) => (
                     <th
                       key={header}
-                      className="px-3 py-3 font-semibold text-slate-900"
+                      className="px-3 py-3 text-xs font-bold uppercase tracking-wider text-[#1F2933]"
                     >
                       {header}
                     </th>

@@ -133,7 +133,7 @@ export function DataTable<TData>({
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="rounded-md border border-slate-200 bg-white">
+      <div className="rounded-md border border-[#D9E2EC] bg-white shadow-xs overflow-x-auto">
         <Table aria-label="Data table">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

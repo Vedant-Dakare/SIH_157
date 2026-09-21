@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import { EmptyState } from '@/components/common/EmptyState';
 import { RiskBadge } from '@/components/common/RiskBadge';
@@ -39,6 +39,8 @@ export function SignalHeatmap({
   findings,
 }: SignalHeatmapProps) {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const runParam = searchParams.get('run');
 
   const byCell = React.useMemo(() => {
     const map = new Map<string, Finding>();
@@ -128,7 +130,7 @@ export function SignalHeatmap({
 
         {/* Heatmap */}
         <svg
-          role="img"
+          role="group"
           aria-label={`Heatmap of ${entities.length} entities by ${signals.length} signals`}
           width={width - ROW_LABEL_WIDTH}
           height={height}
@@ -216,7 +218,7 @@ export function SignalHeatmap({
                   style={{ cursor: 'pointer' }}
                   onClick={() =>
                     navigate(
-                      `/findings/${finding.finding_id}`,
+                      `/findings/${finding.finding_id}${runParam ? `?run=${encodeURIComponent(runParam)}` : ''}`,
                     )
                   }
                   onKeyDown={(event) => {
@@ -227,7 +229,7 @@ export function SignalHeatmap({
                       event.preventDefault();
 
                       navigate(
-                        `/findings/${finding.finding_id}`,
+                        `/findings/${finding.finding_id}${runParam ? `?run=${encodeURIComponent(runParam)}` : ''}`,
                       );
                     }
                   }}

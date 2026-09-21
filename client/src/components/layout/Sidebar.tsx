@@ -7,8 +7,8 @@ import {
   ListOrdered,
   ScrollText,
   Settings,
-  ShieldCheck,
   Users,
+  X,
 } from 'lucide-react';
 
 import {
@@ -20,8 +20,9 @@ import {
 } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 import { useRuns } from '@/hooks/useRuns';
+import { EmblemOfIndia } from '@/components/common/EmblemOfIndia';
 
-const NAV_ITEMS = [
+export const NAV_ITEMS = [
   { to: '/portfolio', label: 'Overview', icon: LayoutDashboard },
   { to: '/entities', label: 'Case Explorer', icon: Users },
   { to: '/queue', label: 'Attention Queue', icon: ListOrdered },
@@ -31,13 +32,17 @@ const NAV_ITEMS = [
   { to: '/settings', label: 'Settings', icon: Settings },
 ] as const;
 
-export function Sidebar() {
+export interface SidebarProps {
+  isMobileMenuOpen?: boolean;
+  onCloseMobileMenu?: () => void;
+}
+
+export function Sidebar({ isMobileMenuOpen, onCloseMobileMenu }: SidebarProps) {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const runsQuery = useRuns();
   const runs = runsQuery.data?.runs ?? [];
-  const selectedRun =
-    searchParams.get('run') ?? runs[0] ?? '';
+  const selectedRun = searchParams.get('run') ?? runs[0] ?? '';
 
   function selectRun(runId: string) {
     const next = new URLSearchParams(searchParams);
@@ -45,128 +50,145 @@ export function Sidebar() {
     setSearchParams(next);
   }
 
-  return (
-    <aside
-      aria-label="Primary navigation"
-      className="fixed bottom-0 left-0 top-8 z-50 hidden w-[248px] flex-col border-r border-slate-200 bg-white lg:flex"
-    >
-      {/* SAT-SA + Current Run */}
-      <div className="border-b border-slate-200 bg-white px-5 pt-7 pb-6">
-        {/* SAT-SA */}
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-[#082b57]">
-            <ShieldCheck
-              className="h-5 w-5 text-white"
-              aria-hidden="true"
-            />
-          </div>
-
-          <div>
-            <div className="text-lg font-bold tracking-tight text-[#102a56]">
-              SAT-SA
+  const navContent = (
+    <div className="flex h-full flex-col justify-between">
+      {/* Branding & Run Selector */}
+      <div>
+        {/* Government Identity Header */}
+        <div className="border-b border-[#D9E2EC] bg-white px-5 pt-4 pb-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-[#123B5D] text-amber-300 p-1">
+              <EmblemOfIndia className="h-9 w-auto text-amber-300" />
             </div>
 
-            <div className="text-[10px] uppercase tracking-[0.1em] text-slate-500">
-              Supervisory Analytics
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-[#52606D]">
+                Govt of India
+              </div>
+              <div className="text-base font-bold tracking-tight text-[#123B5D]">
+                SAT-SA Portal
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.08em] text-[#52606D]">
+                NCIIPC Supervision
+              </div>
             </div>
-          </div>
-        </div>
 
-        {/* Current Run */}
-        <div className="mt-6 mb-2 flex items-center gap-2">
-          <Activity
-            className="h-4 w-4 text-[#123d73]"
-            aria-hidden="true"
-          />
-
-          <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500">
-            Current Run
-          </span>
-        </div>
-
-        <Select
-          value={selectedRun}
-          onValueChange={selectRun}
-          disabled={runs.length === 0}
-        >
-          <SelectTrigger
-            id="run-selector"
-            aria-label="Select current run"
-            className="h-9 border-slate-300 bg-white text-xs text-slate-700"
-          >
-            <SelectValue
-              placeholder={
-                runsQuery.isLoading
-                  ? 'Loading runs…'
-                  : 'No runs'
-              }
-            />
-          </SelectTrigger>
-
-          <SelectContent>
-            {runs.map((runId) => (
-              <SelectItem
-                key={runId}
-                value={runId}
+            {onCloseMobileMenu ? (
+              <button
+                type="button"
+                onClick={onCloseMobileMenu}
+                aria-label="Close navigation"
+                className="flex h-8 w-8 items-center justify-center rounded text-slate-500 hover:bg-slate-100 lg:hidden"
               >
-                {runId}
-              </SelectItem>
+                <X className="h-5 w-5" aria-hidden="true" />
+              </button>
+            ) : null}
+          </div>
+
+          {/* Current Run Selector */}
+          <div className="mt-5 mb-1.5 flex items-center gap-1.5">
+            <Activity className="h-3.5 w-3.5 text-[#1F5F8B]" aria-hidden="true" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#52606D]">
+              Current Run
+            </span>
+          </div>
+
+          <Select value={selectedRun} onValueChange={selectRun} disabled={runs.length === 0}>
+            <SelectTrigger
+              id="run-selector"
+              aria-label="Select current run"
+              className="h-8.5 w-full border-[#D9E2EC] bg-white text-xs font-medium text-[#1F2933] focus:border-[#1F5F8B] focus:ring-1 focus:ring-[#1F5F8B]"
+            >
+              <SelectValue placeholder={runsQuery.isLoading ? 'Loading runs…' : 'No runs'} />
+            </SelectTrigger>
+
+            <SelectContent className="border-[#D9E2EC] bg-white text-xs">
+              {runs.map((runId) => (
+                <SelectItem key={runId} value={runId} className="text-xs text-[#1F2933]">
+                  {runId}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        {/* Navigation items */}
+        <nav className="px-3 py-3" aria-label="Portal Navigation">
+          <div className="mb-2 px-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#52606D]">
+            Official Workspace
+          </div>
+
+          <ul className="space-y-1">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.to}>
+                <NavLink
+                  to={item.to}
+                  aria-label={`Go to ${item.label}`}
+                  onClick={onCloseMobileMenu}
+                  className={({ isActive }) =>
+                    cn(
+                      'flex items-center gap-3 rounded-md px-3 py-2 text-xs font-medium transition-colors',
+                      'focus:outline-none focus:ring-2 focus:ring-[#1F5F8B]',
+                      isActive
+                        ? 'border-l-[3px] border-[#123B5D] bg-[#EAF3F8] font-semibold text-[#123B5D]'
+                        : 'border-l-[3px] border-transparent text-[#52606D] hover:bg-[#F8FAFC] hover:text-[#1F2933]',
+                    )
+                  }
+                >
+                  <item.icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                  <span>{item.label}</span>
+                </NavLink>
+              </li>
             ))}
-          </SelectContent>
-        </Select>
+          </ul>
+        </nav>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex-1 overflow-y-auto px-3 py-4">
-        <div className="mb-2 px-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-          Workspace
+      {/* Institutional Security Environment Badge */}
+      <div className="border-t border-[#D9E2EC] bg-[#F8FAFC] p-3.5">
+        <div className="mb-1.5 flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-emerald-600 ring-2 ring-emerald-100" aria-hidden="true" />
+          <span className="text-[11px] font-semibold text-[#1F2933]">Air-gapped environment</span>
         </div>
 
-        <ul className="space-y-1">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.to}>
-              <NavLink
-                to={item.to}
-                aria-label={`Go to ${item.label}`}
-                className={({ isActive }) =>
-                  cn(
-                    'console-interactive flex items-center gap-3 rounded-md border px-3 py-2.5 text-sm',
-                    'focus:outline-none focus:ring-2 focus:ring-blue-200',
-                    isActive
-                      ? 'border-blue-200 bg-blue-50 font-semibold text-[#123d73]'
-                      : 'border-transparent text-slate-600 hover:bg-slate-50 hover:text-slate-900',
-                  )
-                }
-              >
-                <item.icon
-                  className="h-[17px] w-[17px] shrink-0"
-                  aria-hidden="true"
-                />
-
-                <span>{item.label}</span>
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      {/* Environment */}
-      <div className="border-t border-slate-200 bg-slate-50 p-4">
-        <div className="mb-2 flex items-center gap-2">
-          <span
-            className="h-2 w-2 rounded-full bg-emerald-500"
-            aria-hidden="true"
-          />
-
-          <span className="text-[11px] font-medium text-slate-600">
-            Air-gapped environment
-          </span>
-        </div>
-
-        <p className="text-[10px] leading-4 text-slate-400">
-          SAT-SA · Supervisory decision support
+        <p className="text-[10px] leading-4 text-[#52606D]">
+          SAT-SA · Human supervisory decision support framework
         </p>
       </div>
-    </aside>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Desktop Persistent Sidebar */}
+      <aside
+        aria-label="Primary navigation"
+        className="fixed bottom-0 left-0 top-[107px] z-30 hidden w-[250px] flex-col border-r border-[#D9E2EC] bg-white lg:flex"
+      >
+        {navContent}
+      </aside>
+
+      {/* Mobile Drawer Navigation */}
+      {isMobileMenuOpen ? (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs transition-opacity"
+            onClick={onCloseMobileMenu}
+            aria-hidden="true"
+          />
+
+          {/* Drawer Panel */}
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile Navigation Menu"
+            className="fixed inset-y-0 left-0 w-[280px] bg-white shadow-xl flex flex-col animate-in slide-in-from-left duration-200"
+          >
+            {navContent}
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 }

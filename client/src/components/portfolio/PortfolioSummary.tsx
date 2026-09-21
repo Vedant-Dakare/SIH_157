@@ -100,19 +100,19 @@ export function PortfolioSummary({
     summary.entity_count_by_band.HIGH ?? 0;
 
   const cardClass =
-    'border-slate-200 bg-white text-slate-900';
+    'border-[#D9E2EC] bg-white text-[#1F2933] shadow-xs';
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
       <Card className={cardClass}>
-        <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-500">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#52606D]">
             Total Entities
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <p className="text-2xl font-bold text-[#123D73]">
+          <p className="text-2xl font-bold text-[#123B5D]">
             {total}
           </p>
 
@@ -121,14 +121,14 @@ export function PortfolioSummary({
       </Card>
 
       <Card className={cardClass}>
-        <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-500">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#52606D]">
             HIGH Risk Entities
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <p className={`text-2xl font-bold ${high > 0 ? 'text-red-500' : 'text-[#123D73]'}`}>
+          <p className={`text-2xl font-bold ${high > 0 ? 'text-red-500' : 'text-[#123B5D]'}`}>
             {high}
           </p>
 
@@ -137,14 +137,14 @@ export function PortfolioSummary({
       </Card>
 
       <Card className={cardClass}>
-        <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-500">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#52606D]">
             Active Findings
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <p className="text-2xl font-bold text-[#123D73]">
+          <p className="text-2xl font-bold text-[#123B5D]">
             {findingsCount ?? '—'}
           </p>
 
@@ -153,8 +153,8 @@ export function PortfolioSummary({
       </Card>
 
       <Card className={cardClass}>
-        <CardHeader>
-          <CardTitle className="text-sm font-medium text-slate-500">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#52606D]">
             Data Quality
           </CardTitle>
         </CardHeader>

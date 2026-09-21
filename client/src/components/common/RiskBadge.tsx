@@ -29,13 +29,13 @@ export function RiskBadge({
 }: RiskBadgeProps) {
   const BAND_CLASSES: Record<RiskBand, string> = {
     HIGH:
-      'border-[#123d73] bg-[#123d73] text-white',
+      'border-red-200 bg-red-50 text-red-500 font-semibold',
     ELEVATED:
-      'border-[#2563a8] bg-[#e8f1fa] text-[#1d5b91]',
+      'border-amber-200 bg-amber-50 text-amber-700 font-semibold',
     MODERATE:
-      'border-[#6baed6] bg-[#edf6fb] text-[#256b99]',
+      'border-yellow-200 bg-yellow-50 text-yellow-700 font-semibold',
     LOW:
-      'border-[#b8d9eb] bg-[#f1f8fc] text-[#39799e]',
+      'border-emerald-200 bg-emerald-50 text-emerald-700 font-semibold',
   };
 
   return (

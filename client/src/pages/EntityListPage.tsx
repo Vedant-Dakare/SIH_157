@@ -84,7 +84,7 @@ export default function EntityListPage() {
               disabled={runs.length === 0}
             >
               <SelectTrigger
-                className="h-9 w-44 border-[#BFDBFE] bg-[#EFF6FF] text-[#123D73] hover:bg-blue-100"
+                className="h-9 w-44 border-[#D9E2EC] bg-white text-xs font-medium text-[#1F2933] hover:border-[#1F5F8B] focus:ring-1 focus:ring-[#1F5F8B]"
                 aria-label="Select run"
               >
                 <SelectValue
@@ -92,12 +92,12 @@ export default function EntityListPage() {
                 />
               </SelectTrigger>
 
-              <SelectContent className="border-[#BFDBFE] bg-white">
+              <SelectContent className="border-[#D9E2EC] bg-white text-xs">
                 {runs.map((id) => (
                   <SelectItem
                     key={id}
                     value={id}
-                    className="text-[#123D73] focus:bg-blue-50 focus:text-[#123D73]"
+                    className="text-[#1F2933] focus:bg-[#EAF3F8] focus:text-[#123B5D]"
                   >
                     {id}
                   </SelectItem>
@@ -112,7 +112,7 @@ export default function EntityListPage() {
               onClick={exportCsv}
               disabled={entities.length === 0}
               aria-label="Export entities as CSV"
-              className="border-[#BFDBFE] bg-[#EFF6FF] text-[#123D73] hover:bg-blue-100 hover:text-[#123D73]"
+              className="border-[#D9E2EC] bg-white text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B]"
             >
               <Download
                 className="h-3.5 w-3.5"
@@ -178,11 +178,11 @@ export default function EntityListPage() {
               {BANDS.map((band) => (
                 <div
                   key={band}
-                  className="flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-slate-50 px-3 py-2.5"
+                  className="flex items-center justify-between gap-2 rounded-md border border-[#D9E2EC] bg-[#F8FAFC] px-3 py-2.5"
                 >
                   <RiskBadge band={band} size="sm" />
 
-                  <span className="text-xl font-bold tabular-nums text-[#123D73]">
+                  <span className="text-xl font-bold tabular-nums text-[#123B5D]">
                     {bandCounts[band]}
                   </span>
                 </div>

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import tempfile
 import subprocess
 import sys
@@ -70,6 +71,19 @@ def _now() -> str:
 def _envelope(run_id: str, payload: dict[str, Any]) -> dict[str, Any]:
     """Attach run_id + generated_at to every response."""
     return {"run_id": run_id, "generated_at": _now(), **payload}
+
+
+def _sanitize_json(obj: Any) -> Any:
+    """Replace non-compliant JSON floats (NaN, Inf) with None."""
+    if isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj):
+            return None
+        return obj
+    if isinstance(obj, dict):
+        return {k: _sanitize_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize_json(v) for v in obj]
+    return obj
 
 
 def _spawn_run(run_id: str) -> None:
@@ -259,7 +273,7 @@ def build_fastapi_app() -> Any:
         status, payload = handle_request(
             request.method, request.url.path, query, dict(request.headers), body
         )
-        return JSONResponse(status_code=status, content=payload)
+        return JSONResponse(status_code=status, content=_sanitize_json(payload))
 
     async def _upload(request: Request) -> JSONResponse:
         query = {k: v[0] for k, v in parse_qs(urlparse(str(request.url)).query).items()}
@@ -421,7 +435,7 @@ class _Handler(BaseHTTPRequestHandler):
             except (ValueError, OSError):
                 body = {}
         status, payload = handle_request(method, parsed.path, query, dict(self.headers), body)
-        data = json_mod.dumps(payload, default=str).encode("utf-8")
+        data = json_mod.dumps(_sanitize_json(payload), default=str).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(data)))

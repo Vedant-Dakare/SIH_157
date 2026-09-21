@@ -180,27 +180,30 @@ export function getEntityFindings(entityId: string, runId: string): Promise<Enti
   );
 }
 
-export function getFinding(findingId: string): Promise<FindingDetailResponse> {
+export function getFinding(findingId: string, runId?: string): Promise<FindingDetailResponse> {
   return validated<FindingDetailResponse>(
     `GET /findings/${findingId}`,
     FindingDetailResponseSchema,
-    api.get(`/findings/${encodeURIComponent(findingId)}`),
+    api.get(`/findings/${encodeURIComponent(findingId)}${query({ run_id: runId })}`),
   );
 }
 
-export function getFindingEvidence(findingId: string): Promise<EvidenceResponse> {
+export function getFindingEvidence(findingId: string, runId?: string): Promise<EvidenceResponse> {
   return validated<EvidenceResponse>(
     `GET /findings/${findingId}/evidence`,
     EvidenceResponseSchema,
-    api.get(`/findings/${encodeURIComponent(findingId)}/evidence`),
+    api.get(`/findings/${encodeURIComponent(findingId)}/evidence${query({ run_id: runId })}`),
   );
 }
 
-export function getFindingCounterfactual(findingId: string): Promise<CounterfactualResponse> {
+export function getFindingCounterfactual(
+  findingId: string,
+  runId?: string,
+): Promise<CounterfactualResponse> {
   return validated<CounterfactualResponse>(
     `GET /findings/${findingId}/counterfactual`,
     CounterfactualResponseSchema,
-    api.get(`/findings/${encodeURIComponent(findingId)}/counterfactual`),
+    api.get(`/findings/${encodeURIComponent(findingId)}/counterfactual${query({ run_id: runId })}`),
   );
 }
 

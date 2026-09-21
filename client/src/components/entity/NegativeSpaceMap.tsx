@@ -105,7 +105,7 @@ export function NegativeSpaceMap({ entityId, runId, cells, isLoading = false }: 
                     <td key={source} className={cn('border border-white p-2 text-center text-xs font-medium', style.bg)}>
                       {cell?.findingId ? (
                         <Link
-                          to={`/findings/${cell.findingId}`}
+                          to={`/findings/${cell.findingId}${runId ? `?run=${encodeURIComponent(runId)}` : ''}`}
                           aria-label={`${asset} ${source}: ${style.label}${cell.signalId ? `, covered by ${cell.signalId}` : ''}. Open finding.`}
                           className="underline underline-offset-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
                         >

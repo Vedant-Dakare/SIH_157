@@ -15,7 +15,7 @@ const TableHeader = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
-  <thead ref={ref} className={cn('[&_tr]:border-b [&_tr]:border-slate-200', className)} {...props} />
+  <thead ref={ref} className={cn('[&_tr]:border-b [&_tr]:border-[#D9E2EC] bg-[#F0F4F8]', className)} {...props} />
 ));
 TableHeader.displayName = 'TableHeader';
 
@@ -32,7 +32,7 @@ const TableRow = React.forwardRef<HTMLTableRowElement, React.HTMLAttributes<HTML
     <tr
       ref={ref}
       className={cn(
-        'border-b border-slate-200 transition-colors hover:bg-blue-50/40 data-[state=selected]:bg-blue-50',
+        'border-b border-[#D9E2EC] transition-colors hover:bg-[#F8FAFC] data-[state=selected]:bg-[#EAF3F8]',
         className,
       )}
       {...props}
@@ -47,10 +47,10 @@ const TableHead = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <th
     ref={ref}
-      className={cn(
-        'h-10 px-2 text-left align-middle font-medium text-slate-500 [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
-        className,
-      )}
+    className={cn(
+      'h-9 px-3 text-left align-middle text-[11px] font-bold uppercase tracking-wider text-[#1F2933] [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
+      className,
+    )}
     {...props}
   />
 ));
@@ -62,7 +62,7 @@ const TableCell = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <td
     ref={ref}
-    className={cn('p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]', className)}
+    className={cn('p-3 align-middle text-xs text-[#1F2933] [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]', className)}
     {...props}
   />
 ));
@@ -72,7 +72,7 @@ const TableCaption = React.forwardRef<
   HTMLTableCaptionElement,
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
-  <caption ref={ref} className={cn('mt-4 text-sm text-slate-500', className)} {...props} />
+  <caption ref={ref} className={cn('mt-4 text-xs text-[#52606D]', className)} {...props} />
 ));
 TableCaption.displayName = 'TableCaption';
 

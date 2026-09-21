@@ -25,6 +25,17 @@ const config: Config = {
           anomaly: '#fb923c',
           composite: '#f472b6',
         },
+        gov: {
+          navy: '#123B5D',
+          blue: '#1F5F8B',
+          light: '#EAF3F8',
+          bg: '#F8FAFC',
+          text: '#1F2933',
+          muted: '#52606D',
+          border: '#D9E2EC',
+          saffron: '#FF9933',
+          green: '#138808',
+        },
       },
       keyframes: {
         'accordion-down': {

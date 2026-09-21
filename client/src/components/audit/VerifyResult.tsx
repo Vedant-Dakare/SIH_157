@@ -57,19 +57,19 @@ export function VerifyResult({
   if (result.valid) {
     return (
       <div
-        className="space-y-2 rounded-md border border-blue-200 bg-blue-50 px-4 py-4"
+        className="space-y-2 rounded-md border border-[#D9E2EC] bg-[#EAF3F8] px-5 py-4 shadow-xs"
         aria-label="Chain intact"
       >
-        <p className="flex items-center gap-2 text-lg font-bold text-[#123D73]">
+        <p className="flex items-center gap-2 text-lg font-bold text-[#123B5D]">
           <CheckCircle2
-            className="h-6 w-6 text-[#2563A8]"
+            className="h-6 w-6 text-[#123B5D]"
             aria-hidden="true"
           />
 
           <span>Audit chain intact</span>
         </p>
 
-        <p className="text-sm font-medium text-slate-700">
+        <p className="text-sm font-medium text-[#1F2933]">
           {result.entry_count} entries verified.
         </p>
 

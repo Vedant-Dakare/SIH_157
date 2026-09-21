@@ -5,16 +5,19 @@ import { ErrorState } from '@/components/common/ErrorState';
 import { LoadingState } from '@/components/common/LoadingState';
 import { FindingDetail } from '@/components/findings/FindingDetail';
 import { useCounterfactual, useEvidence, useFinding } from '@/hooks/useEvidence';
+import { useRuns } from '@/hooks/useRuns';
 
 /** Finding detail: parallel fetch, 7-section view, clear 404. */
 export default function FindingDetailPage() {
   const { findingId } = useParams();
   const [searchParams] = useSearchParams();
-  const runId = searchParams.get('run') ?? '';
+  const runsQuery = useRuns();
+  const runs = runsQuery.data?.runs ?? [];
+  const runId = searchParams.get('run') || runs[0] || '';
 
-  const findingQuery = useFinding(findingId);
-  const evidenceQuery = useEvidence(findingId);
-  const counterfactualQuery = useCounterfactual(findingId);
+  const findingQuery = useFinding(findingId, runId);
+  const evidenceQuery = useEvidence(findingId, runId);
+  const counterfactualQuery = useCounterfactual(findingId, runId);
 
   if (!findingId) {
     return (
@@ -57,19 +60,22 @@ export default function FindingDetailPage() {
   const evidence = evidenceQuery.data;
   return (
     <div className="space-y-4">
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500">
-        <Link to={`/portfolio${runId ? `?run=${encodeURIComponent(runId)}` : ''}`} className="font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#52606D]">
+        <Link
+          to={`/portfolio${runId ? `?run=${encodeURIComponent(runId)}` : ''}`}
+          className="rounded border border-[#D9E2EC] bg-white px-2.5 py-1 text-xs font-medium text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B] transition-colors"
+        >
           Portfolio
         </Link>
-        <span aria-hidden="true">›</span>
+        <span aria-hidden="true" className="text-slate-400">›</span>
         <Link
           to={`/entities/${finding.entity_id}${runId ? `?run=${encodeURIComponent(runId)}` : ''}`}
-          className="mono font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]"
+          className="mono rounded border border-[#D9E2EC] bg-white px-2.5 py-1 text-xs font-medium text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B] transition-colors"
         >
           {finding.entity_id}
         </Link>
-        <span aria-hidden="true">›</span>
-        <span className="mono font-medium text-slate-900">{finding.signal_id}</span>
+        <span aria-hidden="true" className="text-slate-400">›</span>
+        <span className="mono font-semibold text-[#1F2933]">{finding.signal_id}</span>
       </nav>
       <ErrorBoundary label="Finding detail">
         <FindingDetail

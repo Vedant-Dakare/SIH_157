@@ -44,12 +44,12 @@ function MetricCards({ report }: { report: ValidationReport }) {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
       {cards.map((card) => (
-        <Card key={card.label}>
-          <CardHeader>
-            <CardTitle className="text-sm font-medium text-slate-500">{card.label}</CardTitle>
+        <Card key={card.label} className="border-[#D9E2EC] bg-white text-[#1F2933] shadow-xs">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-xs font-bold uppercase tracking-wider text-[#52606D]">{card.label}</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-[#123D73]">{card.value.toFixed(3)}</p>
+            <p className="text-2xl font-bold text-[#123B5D]">{card.value.toFixed(3)}</p>
           </CardContent>
         </Card>
       ))}
@@ -81,9 +81,11 @@ function Bar({ label, value, colour }: { label: string; value: number; colour: s
 export function ValidationSections({
   report,
   extras = {},
+  runId,
 }: {
   report: ValidationReport;
   extras?: ValidationExtras;
+  runId?: string;
 }) {
   const { toast } = useToast();
   const ablation = [...(extras.ablation ?? [])].sort(
@@ -222,12 +224,12 @@ export function ValidationSections({
                   type="button"
                   onClick={exportDisagreements}
                   aria-label="Export disagreements as CSV"
-                  className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-[#123D73] hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                  className="rounded-md border border-[#D9E2EC] bg-white px-3 py-1.5 text-xs font-medium text-[#123B5D] hover:bg-[#EAF3F8] hover:border-[#1F5F8B] focus:outline-none focus:ring-2 focus:ring-[#1F5F8B]"
                 >
                   Export CSV
                 </button>
               </div>
-              <div className="overflow-x-auto rounded-md border border-slate-200 bg-white">
+              <div className="overflow-x-auto rounded-md border border-[#D9E2EC] bg-white shadow-xs">
                 <table aria-label="Expert disagreements" className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-slate-200 bg-slate-50 text-left text-slate-600">
@@ -248,7 +250,10 @@ export function ValidationSections({
                         <td className="px-3 py-2 font-medium text-slate-900">{row.kind}</td>
                         <td className="px-3 py-2">
                           {row.finding_id ? (
-                            <Link to={`/findings/${row.finding_id}`} className="font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]">
+                            <Link
+                              to={`/findings/${row.finding_id}${runId ? `?run=${encodeURIComponent(runId)}` : ''}`}
+                              className="font-medium text-[#2563A8] underline underline-offset-4 hover:text-[#123D73]"
+                            >
                               Evidence
                             </Link>
                           ) : (
@@ -294,7 +299,7 @@ export default function ValidationPage() {
         />
       ) : null}
       {!reportQuery.isLoading && !reportQuery.error && reportQuery.data ? (
-        <ValidationSections report={reportQuery.data} />
+        <ValidationSections report={reportQuery.data} runId={runId} />
       ) : null}
     </div>
   );
